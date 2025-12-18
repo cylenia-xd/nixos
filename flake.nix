@@ -10,7 +10,7 @@
     fjordlauncher.url = "github:hero-persson/FjordLauncherUnlocked";
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, fjordlauncher, ... }@inputs: {
     nixosConfigurations.trissa = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [

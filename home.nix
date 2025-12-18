@@ -1,7 +1,7 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, inputs, ... }: {
   home.packages = with pkgs; [
     android-tools
-    fjordlauncher.packages.${pkgs.system}.fjordlauncher
+    inputs.fjordlauncher.packages.${pkgs.system}.fjordlauncher
   ];
 
   programs.git = {
