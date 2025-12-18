@@ -30,11 +30,6 @@
 
   console.keyMap = "uk";
 
-  services.displayManager.autoLogin = {
-    enable = true;
-    user = "cylenia";
-  };
-
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
@@ -53,6 +48,7 @@
 
   programs.firefox.enable = true;
   programs.zsh.enable = true;
+  programs.niri.enable = true;
 
   nixpkgs.config.allowUnfree = true;
 

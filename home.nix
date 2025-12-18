@@ -8,7 +8,6 @@
     mako
     neomutt
     neovim
-    niri
     rofi
     waybar
     swaybg
