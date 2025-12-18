@@ -6,7 +6,7 @@
     fastfetch
     kitty
     mako
-    mutt
+    neomutt
     neovim
     niri
     rofi
