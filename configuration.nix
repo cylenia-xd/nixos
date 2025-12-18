@@ -52,7 +52,7 @@
   users.users.cylenia = {
     isNormalUser = true;
     description = "Cylenia";
-    shell = "/usr/bin/env zsh";
+    shell = pkgs.zsh;
     extraGroups = [ "networkmanager" "wheel" ];
   };
 
