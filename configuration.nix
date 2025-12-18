@@ -28,17 +28,12 @@
     LC_TIME = "en_AU.UTF-8";
   };
 
-  services.xserver.enable = true;
-
-  services.displayManager.gdm.enable = true;
-  services.desktopManager.gnome.enable = true;
-
-  services.xserver.xkb = {
-    layout = "gb";
-    variant = "";
-  };
-
   console.keyMap = "uk";
+
+  services.displayManager.autoLogin = {
+    enable = true;
+    user = "cylenia";
+  };
 
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
