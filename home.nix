@@ -13,6 +13,7 @@
     wl-clipboard
     cliphist
     nerd-fonts.hack
+    libnotify
   ];
 
   programs.git = {
