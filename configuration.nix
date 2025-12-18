@@ -53,10 +53,6 @@
     isNormalUser = true;
     description = "Cylenia";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-      android-tools
-      git
-    ];
   };
 
   programs.firefox.enable = true;
