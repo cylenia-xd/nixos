@@ -2,6 +2,19 @@
   home.packages = with pkgs; [
     android-tools
     inputs.fjordlauncher.packages.${pkgs.stdenv.hostPlatform.system}.fjordlauncher
+    stow
+    fastfetch
+    kitty
+    mako
+    mutt
+    neovim
+    niri
+    rofi
+    waybar
+    zsh
+    swaybg
+    wl-clipboard
+    cliphist
   ];
 
   programs.git = {
