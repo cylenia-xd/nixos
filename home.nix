@@ -1,7 +1,7 @@
 { config, pkgs, inputs, ... }: {
   home.packages = with pkgs; [
     android-tools
-    inputs.fjordlauncher.packages.${pkgs.stdenv.hostPlatform.system}.fjordlauncher
+    freesmlauncher
     stow
     fastfetch
     kitty

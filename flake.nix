@@ -7,7 +7,10 @@
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    fjordlauncher.url = "github:hero-persson/FjordLauncherUnlocked";
+    freesmlauncher = {
+      url = "github:FreesmTeam/FreesmLauncher";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs: {
