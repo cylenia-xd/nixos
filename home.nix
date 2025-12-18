@@ -11,7 +11,6 @@
     niri
     rofi
     waybar
-    zsh
     swaybg
     wl-clipboard
     cliphist
