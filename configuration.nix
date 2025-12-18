@@ -39,6 +39,14 @@
     pulse.enable = true;
   };
 
+  xdg.portal = {
+    enable = true;
+    extraPortals = [
+      pkgs.xdg-desktop-portal-gtk
+    ];
+    config.common.default = "*";
+  };
+
   users.users.cylenia = {
     isNormalUser = true;
     description = "Cylenia";
