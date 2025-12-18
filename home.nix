@@ -9,7 +9,6 @@
     neomutt
     neovim
     rofi
-    waybar
     swaybg
     wl-clipboard
     cliphist
@@ -27,6 +26,8 @@
       commit.gpgsign = true;
     };
   };
+
+  programs.waybar.enable = true;
 
   programs.vesktop = {
     enable = true;
