@@ -18,7 +18,7 @@
           home-manager = {
             useGlobalPkgs = true;
             useUserPackages = true;
-            users.cylenia = ./home.nix
+            users.cylenia = ./home.nix;
           };
         }
       ];
