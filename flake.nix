@@ -10,17 +10,15 @@
     fjordlauncher.url = "github:hero-persson/FjordLauncherUnlocked";
   };
 
-  outputs = { self, nixpkgs, home-manager, fjordlauncher, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, fjordlauncher, ... }: {
     nixosConfigurations.trissa = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
-      specialArgs = { inherit inputs; };
       modules = [
         ./configuration.nix
         home-manager.nixosModules.default {
           home-manager = {
             useGlobalPkgs = true;
             useUserPackages = true;
-            extraSpecialArgs = { inherit inputs; };
             users.cylenia = ./home.nix;
           };
         }

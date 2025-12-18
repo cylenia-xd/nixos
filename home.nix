@@ -1,4 +1,4 @@
-{ config, pkgs, fjordlauncher, ... }: {
+{ config, pkgs, ... }: {
   home.packages = with pkgs; [
     android-tools
     fjordlauncher.packages.${pkgs.system}.fjordlauncher
