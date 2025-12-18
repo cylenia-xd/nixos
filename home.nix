@@ -15,6 +15,7 @@
     swaybg
     wl-clipboard
     cliphist
+    nerd-fonts.hack
   ];
 
   programs.git = {
