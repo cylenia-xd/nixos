@@ -20,6 +20,7 @@
             useGlobalPkgs = true;
             useUserPackages = true;
             users.cylenia = ./home.nix;
+            extraSpecialArgs = { inherit inputs; };
           };
         }
       ];
