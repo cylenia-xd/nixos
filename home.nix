@@ -1,7 +1,7 @@
 { config, pkgs, inputs, ... }: {
   home.packages = with pkgs; [
     android-tools
-    inputs.fjordlauncher.packages.${pkgs.system}.fjordlauncher
+    inputs.fjordlauncher.packages.${pkgs.stdenv.hostPlatform.system}.fjordlauncher
   ];
 
   programs.git = {
@@ -13,6 +13,16 @@
         signingkey = "8211F845B5FB45BE";
       };
       commit.gpgsign = true;
+    };
+  };
+
+  programs.vesktop = {
+    enable = true;
+    settings = {
+      arRPC = true;
+      checkUpdates = false;
+      minimizeToTray = false;
+      tray = false;
     };
   };
 
