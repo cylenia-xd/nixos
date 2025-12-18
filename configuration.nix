@@ -62,6 +62,7 @@
 
   environment.systemPackages = with pkgs; [
     vim
+    yad
   ];
 
   programs.gnupg.agent = {
