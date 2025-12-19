@@ -15,6 +15,7 @@
     rtorrent
     nerd-fonts.hack
     libnotify
+    mpv
   ];
 
   programs.git = {
