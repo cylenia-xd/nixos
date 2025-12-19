@@ -45,14 +45,14 @@
   xdg.userDirs = {
     enable = true;
     createDirectories = true;
-    desktop = "~/desktop";
-    documents = "~/documents";
-    download = "~/downloads";
-    music = "~/music";
-    pictures = "~/pictures";
-    publicShare = "~/public";
-    templates = "~/templates";
-    videos = "~/videos";
+    desktop = "desktop";
+    documents = "documents";
+    download = "downloads";
+    music = "music";
+    pictures = "pictures";
+    publicShare = "public";
+    templates = "templates";
+    videos = "videos";
   };
 
   # don't change this!
