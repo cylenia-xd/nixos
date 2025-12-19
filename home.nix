@@ -30,6 +30,8 @@
 
   programs.waybar.enable = true;
 
+  programs.chromium.enable = true;
+
   programs.vesktop = {
     enable = true;
     settings = {

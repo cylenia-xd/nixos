@@ -54,7 +54,6 @@
     extraGroups = [ "networkmanager" "wheel" ];
   };
 
-  programs.firefox.enable = true;
   programs.zsh.enable = true;
   programs.niri.enable = true;
 
