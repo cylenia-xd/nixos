@@ -12,7 +12,7 @@
     swaybg
     wl-clipboard
     cliphist
-    rtorrent
+    qbittorrent
     nerd-fonts.hack
     libnotify
     mpv
