@@ -12,7 +12,7 @@
     swaybg
     wl-clipboard
     cliphist
-    transmission_4
+    rtorrent
     nerd-fonts.hack
     libnotify
   ];
