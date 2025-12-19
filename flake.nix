@@ -13,7 +13,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, freesmlauncher, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, ... }@inputs: {
     nixosConfigurations.trissa = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
