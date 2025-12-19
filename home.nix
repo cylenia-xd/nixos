@@ -1,7 +1,7 @@
 { config, pkgs, inputs, ... }: {
   home.packages = with pkgs; [
     android-tools
-    inputs.freesmlauncher
+    freesmlauncher
     stow
     fastfetch
     kitty
