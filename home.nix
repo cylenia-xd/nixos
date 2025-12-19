@@ -30,7 +30,7 @@
 
   programs.waybar.enable = true;
 
-  programs.chromium.enable = true;
+  programs.firefox.enable = true;
 
   programs.vesktop = {
     enable = true;
