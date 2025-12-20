@@ -4,7 +4,7 @@
     settings = {
       layer = "top";
       position = "top";
-      autohide = true;
+      autohide = "true";
       autohide-blocked = false;
       exclusive = true;
       passthrough = false;
