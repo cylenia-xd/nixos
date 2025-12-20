@@ -6,6 +6,7 @@
     ./programs/waybar.nix
     ./programs/kitty.nix
     ./programs/mako.nix
+    ./programs/zsh.nix
   ];
 
   home.packages = with pkgs; [
