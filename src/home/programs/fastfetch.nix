@@ -26,7 +26,7 @@
         {
           type = "cpu";
           key = "  CPU";
-          keyColor = "#cba6f7":
+          keyColor = "#cba6f7";
         }
         {
           type = "cpuusage";
