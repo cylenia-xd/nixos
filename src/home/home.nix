@@ -5,13 +5,13 @@
     ./programs/fastfetch.nix
     ./programs/waybar.nix
     ./programs/kitty.nix
+    ./programs/mako.nix
   ];
 
   home.packages = with pkgs; [
     android-tools
     inputs.freesmlauncher.packages.${pkgs.stdenv.hostPlatform.system}.freesmlauncher
     stow
-    mako
     neomutt
     neovim
     rofi
