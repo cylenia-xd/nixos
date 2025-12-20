@@ -137,10 +137,10 @@
       };
       inputbar = {
         children = [
-          prompt
-          textbox-prompt-colon
-          entry
-          case-indicator
+          "prompt"
+          "textbox-prompt-colon"
+          "entry"
+          "case-indicator"
         ];
       };
       textbox-prompt-colon = {
