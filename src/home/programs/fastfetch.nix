@@ -9,7 +9,7 @@
           right = 1;
         };
         color = {
-          1 = "#cba6f7";
+          "1" = "#cba6f7";
         };
       };
       modules = [
