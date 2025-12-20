@@ -31,7 +31,7 @@
         alternate-urgent-foreground = "@urgent-foreground"; /* red */
         background-color = "#00000000";                   /* transparent */
         alternate-active-foreground = "@active-foreground"; /* mauve */
-        active-background = "#00000000";                  /* transparent */
+        #active-background = "#00000000";                  /* transparent */
         selected-active-background = "#a78bda";           /* darker mauve */
       };
       window = {
