@@ -4,13 +4,13 @@
     ./programs/vesktop.nix
     ./programs/fastfetch.nix
     ./programs/waybar.nix
+    ./programs/kitty.nix
   ];
 
   home.packages = with pkgs; [
     android-tools
     inputs.freesmlauncher.packages.${pkgs.stdenv.hostPlatform.system}.freesmlauncher
     stow
-    kitty
     mako
     neomutt
     neovim
