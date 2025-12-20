@@ -4,8 +4,6 @@
     settings = {
       layer = "top";
       position = "top";
-      autohide = "true";
-      autohide-blocked = false;
       exclusive = true;
       passthrough = false;
       gtk-layer-shell = true;
