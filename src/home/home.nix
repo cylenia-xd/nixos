@@ -7,6 +7,7 @@
     ./programs/kitty.nix
     ./programs/mako.nix
     ./programs/zsh.nix
+    ./programs/rofi.nix
   ];
 
   home.packages = with pkgs; [
@@ -15,7 +16,6 @@
     stow
     neomutt
     neovim
-    rofi
     swaybg
     wl-clipboard
     cliphist
