@@ -4,9 +4,6 @@
     settings = {
       layer = "top";
       position = "top";
-      exclusive = true;
-      passthrough = false;
-      gtk-layer-shell = true;
       modules-left = [
         "clock"
       ];
