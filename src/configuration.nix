@@ -1,4 +1,4 @@
-{ config, pkgs, ... }: {
+{ config, lib, pkgs, ... }: {
   imports = [
     ./hardware.nix
   ];
@@ -47,7 +47,7 @@
       pkgs.xdg-desktop-portal-gtk
     ];
     config = {
-#     niri."org.freedesktop.impl.portal.FileChooser" = "gtk";
+      #niri."org.freedesktop.impl.portal.FileChooser" = "gtk";
       common.default = "gnome";
       niri.default = "gnome";
       obs.default = "gnome";
