@@ -40,11 +40,18 @@
   };
 
   xdg.portal = {
-    enable = true;
+    enable = lib.mkDefault true;
+    xdgOpenUsePortal = true;
     extraPortals = [
       pkgs.xdg-desktop-portal-gnome
+      pkgs.xdg-desktop-portal-gtk
     ];
-    config.common.default = "*";
+    config = {
+      niri."org.freedesktop.impl.portal.FileChooser" = "gtk";
+      common.default = "gnome";
+      niri.default = "gnome";
+      obs.default = "gnome";
+    };
   };
 
   users.users.cylenia = {
