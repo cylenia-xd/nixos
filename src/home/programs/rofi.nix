@@ -69,7 +69,7 @@
       };
       element.normal.normal = {
         background-color = "@normal-background";
-        text-color "@normal-foreground";
+        text-color = "@normal-foreground";
       };
       element.normal.urgent = {
         background-color = "@urgent-background";
