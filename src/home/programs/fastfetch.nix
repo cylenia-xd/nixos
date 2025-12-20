@@ -8,9 +8,9 @@
           top = 1;
           right = 1;
         };
-        color = {
-          "1" = "#cba6f7";
-        };
+#        color = {
+#          "1" = "#cba6f7";
+#        };
       };
       modules = [
         break
