@@ -69,6 +69,7 @@
   environment.systemPackages = with pkgs; [
     vim
     yad
+    adwaita-icon-theme
   ];
 
   programs.gnupg.agent = {
