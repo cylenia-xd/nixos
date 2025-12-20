@@ -4,6 +4,6 @@
     settings = {};
     style = ''
 
-    ''
+    '';
   }
 }
