@@ -3,13 +3,13 @@
     ./programs/git.nix
     ./programs/vesktop.nix
     ./programs/fastfetch.nix
+    ./programs/waybar.nix
   ];
 
   home.packages = with pkgs; [
     android-tools
     inputs.freesmlauncher.packages.${pkgs.stdenv.hostPlatform.system}.freesmlauncher
     stow
-    fastfetch
     kitty
     mako
     neomutt
@@ -23,8 +23,6 @@
     libnotify
     mpv
   ];
-
-  programs.waybar.enable = true;
 
   programs.firefox.enable = true;
 
