@@ -1,50 +1,50 @@
 { config, pkgs, ... }: {
   programs.waybar = {
     enable = true;
-    settings = {
-      mainBar = {
-      layer = "top";
-      position = "top";
-      modules-left = [
-        "clock"
-      ];
-      modules-center = [
-        "niri/workspaces"
-      ];
-      modules-right = [
-        "battery"
-      ];
-      "clock" = {
-        interval = 1;
-        timezone = "Australia/Melbourne";
-        format = "{:%H:%M:%S %d/%m/%Y}";
-        tooltip-format = "{calendar}";
-        calendar = {
-          mode = "month";
+    settings = [
+      {
+        layer = "top";
+        position = "top";
+        modules-left = [
+          "clock"
+        ];
+        modules-center = [
+          "niri/workspaces"
+        ];
+        modules-right = [
+          "battery"
+        ];
+        "clock" = {
+          interval = 1;
+          timezone = "Australia/Melbourne";
+          format = "{:%H:%M:%S %d/%m/%Y}";
+          tooltip-format = "{calendar}";
+          calendar = {
+            mode = "month";
+          };
         };
-      };
-      "niri/workspaces" = {
-        format = "{icon}";
-        format-icons = {
-          "1" = "1";
-          "2" = "2";
-          "3" = "3";
-          "4" = "4";
-          "5" = "5";
-          "6" = "6";
-          "7" = "7";
-          "8" = "8";
-          "9" = "9";
+        "niri/workspaces" = {
+          format = "{icon}";
+          format-icons = {
+            "1" = "1";
+            "2" = "2";
+            "3" = "3";
+            "4" = "4";
+            "5" = "5";
+            "6" = "6";
+            "7" = "7";
+            "8" = "8";
+            "9" = "9";
+          };
+          disable-scroll = true;
+          all-outputs = true;
+          show-special = true;
         };
-        disable-scroll = true;
-        all-outputs = true;
-        show-special = true;
-      };
-      "battery" = {
-        format = "{capacity}%";
-      };
-      };
-    };
+        "battery" = {
+          format = "{capacity}%";
+        };
+      }
+    ];
     style = ''
     * {
       border: none;
