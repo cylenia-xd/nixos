@@ -5,7 +5,7 @@
     font = {
       name = "Hack Nerd Font Mono";
       package = pkgs.nerd-fonts.hack;
-      size = 8;
+      size = 24;
     };
   };
 }
