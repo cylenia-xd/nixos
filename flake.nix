@@ -22,7 +22,7 @@
           home-manager = {
             useGlobalPkgs = true;
             useUserPackages = true;
-            users.cylenia = ./src/home.nix;
+            users.cylenia = ./src/home/home.nix;
             extraSpecialArgs = { inherit inputs; };
           };
         }

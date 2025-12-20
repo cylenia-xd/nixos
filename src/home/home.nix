@@ -1,4 +1,10 @@
 { config, pkgs, inputs, ... }: {
+  imports = [
+    ./programs/git.nix
+    ./programs/vesktop.nix
+    ./programs/fastfetch.nix
+  ];
+
   home.packages = with pkgs; [
     android-tools
     inputs.freesmlauncher.packages.${pkgs.stdenv.hostPlatform.system}.freesmlauncher
@@ -18,31 +24,9 @@
     mpv
   ];
 
-  programs.git = {
-    enable = true;
-    settings = {
-      user = {
-        name = "cylenia";
-        email = "me@cylenia.dev";
-        signingkey = "8211F845B5FB45BE";
-      };
-      commit.gpgsign = true;
-    };
-  };
-
   programs.waybar.enable = true;
 
   programs.firefox.enable = true;
-
-  programs.vesktop = {
-    enable = true;
-    settings = {
-      arRPC = true;
-      checkUpdates = false;
-      minimizeToTray = false;
-      tray = false;
-    };
-  };
 
   xdg.userDirs = {
     enable = true;
