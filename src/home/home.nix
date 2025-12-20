@@ -7,7 +7,7 @@
     ./programs/kitty.nix
     ./programs/mako.nix
     ./programs/zsh.nix
-    ./programs/rofi.nix
+    ./programs/wofi.nix
   ];
 
   home.packages = with pkgs; [
