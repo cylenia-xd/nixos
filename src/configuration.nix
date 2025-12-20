@@ -61,7 +61,6 @@
     extraGroups = [ "networkmanager" "wheel" ];
   };
 
-  programs.zsh.enable = true;
   programs.niri.enable = true;
 
   nixpkgs.config.allowUnfree = true;
@@ -71,6 +70,8 @@
     yad
     adwaita-icon-theme
   ];
+
+  environment.pathsToLink = [ "/share/zsh" ];
 
   programs.gnupg.agent = {
     enable = true;
