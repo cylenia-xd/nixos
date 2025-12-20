@@ -2,6 +2,7 @@
   programs.waybar = {
     enable = true;
     settings = {
+      mainBar = {
       layer = "top";
       position = "top";
       modules-left = [
@@ -41,6 +42,7 @@
       };
       "battery" = {
         format = "{capacity}%";
+      };
       };
     };
     style = ''
