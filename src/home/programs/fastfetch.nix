@@ -28,53 +28,53 @@
         }
         {
           type = "cpu";
-          key = "  CPU";
+          key = "│ CPU";
           keyColor = "#cba6f7";
         }
         {
           type = "gpu";
-          key = "  GPU";
+          key = "│ GPU";
           keyColor = "#cba6f7";
         }
         {
           type = "memory";
-          key = "  RAM";
+          key = "│ RAM";
           keyColor = "#cba6f7";
         }
         {
           type = "disk";
-          key = "  DISK";
+          key = "│ DISK";
           keyColor = "#cba6f7";
         }
         {
           type = "os";
-          key = "  OS";
+          key = "│ OS";
           keyColor = "#cba6f7";
         }
         {
           type = "kernel";
-          key = "  KRNL";
+          key = "│ KRNL";
           keyColor = "#cba6f7";
         }
         {
           type = "shell";
-          key = "  SH";
+          key = "│ SH";
           keyColor = "#cba6f7";
         }
         {
           type = "wm";
-          key = "  WM";
+          key = "│ WM";
           keyColor = "#cba6f7";
         }
         {
           type = "command";
-          key = "  AGE";
+          key = "│ AGE";
           keyColor = "#cba6f7";
           text = "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days";
         }
         {
           type = "uptime";
-          key = "  UP";
+          key = "│ UP";
           keyColor = "#cba6f7";
         }
         {
