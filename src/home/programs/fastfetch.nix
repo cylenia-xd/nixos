@@ -30,44 +30,44 @@
         }
         {
           type = "cpu";
-          key = "│ CPU";
+          key = "  CPU";
         }
         {
           type = "gpu";
-          key = "│ GPU";
+          key = "  GPU";
         }
         {
           type = "memory";
-          key = "│ RAM";
+          key = "  RAM";
         }
         {
           type = "disk";
-          key = "│ DISK";
+          key = "  DISK";
         }
         {
           type = "os";
-          key = "│ OS";
+          key = "  OS";
         }
         {
           type = "kernel";
-          key = "│ KRNL";
+          key = "  KRNL";
         }
         {
           type = "shell";
-          key = "│ SH";
+          key = "  SH";
         }
         {
           type = "wm";
-          key = "│ WM";
+          key = "  WM";
         }
         {
           type = "command";
-          key = "│ AGE";
+          key = "  AGE";
           text = "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days";
         }
         {
           type = "uptime";
-          key = "│ UP";
+          key = "  UP";
         }
         {
           type = "custom";
