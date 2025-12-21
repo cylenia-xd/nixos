@@ -15,7 +15,7 @@
 
   home.packages = with pkgs; [
     android-tools
-    #inputs.freesmlauncher.packages.${pkgs.stdenv.hostPlatform.system}.freesmlauncher
+    freesmlauncher
     swaybg
     wl-clipboard
     cliphist
