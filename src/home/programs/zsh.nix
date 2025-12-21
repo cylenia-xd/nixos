@@ -14,6 +14,9 @@
       ff = "fastfetch";
       tree = "tree -F";
     };
-    initContent = lib.mkOrder 1500 "bindkey -v";
+    initContent = lib.mkOrder 1500 ''
+    PROMPT="%~ > "
+    bindkey -v
+    '';
   };
 }
