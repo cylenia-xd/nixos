@@ -16,8 +16,6 @@
   home.packages = with pkgs; [
     android-tools
     inputs.freesmlauncher.packages.${pkgs.stdenv.hostPlatform.system}.freesmlauncher
-    stow
-    neovim
     swaybg
     wl-clipboard
     cliphist
