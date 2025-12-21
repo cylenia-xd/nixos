@@ -12,6 +12,11 @@
           "1" = "#cba6f7";
         };
       };
+      display ={
+        color = {
+          key = "#cba6f7";
+        };
+      };
       modules = [
         {
           type = "break";
@@ -74,7 +79,6 @@
           key = " ";
         }
       ];
-      display.color.key = "#cba6f7";
     };
   };
 }
