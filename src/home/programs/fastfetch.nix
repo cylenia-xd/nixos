@@ -13,6 +13,7 @@
         };
       };
       display ={
+        seperator = " -> ";
         key = {
           color = "#cba6f7";
         };
