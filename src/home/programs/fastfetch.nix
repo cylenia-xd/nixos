@@ -13,10 +13,10 @@
         };
       };
       display ={
-        seperator = " -> ";
+        separator = " -> ";
         color = {
           key = "#cba6f7";
-          seperator = "red";
+          separator = "red";
         };
       };
       modules = [
