@@ -10,13 +10,13 @@
     ./programs/wofi.nix
     ./programs/selemail.nix
     ./programs/niri.nix
+    ./programs/neomutt.nix
   ];
 
   home.packages = with pkgs; [
     android-tools
     inputs.freesmlauncher.packages.${pkgs.stdenv.hostPlatform.system}.freesmlauncher
     stow
-    neomutt
     neovim
     swaybg
     wl-clipboard

@@ -57,7 +57,7 @@
     }
 
     spawn-at-startup "waybar"
-    spawn-sh-at-startup "swaybg -i ~/dotfiles/wallpaper.jpg -o \"*\" -m stretch"
+    spawn-sh-at-startup "swaybg -i ~/nixos/assets/wallpaper.jpg -o \"*\" -m stretch"
     spawn-sh-at-startup "wl-paste --type text --watch cliphist store"
     spawn-sh-at-startup "wl-paste --type image --watch cliphist store"
     spawn-at-startup "mako"
