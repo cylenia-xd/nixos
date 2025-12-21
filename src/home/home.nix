@@ -10,6 +10,7 @@
     ./programs/wofi.nix
     ./programs/niri.nix
     ./programs/neomutt.nix
+    ./programs/helix.nix
   ];
 
   home.packages = with pkgs; [
@@ -44,4 +45,3 @@
   # don't change this!
   home.stateVersion = "25.11";
 }
-
