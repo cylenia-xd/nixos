@@ -39,7 +39,7 @@
       address = "callum@purelymail.com";
       realName = "Callum";
       passwordCommand = "cat ~/.secrets/emailpw";
-      primary = true;
+      primary = false;
       userName = "callum@purelymail.com";
       smtp = {
         authentication = "login";
