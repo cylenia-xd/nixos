@@ -15,7 +15,7 @@
       display ={
         separator = " -> ";
         color = {
-          key = "#cba6f7";
+          key = "magenta";
           separator = "red";
         };
       };
