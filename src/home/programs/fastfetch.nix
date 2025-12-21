@@ -12,13 +12,20 @@
           "1" = "#cba6f7";
         };
       };
+      display = {
+        percent = {
+          green = "white";
+          yellow = "white";
+          red = "white";
+        };
+      };
       modules = [
         {
           type = "break";
         }
         {
           type = "custom";
-          format = "\u{001b}[90m┌──────────────────────────────────────────────────────┐";
+          format = "\u001b[90m┌──────────────────────────────────────────────────────┐";
         }
         {
           type = "host";
