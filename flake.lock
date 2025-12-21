@@ -26,12 +26,15 @@
       "locked": {
         "lastModified": 1766267220,
         "narHash": "sha256-ZU+W0HaCjglMqChAbZymIC1k2UAJlOkCBUSMn6LkD9I=",
-        "type": "tarball",
-        "url": "https://github.com/FreesmTeam/FreesmLauncher/archive/develop.tar.gz"
+        "owner": "FreesmTeam",
+        "repo": "FreesmLauncher",
+        "rev": "62765d146219a7016dcd1fac5d4958cdd3e43d8c",
+        "type": "github"
       },
       "original": {
-        "type": "tarball",
-        "url": "https://github.com/FreesmTeam/FreesmLauncher/archive/develop.tar.gz"
+        "owner": "FreesmTeam",
+        "repo": "FreesmLauncher",
+        "type": "github"
       }
     },
     "home-manager": {
