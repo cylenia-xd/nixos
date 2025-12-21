@@ -6,7 +6,7 @@
         source = "~/nixos/assets/ascii.txt";
         padding = {
           top = 1;
-          right = 1;
+          right = 5;
         };
         color = {
           "1" = "#cba6f7";
