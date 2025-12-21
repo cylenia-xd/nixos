@@ -14,6 +14,7 @@
       address = "me@cylenia.dev";
       realName = "Cylenia";
       passwordCommand = "cat ~/.secrets/emailpw";
+      primary = true;
       userName = "me@cylenia.dev";
       smtp = {
         authentication = "login";
@@ -38,6 +39,7 @@
       address = "callum@purelymail.com";
       realName = "Callum";
       passwordCommand = "cat ~/.secrets/emailpw";
+      primary = true;
       userName = "callum@purelymail.com";
       smtp = {
         authentication = "login";
