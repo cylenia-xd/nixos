@@ -48,7 +48,7 @@
     ];
     config = {
       common.default = "gnome";
-      niri.default = "gnome";
+      niri.default = lib.mkForce "gnome";
       obs.default = "gnome";
     };
   };
