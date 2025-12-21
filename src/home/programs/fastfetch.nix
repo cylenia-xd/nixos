@@ -14,8 +14,9 @@
       };
       display ={
         seperator = " -> ";
-        key = {
-          color = "#cba6f7";
+        color = {
+          key = "#cba6f7";
+          seperator = "red";
         };
       };
       modules = [
