@@ -19,6 +19,13 @@
           keys = "#cba6f7";
           output = "#cba6f7";
         };
+        percent = {
+          color = {
+            green = "#cba6f7";
+            yellow = "#cba6f7";
+            red = "#cba6f7";
+          };
+        };
       };
       modules = [
         {
