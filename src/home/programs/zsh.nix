@@ -2,7 +2,7 @@
   programs.zsh = {
     enable = true;
     envExtra = ''
-    export EDITOR="nvim"
+    export EDITOR="hx"
     export MANPAGER="nvim +Man!"
     export PAGER="less"
     export PATH=$PATH:~/.dotsbin
