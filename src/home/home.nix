@@ -8,7 +8,6 @@
     ./programs/mako.nix
     ./programs/zsh.nix
     ./programs/wofi.nix
-    ./programs/selemail.nix
     ./programs/niri.nix
     ./programs/neomutt.nix
   ];
