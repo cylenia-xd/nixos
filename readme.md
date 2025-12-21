@@ -1,2 +1,2 @@
 # nixos
-my nixos dotfiles, can not be used without heavy modification!
+my nixos configuration, can not be used without heavy modification!
