@@ -31,11 +31,6 @@
           keyColor = "#cba6f7";
         }
         {
-          type = "cpuusage";
-          key = "   └ USAGE";
-          keyColor = "#cba6f7";
-        }
-        {
           type = "gpu";
           key = "  GPU";
           keyColor = "#cba6f7";
@@ -43,11 +38,6 @@
         {
           type = "memory";
           key = "  RAM";
-          keyColor = "#cba6f7";
-        }
-        {
-          type = "swap";
-          key = "  SWAP";
           keyColor = "#cba6f7";
         }
         {
@@ -66,33 +56,13 @@
           keyColor = "#cba6f7";
         }
         {
-          type = "bios";
-          key = "  BIOS";
-          keyColor = "#cba6f7";
-        }
-        {
-          type = "packages";
-          key = "  PKGS";
-          keyColor = "#cba6f7";
-        }
-        {
           type = "shell";
           key = "  SH";
           keyColor = "#cba6f7";
         }
         {
-          type = "lm";
-          key = "  LM";
-          keyColor = "#cba6f7";
-        }
-        {
           type = "wm";
           key = "  WM";
-          keyColor = "#cba6f7";
-        }
-        {
-          type = "terminal";
-          key = "  TERM";
           keyColor = "#cba6f7";
         }
         {
@@ -109,11 +79,6 @@
         {
           type = "datetime";
           key = "  D/T";
-          keyColor = "#cba6f7";
-        }
-        {
-          type = "initsystem";
-          key = "  INIT";
           keyColor = "#cba6f7";
         }
         {
