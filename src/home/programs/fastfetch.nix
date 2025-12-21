@@ -13,8 +13,8 @@
         };
       };
       display ={
-        color = {
-          key = "#cba6f7";
+        key = {
+          color = "#cba6f7";
         };
       };
       modules = [
