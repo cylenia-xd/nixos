@@ -8,6 +8,7 @@
     ./programs/mako.nix
     ./programs/zsh.nix
     ./programs/wofi.nix
+    ./programs/selemail.nix
   ];
 
   home.packages = with pkgs; [
