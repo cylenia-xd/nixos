@@ -15,7 +15,7 @@
       tree = "tree -F";
     };
     initContent = lib.mkOrder 1500 ''
-    PROMPT="%~ > "
+    PROMPT=" %~ > "
     bindkey -v
     '';
   };
