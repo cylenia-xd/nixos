@@ -8,7 +8,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     freesmlauncher = {
-      url = "https://github.com/FreesmTeam/FreesmLauncher/archive/develop.tar.gz";
+      url = "github:FreesmTeam/FreesmLauncher";
     };
   };
 
