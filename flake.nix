@@ -7,6 +7,9 @@
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    freesmlauncher = {
+      url = "https://github.com/FreesmTeam/FreesmLauncher/archive/develop.tar.gz";
+    };
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs: {
