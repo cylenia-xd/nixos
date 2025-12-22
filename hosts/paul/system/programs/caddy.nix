@@ -5,7 +5,7 @@
     virtualHosts = {
       "192.168.86.50".extraConfig = ''
         respond "Hello, world!"
-      ''
+      '';
     };
   };
 }
