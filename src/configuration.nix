@@ -8,6 +8,21 @@
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
+  services.greetd = {
+    enable = true;
+    settings = {
+      terminal.vt = 1;
+      default_session = {
+        command = "agreety --cmd /bin/sh";
+        user = "greeter";
+      };
+      initial_session = {
+        command = "niri-session";
+        user = "cylenia";
+      };
+    };
+  };
+  
   networking.hostName = "trissa";
 
   networking.networkmanager.enable = true;
@@ -66,7 +81,7 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
-    vim
+    nano
     yad
     adwaita-icon-theme
   ];
@@ -77,8 +92,6 @@
     enable = true;
     enableSSHSupport = true;
   };
-
-  services.openssh.enable = true;
 
   networking.firewall.enable = false;
 
