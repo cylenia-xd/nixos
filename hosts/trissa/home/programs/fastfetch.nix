@@ -3,7 +3,7 @@
     enable = true;
     settings = {
       logo = {
-        source = "~/nixos/assets/ascii.txt";
+        source = "~/nixos/hosts/trissa/assets/ascii.txt";
         padding = {
           top = 1;
           right = 5;

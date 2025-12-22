@@ -16,12 +16,12 @@
     nixosConfigurations.trissa = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
-        ./src/configuration.nix
+        ./hosts/trissa/configuration.nix
         home-manager.nixosModules.default {
           home-manager = {
             useGlobalPkgs = true;
             useUserPackages = true;
-            users.cylenia = ./src/home/home.nix;
+            users.cylenia = ./hosts/trissa/home/home.nix;
             extraSpecialArgs = { inherit inputs; };
           };
         }
