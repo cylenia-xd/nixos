@@ -5,6 +5,7 @@
     ./networking.nix
     ./localization.nix
     ./programs/caddy.nix
+    ./programs/cloudflared.nix
   ];
 
   users.users.cylenia = {
