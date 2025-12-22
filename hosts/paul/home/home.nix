@@ -3,7 +3,11 @@
     ./programs/git.nix
   ];
 
-  home.packages = with pkgs; [];
+  home.packages = with pkgs; [
+    git
+    helix
+    fastfetch
+  ];
 
   xdg.userDirs = {
     enable = true;

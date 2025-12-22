@@ -30,15 +30,9 @@
     isNormalUser = true;
     description = "Cylenia";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [];
   };
 
-  environment.systemPackages = with pkgs; [
-    helix
-    git
-    wget
-    fastfetch
-  ];
+  environment.systemPackages = with pkgs; [];
 
   programs.gnupg.agent = {
     enable = true;
@@ -49,9 +43,10 @@
     enable = true;
   };
 
-  networking.firewall.enable = false; # CONFIGURE FIREWALL AT SOME POINT!
+  networking.firewall.enable = false;
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  # don't change this!
   system.stateVersion = "25.11";
 }
