@@ -4,6 +4,7 @@
     ./boot.nix
     ./networking.nix
     ./localization.nix
+    ./programs/caddy.nix
   ];
 
   users.users.cylenia = {
