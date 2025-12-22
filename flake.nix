@@ -30,7 +30,7 @@
     nixosConfigurations.paul = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
-        ./hosts/paul/configuration.nix
+        ./hosts/paul/system/configuration.nix
         home-manager.nixosModules.default {
           home-manager = {
             useGlobalPkgs = true;
