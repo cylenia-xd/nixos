@@ -1,4 +1,4 @@
-{ config, pkgs, ... }: {
+{ config, lib, pkgs, ... }: {
   xdg.portal = {
     enable = lib.mkDefault true;
     xdgOpenUsePortal = true;
