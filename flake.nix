@@ -27,5 +27,19 @@
         }
       ];
     };
+    nixosConfigurations.paul = nixpkgs.lib.nixosSystem {
+      system = "x86_64-linux";
+      modules = [
+        ./hosts/paul/configuration.nix
+        home-manager.nixosModules.default {
+          home-manager = {
+            useGlobalPkgs = true;
+            useUserPackages = true;
+            users.cylenia = ./hosts/paul/home/home.nix;
+            extraSpecialArgs = { inherit inputs; };
+          };
+        }
+      ];
+    };
   };
 }
