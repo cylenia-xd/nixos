@@ -16,7 +16,7 @@
     nixosConfigurations.trissa = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
-        ./hosts/trissa/configuration.nix
+        ./hosts/trissa/system/configuration.nix
         home-manager.nixosModules.default {
           home-manager = {
             useGlobalPkgs = true;
