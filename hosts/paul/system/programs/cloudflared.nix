@@ -1,5 +1,5 @@
 { config, pkgs, ... }: {
   services.cloudflared = {
-    enable = false;
+    enable = true;
   };
 }
