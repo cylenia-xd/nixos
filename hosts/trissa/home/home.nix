@@ -22,6 +22,7 @@
     qbittorrent
     nerd-fonts.hack
     libnotify
+    sops
     mpv
   ];
 
