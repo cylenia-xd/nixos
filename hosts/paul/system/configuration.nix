@@ -16,6 +16,7 @@
     extraGroups = [ "networkmanager" "wheel" ];
   };
 
+  nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # don't change this!
