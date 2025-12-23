@@ -1,5 +1,6 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, inputs, ... }: {
   imports = [
+    inputs.sops-nix.nixosModules.sops
     ./hardware.nix
     ./boot.nix
     ./networking.nix
@@ -20,6 +21,10 @@
     cloudflared
     sops
   ];
+
+  sops.defaultSopsFile = ../secrets/secrets.yaml;
+  sops.defaultSopsFormat = "yaml";
+  sops.age.keyFile = "/home/cylenia/.config/sops/age/keys.txt";
 
   nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
