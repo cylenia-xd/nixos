@@ -24,6 +24,8 @@
   sops.defaultSopsFile = ../secrets/secrets.yaml;
   sops.defaultSopsFormat = "yaml";
   sops.age.keyFile = "/home/cylenia/.config/sops/age/keys.txt";
+  sops.secrets.tunnel_certificate = {};
+  sops.secrets.tunnel_credentials = {};
 
   nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
