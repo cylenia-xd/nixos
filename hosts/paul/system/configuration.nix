@@ -4,7 +4,7 @@
     ./boot.nix
     ./networking.nix
     ./localization.nix
-    ./programs/caddy.nix
+    ./programs/nginx.nix
     ./programs/cloudflared.nix
     ./programs/sshd.nix
     ./programs/gpg.nix
