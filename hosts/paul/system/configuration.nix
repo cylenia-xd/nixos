@@ -1,6 +1,5 @@
 { config, pkgs, inputs, ... }: {
   imports = [
-    inputs.sops-nix.nixosModules.sops
     ./hardware.nix
     ./boot.nix
     ./networking.nix
