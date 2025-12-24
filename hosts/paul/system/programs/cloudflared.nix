@@ -1,10 +1,10 @@
 { config, pkgs, ... }: {
   services.cloudflared = {
     enable = true;
-    certificateFile = /opt/tunnelsecrets/cert.pem;
+    certificateFile = "${config.sops.secrets.tunnel.certificate.path}";
     tunnels = {
       "a47e5b10-67d7-44c0-a486-2c63b09bcd62" = {
-        credentialsFile = /opt/tunnelsecrets/tunnel.json;
+        credentialsFile = "${config.sops.secrets.tunnel.credentials.path}";
         default = "http://localhost:80";
       };
     };
