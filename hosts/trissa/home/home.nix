@@ -11,7 +11,6 @@
     ./programs/niri.nix
     ./programs/neomutt.nix
     ./programs/helix.nix
-    ./programs/steam.nix
   ];
 
   home.packages = with pkgs; [
