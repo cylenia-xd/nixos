@@ -22,6 +22,11 @@
 
   programs.niri.enable = true;
   programs.zsh.enable = true;
+  qt = {
+    enable = true;
+    style = "adwaita-dark";
+    platformTheme = "gnome";
+  };
 
   # don't change this!
   system.stateVersion = "25.11";
