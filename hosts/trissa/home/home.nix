@@ -28,6 +28,7 @@
   ];
 
   programs.firefox.enable = true;
+  services.gnome-keyring.enable = true;
 
   xdg.userDirs = {
     enable = true;
