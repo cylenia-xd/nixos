@@ -31,14 +31,14 @@
   xdg.userDirs = {
     enable = true;
     createDirectories = true;
-    desktop = "desktop";
+    desktop = ".hiddenxdg/desktop";
     documents = "documents";
     download = "downloads";
-    music = "music";
-    pictures = "pictures";
-    publicShare = "public";
-    templates = "templates";
-    videos = "videos";
+    music = ".hiddenxdg/music";
+    pictures = "media/pictures";
+    publicShare = ".hiddenxdg/public";
+    templates = ".hiddenxdg/templates";
+    videos = "media/videos";
   };
 
   # don't change this!
