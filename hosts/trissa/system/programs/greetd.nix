@@ -4,7 +4,7 @@
     settings = {
       terminal.vt = 1;
       default_session = {
-        command = "agreety --cmd /bin/sh";
+        command = "${pkgs.greetd}/bin/agreety --cmd /bin/sh";
         user = "greeter";
       };
       initial_session = {
