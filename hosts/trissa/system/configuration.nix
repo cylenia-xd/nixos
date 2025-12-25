@@ -22,6 +22,7 @@
 
   programs.niri.enable = true;
   programs.zsh.enable = true;
+  services.gnome.gnome-keyring.enable = true;
   qt = {
     enable = true;
     style = "adwaita-dark";
