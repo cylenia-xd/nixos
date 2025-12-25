@@ -11,6 +11,7 @@
     ./programs/niri.nix
     ./programs/neomutt.nix
     ./programs/helix.nix
+    ./programs/nheko.nix
   ];
 
   home.packages = with pkgs; [
