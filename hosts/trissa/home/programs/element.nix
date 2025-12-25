@@ -1,5 +1,5 @@
 { config, pkgs, ... }: {
-  programs.nheko = {
+  programs.element-desktop = {
     enable = true;
   };
 }
