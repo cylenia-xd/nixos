@@ -27,6 +27,7 @@
   sops.age.keyFile = "/home/cylenia/.config/sops/age/keys.txt";
   sops.secrets.tunnel_certificate = {};
   sops.secrets.tunnel_credentials = {};
+  sops.secrets.searxng_secret = {};
 
   nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
