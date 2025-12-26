@@ -2,9 +2,12 @@
   programs.nushell = {
     enable = true;
     environmentVariables = {
-      EDITOR = "hx";
-      MANPAGER = "less";
-      PAGER = "less";
+      PROMPT_COMMAND = "pwd + \" > \"";
+      TRANSIENT_PROMPT_COMMAND = "> ";
+    };
+    settings = {
+      show_banner = false;
+      buffer_editor = "hx";
     };
   };
 }
