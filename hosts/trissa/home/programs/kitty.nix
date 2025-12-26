@@ -7,5 +7,8 @@
       package = pkgs.nerd-fonts.hack;
       size = 12;
     };
+    settings = {
+      single_window_margin_width = 2
+    };
   };
 }
