@@ -16,12 +16,11 @@
   users.users.cylenia = {
     isNormalUser = true;
     description = "Cylenia";
-    shell = pkgs.zsh;
+    shell = pkgs.nushell;
     extraGroups = [ "networkmanager" "wheel" ];
   };
 
   programs.niri.enable = true;
-  programs.zsh.enable = true;
   services.gnome.gnome-keyring.enable = true;
   qt = {
     enable = true;
