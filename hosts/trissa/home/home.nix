@@ -29,6 +29,13 @@
 
   programs.firefox.enable = true;
 
+  # stolen from nixos wiki
+  programs.bash.interactiveShellInit = ''
+    if [ "$TERM" = "xterm-kitty" ] && [ -z "$BASH_EXECUTION_STRING" ]; then
+      exec nu
+    fi
+  '';
+
   xdg.userDirs = {
     enable = true;
     createDirectories = true;

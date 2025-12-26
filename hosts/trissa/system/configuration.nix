@@ -16,7 +16,7 @@
   users.users.cylenia = {
     isNormalUser = true;
     description = "Cylenia";
-    shell = pkgs.nushell;
+    shell = pkgs.bash;
     extraGroups = [ "networkmanager" "wheel" ];
   };
 

@@ -2,12 +2,17 @@
   programs.nushell = {
     enable = true;
     environmentVariables = {
-      PROMPT_COMMAND = "pwd";
+      PROMPT_COMMAND = "(pwd)";
       TRANSIENT_PROMPT_COMMAND = "";
     };
     settings = {
       show_banner = false;
       buffer_editor = "hx";
+    };
+    shellAliases = {
+      vi = "hx";
+      vim = "hx";
+      nano = "hx";
     };
   };
 }
