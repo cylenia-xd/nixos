@@ -3,10 +3,9 @@
     enable = true;
     virtualHosts.localhost = {
       locations."/" = {
-        return = "200 '<html><body>It works</body></html>'";
-        extraConfig = ''
-          default_type text/html;
-        '';
+        proxyPass = "http://127.0.0.1:8067";
+        proxyWebsockets = true;
+        extraConfig = "proxy_pass_header Authorization;";
       };
     };
   };
