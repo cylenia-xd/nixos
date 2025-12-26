@@ -7,6 +7,7 @@
     settings = {
       show_banner = false;
       buffer_editor = "hx";
+      table.mode = "basic";
     };
     shellAliases = {
       vi = "hx";
