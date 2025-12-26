@@ -11,7 +11,6 @@
     ./programs/greetd.nix
     ./programs/gpg.nix
     ./programs/steam.nix
-    ./programs/syncthing.nix
   ];
 
   users.users.cylenia = {
