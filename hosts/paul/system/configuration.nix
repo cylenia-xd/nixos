@@ -8,6 +8,7 @@
     ./programs/cloudflared.nix
     ./programs/sshd.nix
     ./programs/gpg.nix
+    ./programs/searxng.nix
   ];
 
   users.users.cylenia = {
