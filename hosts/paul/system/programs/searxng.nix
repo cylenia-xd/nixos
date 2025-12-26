@@ -7,7 +7,7 @@
         base_url = "https://search.cylenia.dev";
         bind_address = "127.0.0.1";
         port = 8067;
-        secret_key = config.sops.searxng_secret.path;
+        secret_key = config.sops.secrets.searxng_secret.path;
       };
       general = {
         debug = false;
