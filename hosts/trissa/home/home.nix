@@ -18,6 +18,7 @@
     android-tools
     prismlauncher
     swaybg
+    discordo
     wl-clipboard
     cliphist
     qbittorrent
