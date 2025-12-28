@@ -11,9 +11,13 @@
       url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    firefox-addons = {
+      url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, sops-nix, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, sops-nix, firefox-addons, ... }@inputs: {
     nixosConfigurations.trissa = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
