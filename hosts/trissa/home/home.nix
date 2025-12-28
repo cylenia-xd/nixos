@@ -12,6 +12,7 @@
     ./programs/neomutt.nix
     ./programs/helix.nix
     ./programs/element.nix
+    ./programs/librewolf.nix
   ];
 
   home.packages = with pkgs; [
