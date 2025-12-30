@@ -19,10 +19,10 @@
     android-tools
     prismlauncher
     swaybg
-    discordo
     wl-clipboard
     cliphist
     qbittorrent
+    heroic
     nerd-fonts.hack
     libnotify
     sops

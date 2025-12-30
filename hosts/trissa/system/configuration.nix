@@ -10,7 +10,6 @@
     ./environment.nix
     ./programs/greetd.nix
     ./programs/gpg.nix
-    ./programs/steam.nix
   ];
 
   users.users.cylenia = {
