@@ -3,6 +3,10 @@
     enable = true;
     environmentVariables = {
       TRANSIENT_PROMPT_COMMAND = "";
+      PROMPT_COMMAND_RIGHT = "";
+      PROMPT_INDICATOR = " > ";
+      PROMPT_INDICATOR_VI_NORMAL = " n ";
+      PROMPT_INDICATOR_VI_INSERT = " i ";
     };
     settings = {
       show_banner = false;
