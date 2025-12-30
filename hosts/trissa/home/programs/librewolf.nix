@@ -16,6 +16,7 @@
         ];
       };
       settings = {
+        "browser.download.lastDir" = "/home/cylenia/downloads";
         "browser.search.region" = "AU";
         "browser.search.isUS" = false;
         "browser.sessionstore.resume_from_crash" = false;
