@@ -17,7 +17,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, sops-nix, firefox-addons, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, sops-nix, ... }@inputs: {
     nixosConfigurations.trissa = nixpkgs.lib.nixosSystem {
       specialArgs = { inputs = inputs; };
       system = "x86_64-linux";
