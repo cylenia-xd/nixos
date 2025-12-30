@@ -22,7 +22,7 @@
     wl-clipboard
     cliphist
     qbittorrent
-    heroic
+    lutris
     nerd-fonts.hack
     libnotify
     sops
