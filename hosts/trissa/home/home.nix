@@ -29,8 +29,6 @@
     mpv
   ];
 
-  programs.firefox.enable = true;
-
   xdg.userDirs = {
     enable = true;
     createDirectories = true;
