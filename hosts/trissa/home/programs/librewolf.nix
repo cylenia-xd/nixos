@@ -8,7 +8,7 @@
       name = "default";
       extensions = {
         force = true;
-        packages = with inputs.firefox-addons.packages.${pkgs.system}.firefox-addons; [
+        packages = with inputs.firefox-addons.packages.${pkgs.stdenv.hostPlatform.system}.firefox-addons; [
           ublock-origin
           bitwarden
         ];
