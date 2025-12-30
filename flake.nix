@@ -19,7 +19,7 @@
 
   outputs = { self, nixpkgs, home-manager, sops-nix, firefox-addons, ... }@inputs: {
     nixosConfigurations.trissa = nixpkgs.lib.nixosSystem {
-      specialArgs = { inherit inputs; };
+      specialArgs = { inputs; };
       system = "x86_64-linux";
       modules = [
         ./hosts/trissa/system/configuration.nix
