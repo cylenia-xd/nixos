@@ -16,6 +16,8 @@
         ];
       };
       settings = { # here be dragons.. browser settings configuration is weird
+        "browser.display.background_color.dark" = "#1E1E2E";
+        "browser.display.foreground_color.dark" = "#CDD6F4";
         "browser.download.lastDir" = "/home/cylenia/downloads";
         "browser.search.region" = "AU";
         "browser.search.isUS" = false;
