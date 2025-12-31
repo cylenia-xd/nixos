@@ -15,14 +15,18 @@
           catppuccin-mocha-mauve
         ];
       };
-      settings = {
+      settings = { # here be dragons.. browser settings configuration is weird
         "browser.download.lastDir" = "/home/cylenia/downloads";
         "browser.search.region" = "AU";
         "browser.search.isUS" = false;
         "browser.sessionstore.resume_from_crash" = false;
         "browser.startup.homepage" = "https://online.bonjourr.fr";
+        "browser.tabs.inTitlebar" = 0; # hide window decorations
+        "browser.uiCustomization.state" = ''{"placements":{"widget-overflow-fixed-list":[],"unified-extensions-area":["_446900e4-71c2-419f-a6a7-df9c091e268b_-browser-action","addon_darkreader_org-browser-action"],"nav-bar":["back-button","forward-button","stop-reload-button","vertical-spacer","urlbar-container","downloads-button","fxa-toolbar-menu-button","ublock0_raymondhill_net-browser-action","unified-extensions-button"],"toolbar-menubar":["menubar-items"],"TabsToolbar":["tabbrowser-tabs","new-tab-button"],"vertical-tabs":[],"PersonalToolbar":[]},"seen":["ublock0_raymondhill_net-browser-action","_446900e4-71c2-419f-a6a7-df9c091e268b_-browser-action","developer-button","screenshot-button","addon_darkreader_org-browser-action"],"dirtyAreaCache":["unified-extensions-area","nav-bar","vertical-tabs","toolbar-menubar","TabsToolbar","PersonalToolbar"],"currentVersion":23,"newElementCount":3}'';
+        # maybe don't edit this manually ^
         "distribution.searchplugins.defaultLocale" = "en-GB";
-        "extensions.autoDisableScopes" = 0;
+        "extensions.activeThemeID" = "{76aabc99-c1a8-4c1e-832b-d4f2941d5a7a}"; # catpuccin-mocha-mauve
+        "extensions.autoDisableScopes" = 0; # make sure all extensions are enabled
         "general.useragent.locale" = "en-GB";
         "middlemouse.paste" = false;
       };
