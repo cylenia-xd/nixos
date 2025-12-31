@@ -31,6 +31,7 @@
         "extensions.autoDisableScopes" = 0; # make sure all extensions are enabled
         "general.useragent.locale" = "en-GB";
         "middlemouse.paste" = false;
+        "places.history.enabled" = false; # dont save history
       };
       search = {
         force = true;
