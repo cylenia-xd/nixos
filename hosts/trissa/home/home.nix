@@ -21,7 +21,7 @@
     swaybg
     wl-clipboard
     cliphist
-    qbittorrent
+    varia
     lutris
     nerd-fonts.hack
     libnotify
