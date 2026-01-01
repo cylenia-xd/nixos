@@ -20,6 +20,7 @@
     prismlauncher
     swaybg
     wl-clipboard
+    xdg-user-dirs
     cliphist
     varia
     lutris
@@ -32,14 +33,14 @@
   xdg.userDirs = {
     enable = true;
     createDirectories = true;
-    desktop = ".hiddenxdg/desktop";
-    documents = "documents";
-    download = "downloads";
-    music = ".hiddenxdg/music";
-    pictures = "media/pictures";
-    publicShare = ".hiddenxdg/public";
-    templates = ".hiddenxdg/templates";
-    videos = "media/videos";
+    desktop = "/home/cylenia/.hiddenxdg/desktop";
+    documents = "/home/cylenia/documents";
+    download = "/home/cylenia/downloads";
+    music = "/home/cylenia/.hiddenxdg/music";
+    pictures = "/home/cylenia/media/pictures";
+    publicShare = "/home/cylenia/.hiddenxdg/public";
+    templates = "/home/cylenia/.hiddenxdg/templates";
+    videos = "/home/cylenia/media/videos";
   };
 
   # don't change this!
