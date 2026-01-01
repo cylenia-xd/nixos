@@ -24,6 +24,7 @@
     cliphist
     varia
     lutris
+    p7zip
     nerd-fonts.hack
     libnotify
     sops
