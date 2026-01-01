@@ -23,7 +23,6 @@
     cliphist
     qbittorrent
     lutris
-    steam
     nerd-fonts.hack
     libnotify
     sops

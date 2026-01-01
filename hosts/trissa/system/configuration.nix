@@ -20,6 +20,7 @@
   };
 
   programs.niri.enable = true;
+  programs.steam.enable = true;
   services.gnome.gnome-keyring.enable = true;
   # stolen from nixos wiki
   programs.bash.interactiveShellInit = ''
