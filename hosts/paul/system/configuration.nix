@@ -8,7 +8,6 @@
     ./programs/sshd.nix
     ./programs/gpg.nix
     ./programs/searxng.nix
-    ./programs/vaultwarden.nix
   ];
 
   users.users.cylenia = {
@@ -25,7 +24,6 @@
   sops.defaultSopsFormat = "yaml";
   sops.age.keyFile = "/home/cylenia/.config/sops/age/keys.txt";
   sops.secrets.pangolin_env = {};
-  sops.secrets.vaultwarden_env = {};
   sops.secrets.searxng_secret = {};
 
   nixpkgs.config.allowUnfree = true;
