@@ -5,6 +5,7 @@
     environmentFile = config.sops.secrets.vaultwarden_env.path;
     config = {
       DOMAIN = "https://pass.cylenia.dev";
+      DATA_FOLDER = "/opt/vwdata";
       SENDS_ALLOWED = true;
       INCOMPLETE_2FA_TIME_LIMIT = 3;
       DISABLE_ICON_DOWNLOAD = false;
