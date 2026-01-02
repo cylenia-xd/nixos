@@ -55,6 +55,6 @@
       EMAIL_ATTEMPTS_LIMIT = 3;
       EMAIL_2FA_ENFORCE_ON_VERIFIED_INVITE = false;
       EMAIL_2FA_AUTO_FALLBACK = false;
-    }
+    };
   };
 }
