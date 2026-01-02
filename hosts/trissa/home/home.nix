@@ -24,6 +24,7 @@
     cliphist
     varia
     lutris
+    gamescope
     p7zip
     nerd-fonts.hack
     libnotify
