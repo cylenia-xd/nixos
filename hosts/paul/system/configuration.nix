@@ -5,7 +5,7 @@
     ./networking.nix
     ./localization.nix
     ./programs/nginx.nix
-    ./programs/cloudflared.nix
+    ./programs/newt.nix
     ./programs/sshd.nix
     ./programs/gpg.nix
     ./programs/searxng.nix
@@ -25,8 +25,7 @@
   sops.defaultSopsFile = ../secrets/secrets.yaml;
   sops.defaultSopsFormat = "yaml";
   sops.age.keyFile = "/home/cylenia/.config/sops/age/keys.txt";
-  sops.secrets.tunnel_certificate = {};
-  sops.secrets.tunnel_credentials = {};
+  sops.secrets.pangolin_env = {};
   sops.secrets.searxng_secret = {};
 
   nixpkgs.config.allowUnfree = true;
