@@ -6,7 +6,7 @@
     config = {
       DOMAIN = "https://pass.cylenia.dev";
       DATA_FOLDER = "/opt/vwdata";
-      ROCKET_ADDRESS = 0.0.0.0;
+      ROCKET_ADDRESS = "0.0.0.0";
       ROCKET_PORT = 8069;
       SENDS_ALLOWED = true;
       INCOMPLETE_2FA_TIME_LIMIT = 3;
