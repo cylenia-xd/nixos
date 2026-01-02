@@ -4,7 +4,6 @@
     ./boot.nix
     ./networking.nix
     ./localization.nix
-    ./programs/nginx.nix
     ./programs/newt.nix
     ./programs/sshd.nix
     ./programs/gpg.nix
@@ -18,7 +17,6 @@
   };
 
   environment.systemPackages = with pkgs; [
-    cloudflared
     sops
   ];
 
