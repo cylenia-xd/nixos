@@ -17,15 +17,6 @@
     extraGroups = [ "networkmanager" "wheel" ];
   };
 
-  systemd.services.git-update = {
-    description = "Git pull updater";
-    wantedBy = [ "multi-user.target" ];
-    serviceConfig = {
-      ExecStart = "${pkgs.bash}/bin/bash -c 'cd /srv/bio && git pull'";
-      Type = "oneshot";
-    };
-  };
-
   environment.systemPackages = with pkgs; [
     sops
   ];
