@@ -6,7 +6,7 @@
     ./programs/waybar.nix
     ./programs/kitty.nix
     ./programs/mako.nix
-    ./programs/nushell.nix
+    ./programs/bash.nix
     ./programs/wofi.nix
     ./programs/niri.nix
     ./programs/neomutt.nix
@@ -30,6 +30,7 @@
     libnotify
     sops
     mpv
+    jq
   ];
 
   xdg.userDirs = {

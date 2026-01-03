@@ -22,12 +22,6 @@
   programs.niri.enable = true;
   programs.steam.enable = true;
   services.gnome.gnome-keyring.enable = true;
-  # stolen from nixos wiki
-  programs.bash.interactiveShellInit = ''
-    if [ "$TERM" = "xterm-kitty" ] && [ -z "$BASH_EXECUTION_STRING" ]; then
-      exec nu
-    fi
-  '';
 
   qt = {
     enable = true;
