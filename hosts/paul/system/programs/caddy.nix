@@ -1,12 +1,10 @@
 { config, pkgs, ... }: {
   services.caddy = {
     enable = true;
-    virtualHosts."http://0.0.0.0:8068" = {
-      root = "/srv/bio";
+    virtualHosts."0.0.0.0:8068" = {
       extraConfig = ''
-        handle {
-          file_server
-        }
+        root * /srv/bio
+        file_server
       '';
     };
   };
