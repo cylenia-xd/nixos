@@ -30,6 +30,7 @@
         "extensions.activeThemeID" = "{76aabc99-c1a8-4c1e-832b-d4f2941d5a7a}"; # catpuccin-mocha-mauve
         "extensions.autoDisableScopes" = 0; # make sure all extensions are enabled
         "general.useragent.locale" = "en-GB";
+        "layout.css.prefers-color-scheme.content-override" = 0;
         "middlemouse.paste" = false;
         "places.history.enabled" = false; # dont save history
       };
