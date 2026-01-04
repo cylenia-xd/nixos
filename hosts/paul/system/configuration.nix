@@ -9,6 +9,7 @@
     ./programs/gpg.nix
     ./programs/searxng.nix
     ./programs/caddy.nix
+    ./programs/vaultwarden.nix
   ];
 
   users.users.cylenia = {
