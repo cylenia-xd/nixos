@@ -26,6 +26,7 @@
   sops.defaultSopsFormat = "yaml";
   sops.age.keyFile = "/home/cylenia/.config/sops/age/keys.txt";
   sops.secrets.pangolin_env = {};
+  sops.secrets.vaultwarden_env = {};
   sops.secrets.searxng_secret = {};
 
   nixpkgs.config.allowUnfree = true;
