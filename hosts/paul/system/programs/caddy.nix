@@ -6,6 +6,10 @@
         root * /srv/bio
         file_server
       }
+      :8069 {
+        root * /srv/dash
+        file_server
+      }
     '';
   };
 }
