@@ -33,6 +33,7 @@
         "layout.css.prefers-color-scheme.content-override" = 0;
         "middlemouse.paste" = false;
         "places.history.enabled" = false; # dont save history
+        "privacy.resistFingerprinting" = false;
       };
       search = {
         force = true;
