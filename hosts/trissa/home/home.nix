@@ -55,7 +55,7 @@
     executable = true;
     force = true;
     target = ".mailcap";
-    text = "text/html; librewolf %s";
+    text = "text/html; librewolf %s; nametemplate=%s.html";
   };
 
   # don't change this!
