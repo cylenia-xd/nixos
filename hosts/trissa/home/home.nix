@@ -46,10 +46,6 @@
     videos = "/home/cylenia/media/videos";
   };
 
-  xdg.mimeApps.defaultApplications = {
-    "text/html" = [ "librewolf.desktop" ];
-  };
-
   home.file.mailcap = {
     enable = true;
     executable = true;
