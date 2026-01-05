@@ -55,7 +55,7 @@
     executable = true;
     force = true;
     target = ".mailcap";
-    text = "*/*; xdg-open %s";
+    text = "text/html; librewolf %s";
   };
 
   # don't change this!
