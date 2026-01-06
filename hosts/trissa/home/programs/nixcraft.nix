@@ -17,6 +17,7 @@
           enable = true;
           fabricLoader = {
             enable = true;
+            version = "0.18.4";
             minecraftVersion = {
               content = "1.21.11";
             };
