@@ -76,8 +76,8 @@
 
     binds {
       Mod+T { spawn "kitty"; }
-      Mod+D { spawn-sh "wofi --show drun"; }
-      Mod+V { spawn-sh "cliphist list | wofi --dmenu | cliphist decode | wl-copy"; }
+      Mod+D { spawn-sh "fuzzel"; }
+      Mod+V { spawn-sh "cliphist list | fuzzel --dmenu --with-nth 2 | cliphist decode | wl-copy"; }
       Mod+Q repeat=false { close-window; }
 
       Mod+Left  { focus-column-left; }
