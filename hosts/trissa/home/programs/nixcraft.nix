@@ -15,6 +15,13 @@
       instances = {
         warpium = {
           enable = true;
+          fabricLoader = {
+            enable = true;
+            minecraftVersion = {
+              content = "1.21.11";
+            };
+          };
+          version = "1.21.11";
           files = {
             "mods/fabric-api.jar".source = pkgs.fetchurl {
               url = "https://cdn.modrinth.com/data/P7dR8mSH/versions/DdVHbeR1/fabric-api-0.141.1%2B1.21.11.jar";
