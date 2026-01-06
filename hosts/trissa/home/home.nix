@@ -1,7 +1,6 @@
 { config, pkgs, inputs, ... }: {
   imports = [
     ./programs/git.nix
-    ./programs/vesktop.nix
     ./programs/fastfetch.nix
     ./programs/waybar.nix
     ./programs/kitty.nix
@@ -13,7 +12,6 @@
     ./programs/helix.nix
     ./programs/element.nix
     ./programs/librewolf.nix
-    ./programs/nixcraft.nix
   ];
 
   home.packages = with pkgs; [
@@ -22,14 +20,10 @@
     wl-clipboard
     xdg-user-dirs
     cliphist
-    varia
-    lutris
-    gamescope
     p7zip
     nerd-fonts.hack
     libnotify
     sops
-    mpv
     jq
   ];
 
