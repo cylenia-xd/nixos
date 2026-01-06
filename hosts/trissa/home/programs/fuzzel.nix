@@ -6,7 +6,7 @@
         terminal = "${lib.getExe pkgs.kitty}";
         layer = "overlay";
       };
-      colors.background = "1e1e2e";
+      colors.background = "ff1e1e2e";
     };
   };
 }
