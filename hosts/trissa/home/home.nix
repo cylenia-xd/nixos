@@ -13,6 +13,7 @@
     ./programs/helix.nix
     ./programs/element.nix
     ./programs/librewolf.nix
+    ./programs/nixcraft.nix
   ];
 
   home.packages = with pkgs; [
