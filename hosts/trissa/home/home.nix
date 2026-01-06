@@ -17,7 +17,6 @@
 
   home.packages = with pkgs; [
     android-tools
-    prismlauncher
     swaybg
     wl-clipboard
     xdg-user-dirs
