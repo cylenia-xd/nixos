@@ -3,6 +3,7 @@
 
   config.nixcraft = {
     enable = true;
+    server.instances = {};
     client = {
       shared = {
         account = {
