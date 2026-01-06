@@ -6,7 +6,7 @@
     ./programs/kitty.nix
     ./programs/mako.nix
     ./programs/bash.nix
-    ./programs/wofi.nix
+    ./programs/fuzzel.nix
     ./programs/niri.nix
     ./programs/neomutt.nix
     ./programs/helix.nix
