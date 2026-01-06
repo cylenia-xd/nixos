@@ -76,7 +76,7 @@
 
     binds {
       Mod+T { spawn "kitty"; }
-      Mod+D { spawn-sh "fuzzel --list-executables-in-path"; }
+      Mod+D { spawn-sh "fuzzel"; }
       Mod+V { spawn-sh "cliphist list | fuzzel --dmenu --with-nth 2 | cliphist decode | wl-copy"; }
       Mod+Q repeat=false { close-window; }
 
