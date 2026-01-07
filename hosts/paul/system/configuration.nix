@@ -10,6 +10,7 @@
     ./programs/searxng.nix
     ./programs/caddy.nix
     ./programs/vaultwarden.nix
+    ./programs/ente.nix
   ];
 
   users.users.cylenia = {
@@ -28,6 +29,9 @@
   sops.secrets.pangolin_env = {};
   sops.secrets.vaultwarden_env = {};
   sops.secrets.searxng_secret = {};
+  sops.secrets.ente_encryption = {};
+  sops.secrets.ente_hash = {};
+  sops.secrets.ente_jwt = {};
 
   nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
