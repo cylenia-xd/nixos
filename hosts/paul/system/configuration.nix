@@ -26,12 +26,20 @@
   sops.defaultSopsFile = ../secrets/secrets.yaml;
   sops.defaultSopsFormat = "yaml";
   sops.age.keyFile = "/home/cylenia/.config/sops/age/keys.txt";
-  sops.secrets.pangolin_env = {};
-  sops.secrets.vaultwarden_env = {};
-  sops.secrets.searxng_secret = {};
-  sops.secrets.ente_encryption = {};
-  sops.secrets.ente_hash = {};
-  sops.secrets.ente_jwt = {};
+  sops.secrets = {
+    pangolin_env = {};
+    vaultwarden_env = {};
+    searxng_secret = {};
+    ente_encryption = {
+      owner = "ente";
+    };
+    ente_hash = {
+      owner = "ente";
+    };
+    ente_jwt = {
+      owner = "ente";
+    };
+  };
 
   nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
