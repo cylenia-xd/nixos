@@ -22,6 +22,7 @@
     cliphist
     p7zip
     nerd-fonts.hack
+    prismlauncher
     libnotify
     sops
     jq
