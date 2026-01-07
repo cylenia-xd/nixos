@@ -3,163 +3,40 @@
     enable = true;
     sidebar.enable = false;
     settings = {
-      color = {
-        normal = {
-          fg = "default";
-          bg = "default";
-        };
+      "color normal" = "default default";
+      "color index ~N" = "color2 default";
+      "color index ~F" = "color1 default";
+      "color index ~T" = "color13 default";
+      "color index ~D" = "color1 default";
+      "color attachment" = "color5 default";
+      "color signature" = "color8 default";
+      "color search" = "color4 default";
 
-        indexNew = {
-          fg = "color2";
-          bg = "default";
-          pattern = "~N";
-        };
+      "color indicator" = "default color8";
+      "color error" = "color1 default";
+      "color status" = "color15 default";
+      "color tree" = "color15 default";
+      "color tilde" = "color15 default";
 
-        indexFlagged = {
-          fg = "color1";
-          bg = "default";
-          pattern = "~F";
-        };
+      "color hdrdefault" = "color13 default";
+      "color header From" = "color13 default \"^From:\"";
+      "color header Subject" = "color13 default \"^Subject:\"";
 
-        indexTagged = {
-          fg = "color13";
-          bg = "default";
-          pattern = "~T";
-        };
+      "color quoted" = "color15 default";
+      "color quoted1" = "color7 default";
+      "color quoted2" = "color8 default";
+      "color quoted3" = "color0 default";
+      "color quoted4" = "color0 default";
+      "color quoted5" = "color0 default";
 
-        indexDeleted = {
-          fg = "color1";
-          bg = "default";
-          pattern = "~D";
-        };
+      "color body email" = "color2 default \"[\\-\\.+_a-zA-Z0-9]+@[\\-\\.a-zA-Z0-9]+\"";
+      "color body url" = "color2 default \"(https?|ftp)://[\\-\\.,/%~_:?&=\\#a-zA-Z0-9]+\"";
+      "color body bold" = "color4 default \"(^|[[:space:]])\\\\*[^[:space:]]+\\\\*([[:space:]]|$)\"";
+      "color body underline" = "color4 default \"(^|[[:space:]])_[^[:space:]]+_([[:space:]]|$)\"";
+      "color body italic" = "color4 default \"(^|[[:space:]])/[^[:space:]]+/([[:space:]]|$)\"";
 
-        attachment = {
-          fg = "color5";
-          bg = "default";
-        };
-
-        signature = {
-          fg = "color8";
-          bg = "default";
-        };
-
-        search = {
-          fg = "color4";
-          bg = "default";
-        };
-
-        indicator = {
-          fg = "default";
-          bg = "color8";
-        };
-
-        error = {
-          fg = "color1";
-          bg = "default";
-        };
-
-        status = {
-          fg = "color15";
-          bg = "default";
-        };
-
-        tree = {
-          fg = "color15";
-          bg = "default";
-        };
-
-        tilde = {
-          fg = "color15";
-          bg = "default";
-        };
-
-        hdrdefault = {
-          fg = "color13";
-          bg = "default";
-        };
-
-        headerFrom = {
-          fg = "color13";
-          bg = "default";
-          pattern = "^From:";
-        };
-
-        headerSubject = {
-          fg = "color13";
-          bg = "default";
-          pattern = "^Subject:";
-        };
-
-        quoted = {
-          fg = "color15";
-          bg = "default";
-        };
-
-        quoted1 = {
-          fg = "color7";
-          bg = "default";
-        };
-
-        quoted2 = {
-          fg = "color8";
-          bg = "default";
-        };
-
-        quoted3 = {
-          fg = "color0";
-          bg = "default";
-        };
-
-        quoted4 = {
-          fg = "color0";
-          bg = "default";
-        };
-
-        quoted5 = {
-          fg = "color0";
-          bg = "default";
-        };
-
-        bodyEmail = {
-          fg = "color2";
-          bg = "default";
-          pattern = ''[\-\.+_a-zA-Z0-9]+@[\-\.a-zA-Z0-9]+'';
-        };
-
-        bodyUrl = {
-          fg = "color2";
-          bg = "default";
-          pattern = ''(https?|ftp)://[\-\.,/%~_:?&=\#a-zA-Z0-9]+'';
-        };
-
-        bodyBold = {
-          fg = "color4";
-          bg = "default";
-          pattern = ''(^|[[:space:]])\*[^[:space:]]+\*([[:space:]]|$)'';
-        };
-
-        bodyUnderline = {
-          fg = "color4";
-          bg = "default";
-          pattern = ''(^|[[:space:]])_[^[:space:]]+_([[:space:]]|$)'';
-        };
-
-        bodyItalic = {
-          fg = "color4";
-          bg = "default";
-          pattern = ''(^|[[:space:]])/[^[:space:]]+/([[:space:]]|$)'';
-        };
-
-        sidebarFlagged = {
-          fg = "color1";
-          bg = "default";
-        };
-
-        sidebarNew = {
-          fg = "color10";
-          bg = "default";
-        };
-      };
+      "color sidebar_flagged" = "color1 default";
+      "color sidebar_new" = "color10 default";
     };
   };
 
