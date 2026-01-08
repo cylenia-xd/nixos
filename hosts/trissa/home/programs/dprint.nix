@@ -28,5 +28,5 @@
         "https://plugins.dprint.dev/g-plane/pretty_yaml-v0.5.1.wasm"
       ];
     };
-  }
+  };
 }
