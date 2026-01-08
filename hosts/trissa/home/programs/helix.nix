@@ -10,7 +10,7 @@
       soft-wrap = {
         enable = true;
         max-wrap = 25;
-        wrap-indicator = "↪";
+        wrap-indicator = "↪ ";
       };
       formatter = {
         command = "dprint";
