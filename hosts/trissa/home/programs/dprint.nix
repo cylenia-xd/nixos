@@ -1,3 +1,32 @@
 { config, pkgs, ... }: {
-  
+  home.file.dprint_config = {
+    executable = true;
+    force = true;
+    target = ".config/dprint/dprint.json";
+    text = builtins.toJSON {
+      json = {};
+      markdown = {
+        lineWidth = 100;
+        newLineKind = "lf";
+        textWrap = "maintain";
+        emphasisKind = "asterisks";
+        strongKind = "asterisks";
+      };
+      toml = {};
+      markup = {};
+      yaml = {};
+
+      excludes = [
+        "**/*-lock.json"
+      ];
+
+      plugins = [
+        "https://plugins.dprint.dev/json-0.21.1.wasm"
+        "https://plugins.dprint.dev/markdown-0.20.0.wasm"
+        "https://plugins.dprint.dev/toml-0.7.0.wasm"
+        "https://plugins.dprint.dev/g-plane/markup_fmt-v0.25.3.wasm"
+        "https://plugins.dprint.dev/g-plane/pretty_yaml-v0.5.1.wasm"
+      ];
+    };
+  }
 }
