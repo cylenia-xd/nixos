@@ -10,7 +10,6 @@
     ./programs/searxng.nix
     ./programs/caddy.nix
     ./programs/vaultwarden.nix
-    ./programs/ente.nix
   ];
 
   users.users.cylenia = {
@@ -30,15 +29,6 @@
     pangolin_env = {};
     vaultwarden_env = {};
     searxng_secret = {};
-    ente_encryption = {
-      owner = "ente";
-    };
-    ente_hash = {
-      owner = "ente";
-    };
-    ente_jwt = {
-      owner = "ente";
-    };
   };
 
   nixpkgs.config.allowUnfree = true;
