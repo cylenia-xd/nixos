@@ -12,6 +12,7 @@
     ./programs/helix.nix
     ./programs/element.nix
     ./programs/librewolf.nix
+    ./programs/dprint.nix
   ];
 
   home.packages = with pkgs; [
@@ -21,6 +22,7 @@
     xdg-user-dirs
     cliphist
     p7zip
+    dprint
     nerd-fonts.hack
     prismlauncher
     libnotify
