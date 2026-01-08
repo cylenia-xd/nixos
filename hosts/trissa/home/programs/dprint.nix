@@ -5,13 +5,7 @@
     target = ".config/dprint/dprint.json";
     text = builtins.toJSON {
       json = {};
-      markdown = {
-        lineWidth = 100;
-        newLineKind = "lf";
-        textWrap = "maintain";
-        emphasisKind = "asterisks";
-        strongKind = "asterisks";
-      };
+      markdown = {};
       toml = {};
       markup = {};
       yaml = {};
