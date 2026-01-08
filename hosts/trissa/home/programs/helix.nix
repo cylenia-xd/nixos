@@ -6,7 +6,7 @@
     settings.theme = "catppuccin_mocha";
     languages.language = [{
       name = "markdown";
-      formatter = { command = "dprint"; args = ["fmt" "--stdin" "md"]; };
+      formatter = "dprint fmt --stdin md";
     }];
   };
 }
