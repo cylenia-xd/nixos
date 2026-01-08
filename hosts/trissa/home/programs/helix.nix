@@ -8,7 +8,7 @@
       name = "markdown";
       formatter = {
         command = "dprint";
-        args = [ "fmt" "--stdin" "md"];
+        args = [ "fmt" "--stdin" "md" "--config" "~/.config/dprint/dprint.json"];
       };
     }];
   };
