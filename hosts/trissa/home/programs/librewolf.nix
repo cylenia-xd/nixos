@@ -11,7 +11,6 @@
         packages = with inputs.firefox-addons.packages.${pkgs.stdenv.hostPlatform.system}; [
           ublock-origin
           bitwarden
-          darkreader
           catppuccin-mocha-mauve
         ];
       };
