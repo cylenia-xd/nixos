@@ -30,7 +30,7 @@
     pangolin_env = {};
     vaultwarden_env = {};
     searxng_secret = {};
-    email_password_has = {};
+    email_password_hash = {};
   };
 
   nixpkgs.config.allowUnfree = true;
