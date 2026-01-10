@@ -23,8 +23,6 @@
     fqdn = "mail.cylenia.dev";
     domains = [ "cylenia.dev" ];
 
-    x509.useACMEHost = config.mailserver.fqdn;
-
     loginAccounts = {
       "me@cylenia.dev" = {
         hashedPasswordFile = builtins.toString config.sops.secrets.email_password_hash.path;
