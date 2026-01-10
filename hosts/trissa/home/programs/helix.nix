@@ -2,7 +2,11 @@
   programs.helix = {
     enable = true;
     defaultEditor = true;
-    extraPackages = [ pkgs.marksman ];
+    extraPackages = [
+      pkgs.marksman
+      pkgs.nixd
+      pkgs.kotlin-language-server
+    ];
     settings.theme = "catppuccin_mocha";
     languages.language = [{
       name = "markdown";
