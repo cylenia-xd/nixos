@@ -45,13 +45,13 @@
       userName = "me@cylenia.dev";
       smtp = {
         authentication = "login";
-        host = "smtp.purelymail.com";
+        host = "mail.cylenia.dev";
         port = 465;
         tls.enable = true;
       };
       imap = {
         authentication = "login";
-        host = "imap.purelymail.com";
+        host = "mail.cylenia.dev";
         port = 993;
         tls.enable = true;
       };
