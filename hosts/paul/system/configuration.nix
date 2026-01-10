@@ -10,6 +10,7 @@
     ./programs/searxng.nix
     ./programs/caddy.nix
     ./programs/vaultwarden.nix
+    ./programs/mailserver.nix
   ];
 
   users.users.cylenia = {
