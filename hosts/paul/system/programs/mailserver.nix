@@ -10,7 +10,7 @@
     acceptTerms = true;
     defaults.email = "me@cylenia.dev";
     certs.${config.mailserver.fqdn} = {
-      domain = "mail.cylenia.dev";
+      domain = "*.cylenia.dev";
       dnsProvider = "rfc2136";
       environmentFile = "/var/lib/secrets/certs.secret";
       dnsPropagationCheck = false;
@@ -19,11 +19,11 @@
 
   systemd.services.dns-rfc2136-conf = {
     requiredBy = [
-      "acme-mail.cylenia.dev.service"
+      "acme-cylenia.dev.service"
       "bind.service"
     ];
     before = [
-      "acme-mail.cylenia.dev.service"
+      "acme-cylenia.dev.service"
       "bind.service"
     ];
     unitConfig = {
@@ -37,7 +37,7 @@
     script = ''
       mkdir -p /var/lib/secrets
       chmod 755 /var/lib/secrets
-      tsig-keygen rfc2136key.mail.cylenia.dev > /var/lib/secrets/dnskeys.conf
+      tsig-keygen rfc2136key.cylenia.dev > /var/lib/secrets/dnskeys.conf
       chown named:root /var/lib/secrets/dnskeys.conf
       chmod 400 /var/lib/secrets/dnskeys.conf
 
@@ -47,7 +47,7 @@
       cat > /var/lib/secrets/certs.secret << EOF
       RFC2136_NAMESERVER='127.0.0.1:53'
       RFC2136_TSIG_ALGORITHM='hmac-sha256.'
-      RFC2136_TSIG_KEY='rfc2136key.mail.cylenia.dev'
+      RFC2136_TSIG_KEY='rfc2136key.cylenia.dev'
       RFC2136_TSIG_SECRET='$secret'
       EOF
       chmod 400 /var/lib/secrets/certs.secret
@@ -57,7 +57,7 @@
   mailserver = {
     enable = true;
     stateVersion = 3;
-    fqdn = "mail.cylenia.dev";
+    fqdn = "cylenia.dev";
     domains = [ "cylenia.dev" ];
 
     loginAccounts = {
