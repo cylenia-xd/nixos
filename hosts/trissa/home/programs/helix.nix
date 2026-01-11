@@ -1,4 +1,4 @@
-{ config, pkgs, ... }: {
+{ pkgs, ... }: {
   programs.helix = {
     enable = true;
     defaultEditor = true;
@@ -6,8 +6,8 @@
       pkgs.marksman
       pkgs.nixd
       pkgs.kotlin-language-server
-      pkgs.vscode-css-language-server
-      pkgs.vscode-html-language-server
+      pkgs.vscode-css-languageserver
+      pkgs.vscode-html-languageserver
       pkgs.typescript-language-server
     ];
     settings.theme = "catppuccin_mocha";
