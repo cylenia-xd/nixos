@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, ... }: {
+{ pkgs, ... }: {
   imports = [
     ./programs/git.nix
     ./programs/fastfetch.nix
@@ -10,7 +10,6 @@
     ./programs/niri.nix
     ./programs/neomutt.nix
     ./programs/helix.nix
-    ./programs/element.nix
     ./programs/librewolf.nix
     ./programs/dprint.nix
   ];
