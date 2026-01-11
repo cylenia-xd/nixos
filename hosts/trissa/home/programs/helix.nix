@@ -6,6 +6,9 @@
       pkgs.marksman
       pkgs.nixd
       pkgs.kotlin-language-server
+      pkgs.vscode-css-language-server
+      pkgs.vscode-html-language-server
+      pkgs.typescript-language-server
     ];
     settings.theme = "catppuccin_mocha";
     languages.language = [{
