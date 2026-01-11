@@ -2,13 +2,12 @@
   programs.helix = {
     enable = true;
     defaultEditor = true;
-    extraPackages = [
-      pkgs.marksman
-      pkgs.nixd
-      pkgs.kotlin-language-server
-      pkgs.vscode-css-languageserver
-      pkgs.vscode-html-languageserver
-      pkgs.typescript-language-server
+    extraPackages = with pkgs; [
+      marksman
+      nixd
+      kotlin-language-server
+      typescript-language-server
+      vscode-langservers-extracted
     ];
     settings.theme = "catppuccin_mocha";
     languages.language = [{
