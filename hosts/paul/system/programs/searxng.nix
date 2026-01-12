@@ -31,6 +31,11 @@
       engines = lib.mapAttrsToList (name: value: { inherit name; } // value) {
 
         # --- enabled engines (top priority) ---
+        "brave" = {
+          disabled = false;
+          weight = 3;
+        };
+        
         "duckduckgo" = {
           disabled = false;
           weight = 2;
@@ -43,8 +48,8 @@
 
         # --- everything else disabled ---
         "startpage".disabled = true;
-        "brave".disabled = true;
         "bing".disabled = true;
+        "google".disabled = true;
         "mojeek".disabled = true;
         "mwmbl".disabled = true;
         "crowdview".disabled = true;
@@ -58,6 +63,7 @@
         "wikispecies".disabled = true;
         "wikiversity".disabled = true;
         "wikivoyage".disabled = true;
+        "wikipedia".disabled = true;
 
         "currency".disabled = true;
         "dictzone".disabled = true;
