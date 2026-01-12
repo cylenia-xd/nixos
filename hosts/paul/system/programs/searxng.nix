@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }: {
+{ config, lib, ... }: {
   services.searx = {
     enable = true;
     redisCreateLocally = true;
@@ -31,7 +31,7 @@
       engines = lib.mapAttrsToList (name: value: { inherit name; } // value) {
 
         # --- enabled engines (top priority) ---
-        "brave" = {
+        "startpage" = {
           disabled = false;
           weight = 3;
         };
@@ -41,13 +41,12 @@
           weight = 2;
         };
 
-        "qwant" = {
+        "qwant"= {
           disabled = false;
           weight = 1;
         };
 
         # --- everything else disabled ---
-        "startpage".disabled = true;
         "bing".disabled = true;
         "google".disabled = true;
         "mojeek".disabled = true;
