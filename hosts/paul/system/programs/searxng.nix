@@ -28,16 +28,10 @@
         search_on_category_select = false;
       };
       # stolen from wiki, idk what the lib stuff means
-      # also i got chatgpt to enable the stuff i wanted cos i aint dealing with that :sob:
       engines = lib.mapAttrsToList (name: value: { inherit name; } // value) {
 
         # --- enabled engines (top priority) ---
-        "startpage" = {
-          disabled = false;
-          weight = 3;
-        };
-
-        "wikipedia" = {
+        "duckduckgo" = {
           disabled = false;
           weight = 2;
         };
@@ -48,7 +42,7 @@
         };
 
         # --- everything else disabled ---
-        "duckduckgo".disabled = true;
+        "startpage".disabled = true;
         "brave".disabled = true;
         "bing".disabled = true;
         "mojeek".disabled = true;
