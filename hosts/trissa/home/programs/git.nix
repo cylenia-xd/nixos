@@ -3,7 +3,7 @@
     enable = true;
     signing = {
       format = "ssh";
-      key = "SHA256:7iw5hnvtd1eHpmhRotyBpX0YHCbCAQYzED+DATnz3/E";
+      key = "~/.ssh/id_ed25519";
       signByDefault = true;
     };
     settings = {
