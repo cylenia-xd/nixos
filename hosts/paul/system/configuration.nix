@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, ... }: {
+{ pkgs, ... }: {
   imports = [
     ./hardware.nix
     ./boot.nix
@@ -20,6 +20,7 @@
 
   environment.systemPackages = with pkgs; [
     sops
+    git
   ];
 
   sops.defaultSopsFile = ../secrets/secrets.yaml;
