@@ -12,6 +12,7 @@
     ./programs/helix.nix
     ./programs/librewolf.nix
     ./programs/dprint.nix
+    ./programs/ssh.nix
   ];
 
   home.packages = with pkgs; [
