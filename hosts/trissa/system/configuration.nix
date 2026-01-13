@@ -5,11 +5,28 @@
     ./programs/gpg.nix
   ];
 
-  users.users.cylenia = {
-    isNormalUser = true;
-    description = "Cylenia";
-    shell = pkgs.bash;
-    extraGroups = [ "networkmanager" "wheel" ];
+  users = {
+    mutableUsers = false;
+    users.cylenia = {
+      isNormalUser = true;
+      description = "Cylenia";
+      shell = pkgs.bash;
+      extraGroups = [ "networkmanager" "wheel" ];
+      hashedPasswordFile = config.sops.secrets.user_password_hash.path;
+    };
+    users.root = {
+      description = "Root";
+      shell = pkgs.bash;
+      hashedPasswordFile = config.sops.secrets.user_password_hash.path;
+    };
+  };
+
+ 
+  sops.defaultSopsFile = ../secrets/secrets.yaml;
+  sops.defaultSopsFormat = "yaml";
+  sops.age.keyFile = "/home/cylenia/.config/sops/age/keys.txt";
+  sops.secrets = {
+    user_password_hash = {};
   };
 
   networking.hostName = "trissa";
