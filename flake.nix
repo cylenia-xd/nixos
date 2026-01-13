@@ -15,7 +15,6 @@
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    textfox.url = "github:adriankarlen/textfox";
   };
 
   outputs = { self, nixpkgs, home-manager, sops-nix, ... }@inputs: {
