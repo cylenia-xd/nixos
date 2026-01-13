@@ -27,6 +27,7 @@
       system = "x86_64-linux";
       modules = [
         ./hosts/trissa/system/configuration.nix
+        sops-nix.nixosModules.sops
         home-manager.nixosModules.default {
           home-manager = {
             useGlobalPkgs = true;
