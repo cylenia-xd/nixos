@@ -15,15 +15,12 @@
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixcraft = {
-      url = "github:loystonpais/nixcraft";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    textfox.url = "github:adriankarlen/textfox";
   };
 
   outputs = { self, nixpkgs, home-manager, sops-nix, ... }@inputs: {
     nixosConfigurations.trissa = nixpkgs.lib.nixosSystem {
-      specialArgs = { inputs = inputs; };
+      specialArgs = { inherit inputs; };
       system = "x86_64-linux";
       modules = [
         ./hosts/trissa/system/configuration.nix
