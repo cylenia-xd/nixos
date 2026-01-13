@@ -24,7 +24,9 @@
   sops.defaultSopsFormat = "yaml";
   sops.age.keyFile = "/home/cylenia/.config/sops/age/keys.txt";
   sops.secrets = {
-    user_password_hash = {};
+    user_password_hash = {
+      neededForUsers = true;
+    };
   };
 
   networking.hostName = "trissa";
