@@ -15,8 +15,6 @@
       hashedPasswordFile = config.sops.secrets.user_password_hash.path;
     };
     users.root = {
-      description = "Root";
-      shell = pkgs.bash;
       hashedPasswordFile = config.sops.secrets.user_password_hash.path;
     };
   };
