@@ -12,22 +12,17 @@
       description = "Cylenia";
       shell = pkgs.bash;
       extraGroups = [ "networkmanager" "wheel" ];
-      hashedPasswordFile = config.sops.secrets.user_password_hash.path;
+      hashedPassword = "$y$j9T$gej56YvgGE.K/x4UOF/mZ1$W7EQoyuqICLE8uV1oIxM.cI180PXT9xERVXMzDdtAV0";
     };
     users.root = {
-      hashedPasswordFile = config.sops.secrets.user_password_hash.path;
+      hashedPassword = "$y$j9T$gej56YvgGE.K/x4UOF/mZ1$W7EQoyuqICLE8uV1oIxM.cI180PXT9xERVXMzDdtAV0";
     };
   };
 
- 
   sops.defaultSopsFile = ../secrets/secrets.yaml;
   sops.defaultSopsFormat = "yaml";
   sops.age.keyFile = "/home/cylenia/.config/sops/age/keys.txt";
-  sops.secrets = {
-    user_password_hash = {
-      neededForUsers = true;
-    };
-  };
+  sops.secrets = {};
 
   networking.hostName = "trissa";
   networking.networkmanager.enable = true;
