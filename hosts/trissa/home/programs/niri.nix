@@ -1,4 +1,4 @@
-{ config, pkgs, ... }: {
+{ ... }: {
   home.file.niri = {
     enable = true;
     target = ".config/niri/config.kdl";
@@ -7,6 +7,7 @@
       keyboard {
         xkb {
           layout "gb"
+          layout "au"
         }
       }
       touchpad {
