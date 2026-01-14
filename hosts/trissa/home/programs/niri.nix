@@ -117,7 +117,6 @@
       Ctrl+Print { screenshot-screen; }
       Alt+Print { screenshot-window; }
 
-      Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
       Mod+Shift+E { quit; }
       Mod+Shift+P { power-off-monitors; }
     }
