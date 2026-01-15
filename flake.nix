@@ -18,17 +18,17 @@
   };
 
   outputs = { self, nixpkgs, home-manager, sops-nix, ... }@inputs: {
-    nixosConfigurations.trissa = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.jane = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
       system = "x86_64-linux";
       modules = [
-        ./hosts/trissa/system/configuration.nix
+        ./hosts/jane/system/configuration.nix
         sops-nix.nixosModules.sops
         home-manager.nixosModules.default {
           home-manager = {
             useGlobalPkgs = true;
             useUserPackages = true;
-            users.cylenia = ./hosts/trissa/home/home.nix;
+            users.cylenia = ./hosts/jane/home/home.nix;
             extraSpecialArgs = { inherit inputs; };
           };
         }

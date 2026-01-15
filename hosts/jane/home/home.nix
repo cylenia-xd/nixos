@@ -13,6 +13,7 @@
     ./programs/librewolf.nix
     ./programs/dprint.nix
     ./programs/ssh.nix
+    ./programs/starship.nix
   ];
 
   home.packages = with pkgs; [
@@ -25,6 +26,8 @@
     dprint
     nerd-fonts.hack
     prismlauncher
+    pulsemixer
+    bluetui
     libnotify
     sops
     jq

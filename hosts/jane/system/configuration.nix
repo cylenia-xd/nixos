@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }: {
+{ lib, pkgs, ... }: {
   imports = [
     ./hardware.nix
     ./programs/greetd.nix
@@ -77,6 +77,7 @@
     };
   };
 
+  hardware.bluetooth.enable = true;
 
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;

@@ -1,9 +1,9 @@
-{ config, pkgs, ... }: {
+{ ... }: {
   programs.fastfetch = {
     enable = true;
     settings = {
       logo = {
-        source = "~/nixos/hosts/trissa/assets/ascii.txt";
+        source = "~/nixos/hosts/jane/assets/ascii.txt";
         padding = {
           top = 1;
           right = 5;
