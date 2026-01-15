@@ -3,11 +3,12 @@
     enable = true;
     defaultEditor = true;
     extraPackages = with pkgs; [
-      marksman
-      nixd
-      kotlin-language-server
-      typescript-language-server
-      vscode-langservers-extracted
+      marksman                     # markdown
+      nixd                         # nix 
+      kotlin-language-server       # kotlin
+      typescript-language-server   # typescript
+      vscode-langservers-extracted # frontend
+      kdePackages.qtdeclarative    # qml
     ];
     settings.theme = "catppuccin_mocha";
     languages.language = [{
