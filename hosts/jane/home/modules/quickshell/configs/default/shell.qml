@@ -2,36 +2,56 @@ import Quickshell
 import Quickshell.Io
 import QtQuick
 
-Variants {
-  model: Quickshell.screens
-  delegate: Component {
+Scope {
+  id: root
+  property string time
+  property string battery
+  Variants {
+    model: Quickshell.screens
     PanelWindow {
       required property var modelData
       screen: modelData
-      implicitHeight: 30
       anchors {
-        bottom: true
+        top: true
         left: true
         right: true
       }
+      implicitHeight: 30
       Text {
-        id: clock
-        anchors.centerIn: parent
-        Process {
-          id: dateProc
-          command: ["date"]
-          running: true
-          stdout: StdioCollector {
-            onStreamFinished: clock.text = this.text
-          }
-        }
-        Timer {
-          interval: 1000
-          running: true
-          repeat: true
-          onTriggered: dateProc.running = true
-        }
+        anchors.verticalCenter: parent
+        anchors.left: parent
+        text: root.time
       }
+      Text {
+        anchors.verticalCenter: parent
+        anchors.right: parent
+        text: root.battery
+      }
+    }
+  }
+  Process {
+    id: dateProc
+    command: ["date"]
+    running: true
+    stdout: StdioCollector {
+      onStreamFinished: root.time = this.text
+    }
+  }
+  Process {
+    id: batteryProc
+    command: ["echo \"$(</sys/class/power_supply/BAT1/status) $(</sys/class/power_supply/BAT1/capacity)%\""]
+    running: true
+    stdout: StdioCollector {
+      onStreamFinished: root.battery = this.text
+    }
+  }
+  Timer {
+    interval: 1000
+    running: true
+    repeat: true
+    onTriggered: {
+      dateProc.running = true
+      batteryProc.running = true;
     }
   }
 }
