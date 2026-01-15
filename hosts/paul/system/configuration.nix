@@ -1,15 +1,12 @@
 { pkgs, ... }: {
   imports = [
     ./hardware.nix
-    ./boot.nix
-    ./networking.nix
-    ./localization.nix
-    ./programs/newt.nix
-    ./programs/sshd.nix
-    ./programs/gpg.nix
-    ./programs/searxng.nix
-    ./programs/caddy.nix
-    ./programs/vaultwarden.nix
+    ./modules/newt.nix
+    ./modules/sshd.nix
+    ./modules/gpg.nix
+    ./modules/searxng.nix
+    ./modules/caddy.nix
+    ./modules/vaultwarden.nix
   ];
 
   users.users.cylenia = {

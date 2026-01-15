@@ -1,19 +1,19 @@
 { pkgs, ... }: {
   imports = [
-    ./programs/git.nix
-    ./programs/fastfetch.nix
-    ./programs/waybar.nix
-    ./programs/kitty.nix
-    ./programs/mako.nix
-    ./programs/bash.nix
-    ./programs/fuzzel.nix
-    ./programs/niri.nix
-    ./programs/neomutt.nix
-    ./programs/helix.nix
-    ./programs/librewolf.nix
-    ./programs/dprint.nix
-    ./programs/ssh.nix
-    ./programs/starship.nix
+    ./modules/git.nix
+    ./modules/fastfetch.nix
+    ./modules/waybar.nix
+    ./modules/kitty.nix
+    ./modules/mako.nix
+    ./modules/bash.nix
+    ./modules/fuzzel.nix
+    ./modules/niri.nix
+    ./modules/neomutt.nix
+    ./modules/helix.nix
+    ./modules/librewolf.nix
+    ./modules/dprint.nix
+    ./modules/ssh.nix
+    ./modules/starship.nix
   ];
 
   home.packages = with pkgs; [
