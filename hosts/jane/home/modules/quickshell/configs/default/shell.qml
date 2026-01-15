@@ -39,7 +39,7 @@ Scope {
   }
   Process {
     id: batteryProc
-    command: ["echo" "$(</sys/class/power_supply/BAT1/status) $(</sys/class/power_supply/BAT1/capacity)%"]
+    command: ["echo", "$(</sys/class/power_supply/BAT1/status) $(</sys/class/power_supply/BAT1/capacity)%"]
     running: true
     stdout: StdioCollector {
       onStreamFinished: root.battery = this.text
