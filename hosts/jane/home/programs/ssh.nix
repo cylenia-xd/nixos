@@ -1,6 +1,7 @@
 { ... }: {
   programs.ssh = {
     enable = true;
+    enableDefaultConfig = true;
     extraConfig = ''
       Host greg
         Hostname 192.227.173.19
