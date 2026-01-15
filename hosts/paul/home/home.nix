@@ -1,7 +1,10 @@
 { pkgs, ... }: {
+  imports = [
+    ./modules/helix.nix
+  ];
+  
   home.packages = with pkgs; [
     git
-    helix
     fastfetch
   ];
 

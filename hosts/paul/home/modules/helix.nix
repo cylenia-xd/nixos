@@ -1,0 +1,24 @@
+{ pkgs, ... }: {
+  programs.helix = {
+    enable = true;
+    defaultEditor = true;
+    extraPackages = with pkgs; [
+      marksman                     # markdown
+      nixd                         # nix 
+      kotlin-language-server       # kotlin
+      typescript-language-server   # typescript
+      vscode-langservers-extracted # frontend
+      kdePackages.qtdeclarative    # qml
+    ];
+    settings.theme = "catppuccin_mocha";
+    languages.language = [{
+      name = "markdown";
+      auto-format = true;
+      soft-wrap = {
+        enable = true;
+        max-wrap = 25;
+        wrap-indicator = "↪ ";
+      };
+    }];
+  };
+}
