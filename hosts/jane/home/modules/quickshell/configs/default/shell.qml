@@ -18,13 +18,13 @@ Scope {
       }
       implicitHeight: 30
       Text {
-        anchors.verticalCenter: parent
-        anchors.left: parent
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.left: parent.left
         text: root.time
       }
       Text {
-        anchors.verticalCenter: parent
-        anchors.right: parent
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.right: parent.right
         text: root.battery
       }
     }
