@@ -20,11 +20,13 @@ Scope {
       Text {
         anchors.verticalCenter: parent.verticalCenter
         anchors.left: parent.left
+        anchors.leftMargin: 10
         text: root.time
       }
       Text {
         anchors.verticalCenter: parent.verticalCenter
         anchors.right: parent.right
+        anchors.rightMargin: 10
         text: root.battery
       }
     }
@@ -39,7 +41,7 @@ Scope {
   }
   Process {
     id: batteryProc
-    command: ["echo", "$(</sys/class/power_supply/BAT1/status) $(</sys/class/power_supply/BAT1/capacity)%"]
+    command: ["bash", "-c", "cat /sys/class/power_supply/BAT1/status /sys/class/power_supply/BAT1/capacity | xargs echo -n && echo %"]
     running: true
     stdout: StdioCollector {
       onStreamFinished: root.battery = this.text
