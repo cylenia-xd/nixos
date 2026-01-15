@@ -2,7 +2,7 @@
   programs.ssh = {
     enable = true;
     enableDefaultConfig = false;
-    programs.ssh.matchBlocks = {
+    matchBlocks = {
       greg = {
         hostname = "192.227.173.19";
         port = 22;
