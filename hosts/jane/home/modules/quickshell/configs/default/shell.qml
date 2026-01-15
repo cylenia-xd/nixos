@@ -3,7 +3,7 @@ import QtQuick
 
 PanelWindow {
   anchors {
-    top: true
+    bottom: true
     left: true
     right: true
   }
@@ -12,7 +12,6 @@ PanelWindow {
 
   Text {
     anchors.centerIn: parent
-
     text: "hello world"
   }
 }

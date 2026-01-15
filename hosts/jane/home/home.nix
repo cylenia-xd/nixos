@@ -14,6 +14,7 @@
     ./modules/dprint.nix
     ./modules/ssh.nix
     ./modules/starship.nix
+    ./modules/quickshell/quickshell.nix
   ];
 
   home.packages = with pkgs; [
