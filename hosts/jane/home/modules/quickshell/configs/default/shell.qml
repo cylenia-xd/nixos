@@ -46,7 +46,7 @@ Scope {
   }
   Process {
     id: workspacesProc
-    command: ["bash", "-c", "niri msg -j workspaces | jq -r 'sort_by(.idx) | map(if .is_active then \"<\\\\(.idx)>\" else \"[\\\\(.idx)]\" end) | join(\" \")'"]
+    command: ["qs_workspaces"]
     running: true
     stdout: StdioCollector {
       onStreamFinished: root.workspaces = this.text
