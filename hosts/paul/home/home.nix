@@ -1,6 +1,6 @@
-{ pkgs, ... }: {
+{ pkgs, self, ... }: {
   imports = [
-    ./modules/helix.nix
+    "${self}/modules/h/helix.nix"
   ];
   
   home.packages = with pkgs; [

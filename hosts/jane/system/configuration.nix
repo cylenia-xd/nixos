@@ -1,8 +1,8 @@
-{ lib, pkgs, ... }: {
+{ lib, pkgs, self, ... }: {
   imports = [
     ./hardware.nix
-    ./modules/greetd.nix
-    ./modules/gpg.nix
+    "${self}/modules/n/greetd.nix"
+    "${self}/modules/n/gpg.nix"
   ];
 
   users = {

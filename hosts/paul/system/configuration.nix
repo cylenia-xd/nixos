@@ -1,12 +1,12 @@
-{ pkgs, ... }: {
+{ pkgs, self, ... }: {
   imports = [
     ./hardware.nix
-    ./modules/newt.nix
-    ./modules/sshd.nix
-    ./modules/gpg.nix
-    ./modules/searxng.nix
-    ./modules/caddy.nix
-    ./modules/vaultwarden.nix
+    "${self}/modules/n/newt.nix"
+    "${self}/modules/n/sshd.nix"
+    "${self}/modules/n/gpg.nix"
+    "${self}/modules/n/searxng.nix"
+    "${self}/modules/n/caddy.nix"
+    "${self}/modules/n/vaultwarden.nix"
   ];
 
   users.users.cylenia = {
