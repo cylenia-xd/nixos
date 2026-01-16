@@ -17,7 +17,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, sops-nix, ... }@inputs: {
+  outputs = { nixpkgs, home-manager, sops-nix, ... }@inputs: {
     nixosConfigurations.jane = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
       system = "x86_64-linux";
