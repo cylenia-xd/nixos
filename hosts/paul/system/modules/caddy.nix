@@ -11,6 +11,11 @@
         root * /srv/dash
         file_server
       }
+
+      :8071 {
+        root * /srv/countdown
+        file_server
+      }
     '';
   };
 }
