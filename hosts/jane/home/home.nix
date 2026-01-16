@@ -1,19 +1,19 @@
-{ pkgs, self, ... }: {
+{ pkgs, inputs, ... }: {
   imports = [
-    "${self}/modules/h/git.nix"
-    "${self}/modules/h/fastfetch.nix"
-    "${self}/modules/h/kitty.nix"
-    "${self}/modules/h/mako.nix"
-    "${self}/modules/h/bash.nix"
-    "${self}/modules/h/fuzzel.nix"
-    "${self}/modules/h/niri.nix"
-    "${self}/modules/h/neomutt.nix"
-    "${self}/modules/h/helix.nix"
-    "${self}/modules/h/librewolf.nix"
-    "${self}/modules/h/dprint.nix"
-    "${self}/modules/h/ssh.nix"
-    "${self}/modules/h/starship.nix"
-    "${self}/modules/h/quickshell/quickshell.nix"
+    "${inputs.self}/modules/h/git.nix"
+    "${inputs.self}/modules/h/fastfetch.nix"
+    "${inputs.self}/modules/h/kitty.nix"
+    "${inputs.self}/modules/h/mako.nix"
+    "${inputs.self}/modules/h/bash.nix"
+    "${inputs.self}/modules/h/fuzzel.nix"
+    "${inputs.self}/modules/h/niri.nix"
+    "${inputs.self}/modules/h/neomutt.nix"
+    "${inputs.self}/modules/h/helix.nix"
+    "${inputs.self}/modules/h/librewolf.nix"
+    "${inputs.self}/modules/h/dprint.nix"
+    "${inputs.self}/modules/h/ssh.nix"
+    "${inputs.self}/modules/h/starship.nix"
+    "${inputs.self}/modules/h/quickshell/quickshell.nix"
   ];
 
   home.packages = with pkgs; [
