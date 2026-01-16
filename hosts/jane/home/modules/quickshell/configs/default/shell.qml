@@ -25,14 +25,14 @@ Scope {
         anchors.leftMargin: 10
         color: "#cba6f7"
         font.family: "Hack Nerd Font Mono"
-        font.pointSize: 16
+        font.pointSize: 12
         text: root.time
       }
       Text {
         anchors.centerIn: parent
         color: "#cba6f7"
         font.family: "Hack Nerd Font Mono"
-        font.pointSize: 16
+        font.pointSize: 12
         text: root.workspaces
       }
       Text {
@@ -41,7 +41,7 @@ Scope {
         anchors.rightMargin: 10
         color: "#cba6f7"
         font.family: "Hack Nerd Font Mono"
-        font.pointSize: 16
+        font.pointSize: 12
         text: root.battery
       }
     }
