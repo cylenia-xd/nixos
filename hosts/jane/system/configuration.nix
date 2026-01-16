@@ -24,7 +24,7 @@
   sops.age.keyFile = "/home/cylenia/.config/sops/age/keys.txt";
   sops.secrets = {};
 
-  networking.hostName = "trissa";
+  networking.hostName = "jane";
   networking.networkmanager.enable = true;
   networking.firewall.enable = false;
   networking.nameservers = [
