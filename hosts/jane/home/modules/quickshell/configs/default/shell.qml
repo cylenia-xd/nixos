@@ -1,5 +1,6 @@
 import Quickshell
 import Quickshell.Io
+import Quickshell.Widgets
 import QtQuick
 
 Scope {
@@ -43,6 +44,12 @@ Scope {
         font.family: "Hack Nerd Font Mono"
         font.pointSize: 12
         text: root.battery
+      }
+      Rectangle {
+        anchors.bottom: parent.bottom
+        width: parent.width
+        height: 2
+        color: "#cba6f7"
       }
     }
   }

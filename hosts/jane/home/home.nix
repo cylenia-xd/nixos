@@ -2,7 +2,6 @@
   imports = [
     ./modules/git.nix
     ./modules/fastfetch.nix
-    ./modules/waybar.nix
     ./modules/kitty.nix
     ./modules/mako.nix
     ./modules/bash.nix
