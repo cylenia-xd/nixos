@@ -6,8 +6,6 @@
       marksman                     # markdown
       nixd                         # nix 
       kotlin-language-server       # kotlin
-      typescript-language-server   # typescript
-      vscode-langservers-extracted # frontend
     ];
     settings.theme = "catppuccin_mocha";
     languages.language = [{
