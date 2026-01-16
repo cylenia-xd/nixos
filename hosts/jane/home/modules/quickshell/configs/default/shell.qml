@@ -12,6 +12,7 @@ Scope {
     PanelWindow {
       required property var modelData
       screen: modelData
+      color: "#1e1e2e"
       anchors {
         top: true
         left: true
@@ -22,16 +23,25 @@ Scope {
         anchors.verticalCenter: parent.verticalCenter
         anchors.left: parent.left
         anchors.leftMargin: 10
+        color: "#cba6f7"
+        font.family: "Hack Nerd Font Mono"
+        font.pointSize: 16
         text: root.time
       }
       Text {
         anchors.centerIn: parent
+        color: "#cba6f7"
+        font.family: "Hack Nerd Font Mono"
+        font.pointSize: 16
         text: root.workspaces
       }
       Text {
         anchors.verticalCenter: parent.verticalCenter
         anchors.right: parent.right
         anchors.rightMargin: 10
+        color: "#cba6f7"
+        font.family: "Hack Nerd Font Mono"
+        font.pointSize: 16
         text: root.battery
       }
     }
