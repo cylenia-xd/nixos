@@ -46,7 +46,7 @@ Scope {
   }
   Process {
     id: workspacesProc
-    command: ["qs_workspaces"]
+    command: ["/home/cylenia/.bin/qs_workspaces"]
     running: true
     stdout: StdioCollector {
       onStreamFinished: root.workspaces = this.text
