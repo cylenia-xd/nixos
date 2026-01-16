@@ -6,6 +6,7 @@ Scope {
   id: root
   property string time
   property string battery
+  property string workspaces
   Variants {
     model: Quickshell.screens
     PanelWindow {
@@ -24,6 +25,10 @@ Scope {
         text: root.time
       }
       Text {
+        anchors.centerIn: parent
+        text: root.workspaces
+      }
+      Text {
         anchors.verticalCenter: parent.verticalCenter
         anchors.right: parent.right
         anchors.rightMargin: 10
@@ -40,6 +45,14 @@ Scope {
     }
   }
   Process {
+    id: workspacesProc
+    command: ["bash", "-c", "niri msg -j workspaces | jq -r 'sort_by(.idx) | map(if .is_active then \"<\\\\(.idx)>\" else \"[\\\\(.idx)]\" end) | join(\" \")'"]
+    running: true
+    stdout: StdioCollector {
+      onStreamFinished: root.workspaces = this.text
+    }
+  }
+  Process {
     id: batteryProc
     command: ["bash", "-c", "cat /sys/class/power_supply/BAT1/status /sys/class/power_supply/BAT1/capacity | xargs echo -n && echo %"]
     running: true
@@ -53,7 +66,8 @@ Scope {
     repeat: true
     onTriggered: {
       dateProc.running = true
-      batteryProc.running = true;
+      batteryProc.running = true
+      workspacesProc.running = true
     }
   }
 }
