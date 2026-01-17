@@ -6,8 +6,7 @@
     input {
       keyboard {
         xkb {
-          layout "au"
-          options "altwin:swap_alt_win"
+          layout "uk"
         }
       }
       touchpad {
