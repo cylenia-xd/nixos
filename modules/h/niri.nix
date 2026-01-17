@@ -7,6 +7,7 @@
       keyboard {
         xkb {
           layout "au"
+          options "altwin:swap_alt_win,caps:grave"
         }
       }
       touchpad {
