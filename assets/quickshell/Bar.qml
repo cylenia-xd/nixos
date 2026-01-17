@@ -18,7 +18,7 @@ Scope {
       screen: modelData
 
       color: "#1e1e2e"
-      implicitWidth: 5
+      implicitWidth: 30
 
       anchors {
         top: true
@@ -43,7 +43,7 @@ Scope {
       screen: modelData
 
       color: "#1e1e2e"
-      implicitHeight: 30
+      implicitHeight: 60
 
       anchors {
         top: true
