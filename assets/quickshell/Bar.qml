@@ -77,8 +77,7 @@ Scope {
       implicitWidth: 15
 
       anchors {
-        top: true
-        topMargin: topPanel.implicitHeight
+        top: topPanel.bottom
         left: true
         bottom: true
       }
