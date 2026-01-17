@@ -77,12 +77,11 @@ Scope {
       implicitWidth: 15
 
       anchors {
-        left: true
         top: true
+        topMargin: topPanel.implicitHeight
+        left: true
         bottom: true
       }
-
-      anchors.topMargin: topPanel.implicitHeight
 
       // Right Border
       Rectangle {
