@@ -39,6 +39,8 @@
     xwayland-satellite
   ];
 
+  services.upower.enable = true;
+
   time.timeZone = "Australia/Melbourne";
   console.keyMap = "uk";
   i18n.defaultLocale = "en_GB.UTF-8";

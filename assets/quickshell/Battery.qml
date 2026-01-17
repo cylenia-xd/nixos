@@ -2,22 +2,20 @@ pragma Singleton
 
 import Quickshell
 import Quickshell.Io
+import Quickshell.Services.UPower
 import QtQuick
 
 Singleton {
   id: root
   property string battery
   
-  Process {
-    id: batteryProc
-    command: [
-      "bash", "-c",
-      "cat /sys/class/power_supply/BAT1/status /sys/class/power_supply/BAT1/capacity | xargs echo -n && echo %"
-    ]
-    running: true
-
-    stdout: StdioCollector {
-      onStreamFinished: root.battery = this.text.trim()
+  function formatBattery(): string {
+    let i = 0;
+    while (true) {
+      if (UPower.devices.values[i].powerSupply) {
+        let batt = UPower.devices.values[i].powerSupply
+        return `${UPowerDeviceState.toString(batt.state)} ${Math.round(batt.percentage)}%`
+      } else { i = i + 1 }
     }
   }
 
@@ -25,6 +23,6 @@ Singleton {
     interval: 1000
     running: true
     repeat: true
-    onTriggered: batteryProc.running = true
+    onTriggered: battery = formatBattery()
   }
 }
