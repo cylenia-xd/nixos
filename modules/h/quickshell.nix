@@ -2,7 +2,7 @@
   programs.quickshell = {
     enable = true;
     activeConfig = "default";
-    configs.default = ./configs/default;
+    configs.default = ../../../assets/quickshell;
   };
 
   home.file.qs_workspaces = {

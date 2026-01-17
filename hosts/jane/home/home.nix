@@ -13,7 +13,7 @@
     "${inputs.self}/modules/h/dprint.nix"
     "${inputs.self}/modules/h/ssh.nix"
     "${inputs.self}/modules/h/starship.nix"
-    "${inputs.self}/modules/h/quickshell/quickshell.nix"
+    "${inputs.self}/modules/h/quickshell.nix"
   ];
 
   home.packages = with pkgs; [
