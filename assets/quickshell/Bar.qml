@@ -13,37 +13,14 @@ Scope {
   Variants {
     model: Quickshell.screens
 
+    // Top Panel
     PanelWindow {
+      id: topPanel
       required property var modelData
       screen: modelData
 
       color: "#1e1e2e"
-      implicitWidth: 30
-
-      anchors {
-        top: true
-        left: true
-        bottom: true
-      }
-
-      Rectangle {
-        anchors.right: parent.right
-        height: parent.height
-        width: 2
-        color: "#cba6f7"
-      }
-    }
-  }
-
-  Variants {
-    model: Quickshell.screens
-
-    PanelWindow {
-      required property var modelData
-      screen: modelData
-
-      color: "#1e1e2e"
-      implicitHeight: 60
+      implicitHeight: 30
 
       anchors {
         top: true
@@ -51,7 +28,7 @@ Scope {
         right: true
       }
 
-      // Left: time
+      // Left: Time
       Text {
         anchors.left: parent.left
         anchors.leftMargin: 10
@@ -62,7 +39,7 @@ Scope {
         font.pointSize: 12
       }
 
-      // Center: workspaces
+      // Center: Workspaces
       Text {
         anchors.centerIn: parent
         text: workspacesSource.workspaces
@@ -71,7 +48,7 @@ Scope {
         font.pointSize: 12
       }
 
-      // Right: battery
+      // Right: Battery
       Text {
         anchors.right: parent.right
         anchors.rightMargin: 10
@@ -82,11 +59,36 @@ Scope {
         font.pointSize: 12
       }
 
-      // Border
+      // Bottom Border
       Rectangle {
         anchors.bottom: parent.bottom
         width: parent.width
         height: 2
+        color: "#cba6f7"
+      }
+    }
+
+    // Left Panel
+    PanelWindow {
+      required property var modelData
+      screen: modelData
+
+      color: "#1e1e2e"
+      implicitWidth: 15
+
+      anchors {
+        left: true
+        top: true
+        bottom: true
+      }
+
+      anchors.topMargin: topPanel.implicitHeight
+
+      // Right Border
+      Rectangle {
+        anchors.right: parent.right
+        height: parent.height
+        width: 2
         color: "#cba6f7"
       }
     }
