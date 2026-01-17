@@ -10,13 +10,11 @@ Singleton {
   property string battery
   
   function formatBattery(): string {
-    let i = 0;
-    while (true) {
-      if (UPower.devices.values[i].powerSupply) {
-        let batt = UPower.devices.values[i].powerSupply
-        return `${UPowerDeviceState.toString(batt.state)} ${Math.round(batt.percentage)}%`
-      } else { i = i + 1 }
+    for (const device of UPower.devices.values) {
+      if (device.powerSupply)
+        return `${UPowerDeviceState.toString(device.state)} ${Math.round(device.percentage)}%`;
     }
+    return "Battless";
   }
 
   Timer {
