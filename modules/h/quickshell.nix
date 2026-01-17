@@ -1,8 +1,14 @@
 { ... }: {
   programs.quickshell = {
     enable = true;
-    activeConfig = "default";
-    configs.default = ../../../assets/quickshell;
+    activeConfig = null;
+  };
+
+  home.file.quickshell = {
+    enable = true;
+    executable = true;
+    target = ".config/quickshell";
+    source = ../../assets/quickshell;
   };
 
   home.file.qs_workspaces = {
