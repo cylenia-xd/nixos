@@ -6,7 +6,7 @@
     input {
       keyboard {
         xkb {
-          layout "gb"
+          layout "au"
         }
       }
       touchpad {
