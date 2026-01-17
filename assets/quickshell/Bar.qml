@@ -26,27 +26,24 @@ Scope {
         right: true
       }
 
-      // Left: Time
       Text {
         anchors.left: parent.left
         anchors.leftMargin: 10
         anchors.verticalCenter: parent.verticalCenter
+        color: "#cba6f7"
+        font.family: "Hack Nerd Font Mono"
+        font.pointSize: 12
+      }
+
+      Text {
+        anchors.centerIn: parent
+        text: workspacesSource.workspaces
         text: timeSource.time
         color: "#cba6f7"
         font.family: "Hack Nerd Font Mono"
         font.pointSize: 12
       }
 
-      // Center: Workspaces
-      Text {
-        anchors.centerIn: parent
-        text: workspacesSource.workspaces
-        color: "#cba6f7"
-        font.family: "Hack Nerd Font Mono"
-        font.pointSize: 12
-      }
-
-      // Right: Battery
       Text {
         anchors.right: parent.right
         anchors.rightMargin: 10
@@ -57,7 +54,6 @@ Scope {
         font.pointSize: 12
       }
 
-      // Bottom Border
       Rectangle {
         anchors.bottom: parent.bottom
         width: parent.width
