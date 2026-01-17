@@ -18,6 +18,31 @@ Scope {
       screen: modelData
 
       color: "#1e1e2e"
+      implicitWidth: 5
+
+      anchors {
+        top: true
+        left: true
+        bottom: true
+      }
+
+      Rectangle {
+        anchors.right: parent.right
+        height: parent.height
+        width: 2
+        color: "#cba6f7"
+      }
+    }
+  }
+
+  Variants {
+    model: Quickshell.screens
+
+    PanelWindow {
+      required property var modelData
+      screen: modelData
+
+      color: "#1e1e2e"
       implicitHeight: 30
 
       anchors {
