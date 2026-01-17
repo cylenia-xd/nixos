@@ -30,6 +30,7 @@ Scope {
         anchors.left: parent.left
         anchors.leftMargin: 10
         anchors.verticalCenter: parent.verticalCenter
+        text: workspacesSource.workspaces
         color: "#cba6f7"
         font.family: "Hack Nerd Font Mono"
         font.pointSize: 12
@@ -37,7 +38,6 @@ Scope {
 
       Text {
         anchors.centerIn: parent
-        text: workspacesSource.workspaces
         text: timeSource.time
         color: "#cba6f7"
         font.family: "Hack Nerd Font Mono"
