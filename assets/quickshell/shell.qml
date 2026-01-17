@@ -86,7 +86,7 @@ Scope {
 
   Process {
     id: dateProc
-    command: ["date", "+%H:%M:%S"]
+    command: ["date"]
     stdout: StdioCollector {
       onStreamFinished: root.time = this.text.trim()
     }
