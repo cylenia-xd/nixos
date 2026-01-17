@@ -13,9 +13,7 @@ Scope {
   Variants {
     model: Quickshell.screens
 
-    // Top Panel
     PanelWindow {
-      id: topPanel
       required property var modelData
       screen: modelData
 
@@ -64,29 +62,6 @@ Scope {
         anchors.bottom: parent.bottom
         width: parent.width
         height: 2
-        color: "#cba6f7"
-      }
-    }
-
-    // Left Panel
-    PanelWindow {
-      required property var modelData
-      screen: modelData
-
-      color: "#1e1e2e"
-      implicitWidth: 15
-
-      anchors {
-        top: topPanel.bottom
-        left: true
-        bottom: true
-      }
-
-      // Right Border
-      Rectangle {
-        anchors.right: parent.right
-        height: parent.height
-        width: 2
         color: "#cba6f7"
       }
     }
