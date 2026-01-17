@@ -1,8 +1,10 @@
+pragma Singleton
+
 import Quickshell
 import Quickshell.Io
 import QtQuick
 
-Scope {
+Singleton {
   id: root
   property string battery
   
@@ -25,5 +27,4 @@ Scope {
     repeat: true
     onTriggered: batteryProc.running = true
   }
-
 }

@@ -6,10 +6,6 @@ import QtQuick
 Scope {
   id: root
 
-  Time { id: timeSource }
-  Workspaces { id: workspacesSource }
-  Battery { id: batterySource }
-
   Variants {
     model: Quickshell.screens
 
@@ -30,7 +26,7 @@ Scope {
         anchors.left: parent.left
         anchors.leftMargin: 10
         anchors.verticalCenter: parent.verticalCenter
-        text: workspacesSource.workspaces
+        text: Workspaces.workspaces
         color: "#cba6f7"
         font.family: "Hack Nerd Font Mono"
         font.pointSize: 12
@@ -38,7 +34,7 @@ Scope {
 
       Text {
         anchors.centerIn: parent
-        text: timeSource.time
+        text: Time.time
         color: "#cba6f7"
         font.family: "Hack Nerd Font Mono"
         font.pointSize: 12
@@ -48,7 +44,7 @@ Scope {
         anchors.right: parent.right
         anchors.rightMargin: 10
         anchors.verticalCenter: parent.verticalCenter
-        text: batterySource.battery
+        text: Battery.battery
         color: "#cba6f7"
         font.family: "Hack Nerd Font Mono"
         font.pointSize: 12
