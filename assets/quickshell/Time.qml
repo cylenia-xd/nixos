@@ -8,7 +8,7 @@ Scope {
 
   Process {
     id: dateProc
-    command: ["date"]
+    command: ["date" "+%H:%M:%S"]
     running: true
 
     stdout: StdioCollector {
