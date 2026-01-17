@@ -2,7 +2,6 @@ import Quickshell
 import Quickshell.Io
 import Quickshell.Widgets
 import QtQuick
-import QtQuick.Layouts
 
 Scope {
   id: root
@@ -10,6 +9,63 @@ Scope {
   property string time: ""
   property string battery: ""
   property string workspaces: ""
+
+  Variants {
+    model: Quickshell.screens
+
+    PanelWindow {
+      required property var modelData
+      screen: modelData
+
+      color: "#1e1e2e"
+      implicitHeight: 30
+
+      anchors {
+        top: true
+        left: true
+        right: true
+      }
+
+      // Left: time
+      Text {
+        anchors.left: parent.left
+        anchors.leftMargin: 10
+        anchors.verticalCenter: parent.verticalCenter
+        text: root.time
+        color: "#cba6f7"
+        font.family: "Hack Nerd Font Mono"
+        font.pointSize: 12
+      }
+
+      // Center: workspaces
+      Text {
+        anchors.centerIn: parent
+        text: root.workspaces
+        color: "#cba6f7"
+        font.family: "Hack Nerd Font Mono"
+        font.pointSize: 12
+      }
+
+      // Right: battery
+      Text {
+        anchors.right: parent.right
+        anchors.rightMargin: 10
+        anchors.verticalCenter: parent.verticalCenter
+        text: root.battery
+        color: "#cba6f7"
+        font.family: "Hack Nerd Font Mono"
+        font.pointSize: 12
+      }
+
+      // Border
+      Rectangle {
+        anchors.bottom: parent.bottom
+        width: parent.width
+        height: 2
+        color: "#cba6f7"
+      }
+    }
+  }
 
   function formatWorkspaces(jsonText) {
     try {
@@ -28,78 +84,9 @@ Scope {
     }
   }
 
-  Variants {
-    model: Quickshell.screens
-
-    PanelWindow {
-      required property var modelData
-      screen: modelData
-
-      color: "#1e1e2e"
-      implicitHeight: 30
-
-      anchors {
-        top: true
-        left: true
-        right: true
-      }
-
-      RowLayout {
-        anchors.fill: parent
-        anchors.margins: 10
-        spacing: 10
-
-        // Left: time
-        Text {
-          text: root.time
-          color: "#cba6f7"
-          font.family: "Hack Nerd Font Mono"
-          font.pointSize: 12
-          Layout.alignment: Qt.AlignLeft | Qt.AlignVCenter
-        }
-
-        // Spacer
-        Item {
-          Layout.fillWidth: true
-        }
-
-        // Center: workspaces
-        Text {
-          text: root.workspaces
-          color: "#cba6f7"
-          font.family: "Hack Nerd Font Mono"
-          font.pointSize: 12
-          Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
-        }
-
-        // Spacer
-        Item {
-          Layout.fillWidth: true
-        }
-
-        // Right: battery
-        Text {
-          text: root.battery
-          color: "#cba6f7"
-          font.family: "Hack Nerd Font Mono"
-          font.pointSize: 12
-          Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
-        }
-      }
-
-      // Bottom underline
-      Rectangle {
-        anchors.bottom: parent.bottom
-        width: parent.width
-        height: 2
-        color: "#cba6f7"
-      }
-    }
-  }
-
   Process {
     id: dateProc
-    command: ["date"]
+    command: ["date", "+%H:%M:%S"]
     stdout: StdioCollector {
       onStreamFinished: root.time = this.text.trim()
     }
