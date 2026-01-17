@@ -66,4 +66,32 @@ Scope {
       }
     }
   }
+
+  Variants {
+    model: Quickshell.screens
+
+    PanelWindow {
+      required property var modelData
+      screen: modelData
+
+      color: "#1e1e2e"
+      implicitWidth: 30
+
+      anchors {
+        top: true
+        left: true
+        bottom: true
+      }
+
+      margins.top: 30
+
+      // Right Border
+      Rectangle {
+        anchors.right: parent.right
+        height: parent.height
+        width: 2
+        color: "#cba6f7"
+      }
+    }
+  }
 }
