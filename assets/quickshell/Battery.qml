@@ -9,7 +9,6 @@ Singleton {
     id: root
 
     property string battery: (
-      UPower.displayDevice !== null &&
       UPower.displayDevice.ready &&
       UPower.displayDevice.isLaptopBattery
     )

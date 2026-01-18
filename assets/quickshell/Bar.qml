@@ -10,6 +10,8 @@ Scope {
     model: Quickshell.screens
 
     PanelWindow {
+      id: panelBar
+      
       required property var modelData
       screen: modelData
 
@@ -34,10 +36,11 @@ Scope {
 
       Text {
         anchors.centerIn: parent
-        text: Time.time
+        text: Clock.time
         color: "#cba6f7"
         font.family: "Hack Nerd Font Mono"
         font.pointSize: 12
+        visible: !hover.hovered
       }
 
       Text {
@@ -55,6 +58,15 @@ Scope {
         width: parent.width
         height: 2
         color: "#cba6f7"
+      }
+
+      HoverHandler {
+        id: hover
+      }
+
+      Dashboard {
+        parentPanel: panelBar
+        hoverItem: hover
       }
     }
   }
