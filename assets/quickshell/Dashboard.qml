@@ -5,8 +5,10 @@ import QtQuick
 import QtQuick.Layouts
 
 PopupWindow {
+  id: root
+  
   required property PanelWindow parentPanel
-  required property HoverHandler hoverItem
+  property bool isVisible: false
 
   anchor.window: parentPanel
   anchor.rect.x: parentPanel.width / 2 - width / 2
@@ -14,7 +16,6 @@ PopupWindow {
   implicitWidth: 500
   implicitHeight: 500
   color: "#1e1e2e"
-  visible: hoverItem.hovered
 
   ColumnLayout {
     spacing: 20
@@ -128,5 +129,11 @@ PopupWindow {
     height: parent.height
     width: 2
     color: "#cba6f7"
+  }
+
+  IpcHandler {
+    target: "dashboard"
+
+    function toggle() { root.isVisible = !root.isVisible }
   }
 }
