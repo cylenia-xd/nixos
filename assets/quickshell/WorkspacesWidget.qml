@@ -16,7 +16,7 @@ Rectangle {
     spacing: 4
 
     Rectangle {
-      workspace: "1"
+      property string workspace: "1"
       color: "#1e1e2e"
       Layout.preferredHeight: 20
       Layout.preferredWidth: 20
@@ -28,7 +28,7 @@ Rectangle {
     }
 
     Rectangle {
-      workspace: "2"
+      property string workspace: "2"
       color: "#1e1e2e"
       Layout.preferredHeight: 20
       Layout.preferredWidth: 20
@@ -40,7 +40,7 @@ Rectangle {
     }
 
     Rectangle {
-      workspace: "3"
+      property string workspace: "3"
       color: "#1e1e2e"
       Layout.preferredHeight: 20
       Layout.preferredWidth: 20
@@ -52,7 +52,7 @@ Rectangle {
     }
 
     Rectangle {
-      workspace: "4"
+      property string workspace: "4"
       color: "#1e1e2e"
       Layout.preferredHeight: 20
       Layout.preferredWidth: 20
@@ -64,7 +64,7 @@ Rectangle {
     }
     
     Rectangle {
-      workspace: "5"
+      property string workspace: "5"
       color: "#1e1e2e"
       Layout.preferredHeight: 20
       Layout.preferredWidth: 20
