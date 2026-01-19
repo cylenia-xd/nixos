@@ -2,6 +2,7 @@ import Quickshell
 import Quickshell.Io
 import Quickshell.Widgets
 import QtQuick
+import QtQuick.Layouts
 
 Scope {
   id: root
@@ -24,14 +25,46 @@ Scope {
         right: true
       }
 
-      Text {
+      Rectangle {
         anchors.left: parent.left
-        anchors.leftMargin: 10
-        anchors.verticalCenter: parent.verticalCenter
-        text: Workspaces.workspaces
-        color: "#cba6f7"
-        font.family: "Hack Nerd Font Mono"
-        font.pointSize: 12
+        anchors.top: parent.top
+        anchors.topMargin: 4
+        anchors.leftMargin: 5
+        color: "#1e1e2e"
+
+        RowLayout {
+          spacing: 10
+
+          Rectangle {
+            Layout.preferredHeight: 20
+            Layout.preferredWidth: Workspaces.activeWorkspace == "1" ? 30 : 20
+            color: "#cba6f7"
+          }
+
+          Rectangle {
+            Layout.preferredHeight: 20
+            Layout.preferredWidth: Workspaces.activeWorkspace == "2" ? 30 : 20
+            color: "#cba6f7"
+          }
+
+          Rectangle {
+            Layout.preferredHeight: 20
+            Layout.preferredWidth: Workspaces.activeWorkspace == "3" ? 30 : 20
+            color: "#cba6f7"
+          }
+
+          Rectangle {
+            Layout.preferredHeight: 20
+            Layout.preferredWidth: Workspaces.activeWorkspace == "4" ? 30 : 20
+            color: "#cba6f7"
+          }
+
+          Rectangle {
+            Layout.preferredHeight: 20
+            Layout.preferredWidth: Workspaces.activeWorkspace == "5" ? 30 : 20
+            color: "#cba6f7"
+          }
+        }
       }
 
       Text {

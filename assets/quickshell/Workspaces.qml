@@ -6,39 +6,38 @@ import QtQuick
 
 Singleton {
   id: root
-  property string workspaces
+  property string activeWorkspace: "1"
+  property string activeWorkspaceId: "1"
 
-  function formatWorkspaces(jsonText) {
-    try {
-      const workspaces = JSON.parse(jsonText)
+  Process {
+    id: workspacesEventStreamProc
+    command: ["niri", "msg", "-j", "event-stream"]
+    running: true
+    
+    stdout: SplitParser {
+      onRead: function (data) {
+        const parsed = JSON.parse(data)
 
-      return workspaces
-        .sort((a, b) => a.idx - b.idx)
-        .map(ws => ws.is_active
-          ? `<${ws.idx}>`
-          : `[${ws.idx}]`
-        )
-        .join(" ")
-    } catch (e) {
-      console.error("Failed to parse workspaces:", e)
-      return ""
+        if (parsed.WorkspaceActivated) {
+          root.activeWorkspaceId = parsed.WorkspaceActivated.id
+          workspacesProc.running = false
+          workspacesProc.running = true
+        }
+      }
     }
   }
 
   Process {
     id: workspacesProc
     command: ["niri", "msg", "-j", "workspaces"]
-    running: true
-    
-    stdout: StdioCollector {
-      onStreamFinished: root.workspaces = formatWorkspaces(this.text)
-    }
-  }
+    running: false
 
-  Timer {
-    interval: 1000
-    running: true
-    repeat: true
-    onTriggered: workspacesProc.running = true
+    stdout: StdioCollector {
+      onStreamFinished: function () {
+        const parsed = JSON.parse(this.text)
+        const workspace = parsed.find(ws => ws.id == root.activeWorkspaceId)
+        root.activeWorkspace = workspace ? workspace.idx : "1" 
+      }
+    }
   }
 }
