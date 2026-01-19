@@ -14,7 +14,7 @@ PopupWindow {
   anchor.rect.x: parentPanel.width / 2 - width / 2
   anchor.rect.y: parentPanel.height - 2
   implicitWidth: 750
-  implicitHeight: 500
+  implicitHeight: 480
   color: "#1e1e2e"
   visible: isVisible
 
@@ -22,7 +22,8 @@ PopupWindow {
     columns: 2
     columnSpacing: 20
     rowSpacing: 20
-    anchors.centerIn: parent
+    anchors.horizontalCenter: parent.horizontalCenter
+    anchors.top: parent.top
     implicitWidth: parent.implicitWidth
     implicitHeight: parent.implicitHeight
 
@@ -49,7 +50,7 @@ PopupWindow {
     DashboardWidget {
       Text {
         anchors.centerIn: parent
-        text: "67° C"
+        text: Weather.currentTemperature
         color: "#cba6f7"
         font.family: "Hack Nerd Font Mono"
         font.pointSize: 48
@@ -58,15 +59,33 @@ PopupWindow {
 
     DashboardWidget {
       Text {
-        Layout.alignment: Qt.AlignLeft | Qt.AlignTop
-        text: `
-          user - buttface
-          host - buttpc
-          dist - nixos
-        `
+        anchors.left: parent.left
+        anchors.top: parent.top
+        anchors.leftMargin: 10
+        anchors.topMargin: 10
+        text: "user\nhost\ndistro"
         color: "#cba6f7"
         font.family: "Hack Nerd Font Mono"
-        font.pointSize: 16
+        font.pointSize: 24
+      }
+
+      Rectangle {
+        anchors.centerIn: parent
+        width: 2
+        height: parent.height
+        color: "#cba6f7"
+      }
+
+      Text {
+        anchors.right: parent.right
+        anchors.top: parent.top
+        anchors.rightMargin: 10
+        anchors.topMargin: 10
+        horizontalAlignment: Text.AlignRight
+        text: `${Status.user}\n${Status.host}\n${Status.distro}`
+        color: "#cba6f7"
+        font.family: "Hack Nerd Font Mono"
+        font.pointSize: 24
       }
     }
   }
@@ -94,7 +113,6 @@ PopupWindow {
 
   IpcHandler {
     target: "dashboard"
-
     function toggle() { root.isVisible = !root.isVisible }
   }
 }
