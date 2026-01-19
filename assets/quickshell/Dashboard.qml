@@ -18,18 +18,15 @@ PopupWindow {
   color: "#1e1e2e"
   visible: isVisible
 
-  ColumnLayout {
-    spacing: 20
+  GridLayout {
+    columns: 2
+    columnSpacing: 20
+    rowSpacing: 20
     anchors.centerIn: parent
     implicitWidth: parent.implicitWidth
     implicitHeight: parent.implicitHeight
 
-    Rectangle {
-      Layout.alignment: Qt.AlignCenter
-      color: "#1e1e2e"
-      Layout.preferredWidth: 460
-      Layout.preferredHeight: 220
-
+    DashboardWidget {
       Text {
         anchors.centerIn: parent
         text: Clock.time
@@ -37,76 +34,39 @@ PopupWindow {
         font.family: "Hack Nerd Font Mono"
         font.pointSize: 48
       }
-
-      Rectangle {
-        anchors.top: parent.top
-        width: parent.width
-        height: 2
-        color: "#cba6f7"
-      }
-
-      Rectangle {
-        anchors.bottom: parent.bottom
-        width: parent.width
-        height: 2
-        color: "#cba6f7"
-      }
-
-      Rectangle {
-        anchors.left: parent.left
-        height: parent.height
-        width: 2
-        color: "#cba6f7"
-      }
-
-      Rectangle {
-        anchors.right: parent.right
-        height: parent.height
-        width: 2
-        color: "#cba6f7"
-      }
     }
 
-    Rectangle {
-      Layout.alignment: Qt.AlignCenter
-      color: "#1e1e2e"
-      Layout.preferredWidth: 460
-      Layout.preferredHeight: 220
-
+    DashboardWidget {
       Text {
         anchors.centerIn: parent
         text: Clock.date
         color: "#cba6f7"
         font.family: "Hack Nerd Font Mono"
+        font.pointSize: 32
+      }
+    }
+
+    DashboardWidget {
+      Text {
+        anchors.centerIn: parent
+        text: "67° C"
+        color: "#cba6f7"
+        font.family: "Hack Nerd Font Mono"
         font.pointSize: 48
       }
+    }
 
-      Rectangle {
-        anchors.top: parent.top
-        width: parent.width
-        height: 2
+    DashboardWidget {
+      Text {
+        Layout.alignment: Qt.AlignLeft | Qt.AlignTop
+        text: `
+          user - buttface
+          host - buttpc
+          dist - nixos
+        `
         color: "#cba6f7"
-      }
-
-      Rectangle {
-        anchors.bottom: parent.bottom
-        width: parent.width
-        height: 2
-        color: "#cba6f7"
-      }
-
-      Rectangle {
-        anchors.left: parent.left
-        height: parent.height
-        width: 2
-        color: "#cba6f7"
-      }
-
-      Rectangle {
-        anchors.right: parent.right
-        height: parent.height
-        width: 2
-        color: "#cba6f7"
+        font.family: "Hack Nerd Font Mono"
+        font.pointSize: 16
       }
     }
   }
