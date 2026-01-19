@@ -16,6 +16,7 @@ PopupWindow {
   implicitWidth: 500
   implicitHeight: 500
   color: "#1e1e2e"
+  visible: isVisible
 
   ColumnLayout {
     spacing: 20

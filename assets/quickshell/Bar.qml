@@ -33,7 +33,7 @@ Scope {
         color: "#cba6f7"
         font.family: "Hack Nerd Font Mono"
         font.pointSize: 12
-        visible: !hover.hovered
+        visible: !dashboard.isVisible
       }
 
       Text {
@@ -51,6 +51,11 @@ Scope {
         width: parent.width
         height: 2
         color: "#cba6f7"
+      }
+
+      Dashboard {
+        id: dashboard
+        parentPanel: panelBar
       }
     }
   }

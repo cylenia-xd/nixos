@@ -5,7 +5,6 @@
     "${inputs.self}/modules/h/kitty.nix"
     "${inputs.self}/modules/h/mako.nix"
     "${inputs.self}/modules/h/bash.nix"
-    "${inputs.self}/modules/h/fuzzel.nix"
     "${inputs.self}/modules/h/niri.nix"
     "${inputs.self}/modules/h/neomutt.nix"
     "${inputs.self}/modules/h/helix.nix"
