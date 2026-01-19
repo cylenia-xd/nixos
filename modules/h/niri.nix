@@ -70,7 +70,7 @@
       binds {
         Mod+T              { spawn "kitty"; }
         Mod+D              { spawn "qs" "ipc" "call" "dashboard" "toggle"; }
-        Mod+Shift+D        { spawn "qs" "ipc" "-p" "~/nixos/assets/quickshell" "call" "dashboard" "toggle"; }
+        Mod+Shift+D        { spawn "qs" "ipc" "-p" "/home/cylenia/nixos/assets/quickshell" "call" "dashboard" "toggle"; }
         Mod+V              { spawn-sh "cliphist list | fuzzel --dmenu --with-nth 2 | cliphist decode | wl-copy"; }
         Mod+Q repeat=false { close-window; }
 
