@@ -24,7 +24,10 @@
       }
       {
         name = "qml";
-        indent.tab-width = 2;
+        indent = {
+          tab-width = 2;
+          unit = "  ";
+        };
       }
     ];
   };
