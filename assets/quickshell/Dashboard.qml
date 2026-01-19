@@ -13,7 +13,7 @@ PopupWindow {
   anchor.window: parentPanel
   anchor.rect.x: parentPanel.width / 2 - width / 2
   anchor.rect.y: parentPanel.height - 2
-  implicitWidth: 500
+  implicitWidth: 750
   implicitHeight: 500
   color: "#1e1e2e"
   visible: isVisible
