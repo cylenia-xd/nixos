@@ -76,7 +76,7 @@
 
     binds {
       Mod+T { spawn "kitty"; }
-      Mod+D { spawn-sh "qs" "ipc" "call" "dashboard" "toggle"; }
+      Mod+D { spawn "qs" "ipc" "call" "dashboard" "toggle"; }
       Mod+V { spawn-sh "cliphist list | fuzzel --dmenu --with-nth 2 | cliphist decode | wl-copy"; }
       Mod+Q repeat=false { close-window; }
 
