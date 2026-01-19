@@ -23,6 +23,7 @@ Rectangle {
 
       Text {
         text: parent.workspace
+        anchors.centerIn: parent
         color: Workspaces.activeWorkspace == parent.workspace ? "#cba6f7" : "#cdd6f4"
       }
     }
@@ -35,6 +36,7 @@ Rectangle {
 
       Text {
         text: parent.workspace
+        anchors.centerIn: parent
         color: Workspaces.activeWorkspace == parent.workspace ? "#cba6f7" : "#cdd6f4"
       }
     }
@@ -47,6 +49,7 @@ Rectangle {
 
       Text {
         text: parent.workspace
+        anchors.centerIn: parent
         color: Workspaces.activeWorkspace == parent.workspace ? "#cba6f7" : "#cdd6f4"
       }
     }
@@ -59,6 +62,7 @@ Rectangle {
 
       Text {
         text: parent.workspace
+        anchors.centerIn: parent
         color: Workspaces.activeWorkspace == parent.workspace ? "#cba6f7" : "#cdd6f4"
       }
     }
@@ -71,6 +75,7 @@ Rectangle {
 
       Text {
         text: parent.workspace
+        anchors.centerIn: parent
         color: Workspaces.activeWorkspace == parent.workspace ? "#cba6f7" : "#cdd6f4"
       }
     }
