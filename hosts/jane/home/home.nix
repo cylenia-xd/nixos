@@ -13,6 +13,7 @@
     "${inputs.self}/modules/h/ssh.nix"
     "${inputs.self}/modules/h/starship.nix"
     "${inputs.self}/modules/h/quickshell.nix"
+    "${inputs.self}/modules/h/fuzzel.nix"
   ];
 
   home.packages = with pkgs; [
