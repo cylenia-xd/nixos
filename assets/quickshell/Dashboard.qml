@@ -1,6 +1,7 @@
 import Quickshell
 import Quickshell.Io
 import Quickshell.Widgets
+import Quickshell.Wayland
 import QtQuick
 import QtQuick.Layouts
 
@@ -14,20 +15,24 @@ PopupWindow {
   anchor.rect.x: parentPanel.width / 2 - width / 2
   anchor.rect.y: parentPanel.height - 2
   implicitWidth: 750
-  implicitHeight: 480
+  implicitHeight: 680
   color: "#1e1e2e"
   visible: isVisible
 
-  GridLayout {
-    columns: 2
-    columnSpacing: 20
-    rowSpacing: 20
+  RowLayout {
+    spacing: 20
     anchors.horizontalCenter: parent.horizontalCenter
     anchors.top: parent.top
     implicitWidth: parent.implicitWidth
-    implicitHeight: parent.implicitHeight
+    implicitHeight: 220
 
-    DashboardWidget {
+    Rectangle {
+      color: "#1e1e2e"
+      border.color: "#cba6f7"
+      border.width: 2
+      Layout.preferredWidth: 345
+      Layout.preferredHeight: 220
+
       Text {
         anchors.centerIn: parent
         text: Clock.time
@@ -37,7 +42,13 @@ PopupWindow {
       }
     }
 
-    DashboardWidget {
+    Rectangle {
+      color: "#1e1e2e"
+      border.color: "#cba6f7"
+      border.width: 2
+      Layout.preferredWidth: 345
+      Layout.preferredHeight: 220
+
       Text {
         anchors.centerIn: parent
         text: Clock.date
@@ -46,46 +57,44 @@ PopupWindow {
         font.pointSize: 32
       }
     }
+  }
 
-    DashboardWidget {
-      Text {
-        anchors.centerIn: parent
-        text: Weather.currentTemperature
-        color: "#cba6f7"
-        font.family: "Hack Nerd Font Mono"
-        font.pointSize: 48
-      }
-    }
+  Rectangle {
+    anchors.horizontalCenter: parent.horizontalCenter
+    anchors.bottom: parent.bottom
+    anchors.bottomMargin: 20
+    color: "#1e1e2e"
+    border.color: "#cba6f7"
+    border.width: 2
+    implicitWidth: 710
+    implicitHeight: 420
 
-    DashboardWidget {
-      Text {
+    Rectangle {
+      anchors.horizontalCenter: parent.horizontalCenter
+      anchors.bottom: parent.bottom
+      anchors.bottomMargin: 20
+      color: "#1e1e2e"
+      border.color: "#cba6f7"
+      border.width: 2
+      implicitWidth: parent.implicitWidth - 40
+      implicitHeight: 50
+
+      FocusScope {
+        focus: root.isVisible
+        anchors.verticalCenter: parent.verticalCenter
         anchors.left: parent.left
-        anchors.top: parent.top
-        anchors.leftMargin: 10
-        anchors.topMargin: 10
-        text: "user\nhost\ndistro"
-        color: "#cba6f7"
-        font.family: "Hack Nerd Font Mono"
-        font.pointSize: 24
-      }
-
-      Rectangle {
-        anchors.centerIn: parent
-        width: 2
-        height: parent.height
-        color: "#cba6f7"
-      }
-
-      Text {
-        anchors.right: parent.right
-        anchors.top: parent.top
-        anchors.rightMargin: 10
-        anchors.topMargin: 10
-        horizontalAlignment: Text.AlignRight
-        text: `${Status.user}\n${Status.host}\n${Status.distro}`
-        color: "#cba6f7"
-        font.family: "Hack Nerd Font Mono"
-        font.pointSize: 24
+        anchors.leftMargin: 5
+        
+        TextInput {
+          anchors.verticalCenter: parent.verticalCenter
+          anchors.left: parent.left
+          anchors.leftMargin: 5
+          focus: true
+          color: "#cba6f7"
+          font.family: "Hack Nerd Font Mono"
+          font.pointSize: 24
+          text: "ASDASJDasdjsadjjIJASIDJAISDJ"
+        }
       }
     }
   }

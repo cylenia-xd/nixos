@@ -1,4 +1,3 @@
-
 import Quickshell
 import Quickshell.Io
 import Quickshell.Widgets
@@ -22,9 +21,9 @@ Rectangle {
       Layout.preferredWidth: 20
 
       Text {
-        text: parent.workspace
+        text: Workspaces.activeWorkspace == parent.workspace ? "#" : parent.workspace
         anchors.centerIn: parent
-        color: Workspaces.activeWorkspace == parent.workspace ? "#cba6f7" : "#cdd6f4"
+        color: "#cba6f7"
       }
     }
 
@@ -35,9 +34,9 @@ Rectangle {
       Layout.preferredWidth: 20
 
       Text {
-        text: parent.workspace
+        text: Workspaces.activeWorkspace == parent.workspace ? "#" : parent.workspace
         anchors.centerIn: parent
-        color: Workspaces.activeWorkspace == parent.workspace ? "#cba6f7" : "#cdd6f4"
+        color: "#cba6f7"
       }
     }
 
@@ -48,9 +47,9 @@ Rectangle {
       Layout.preferredWidth: 20
 
       Text {
-        text: parent.workspace
+        text: Workspaces.activeWorkspace == parent.workspace ? "#" : parent.workspace
         anchors.centerIn: parent
-        color: Workspaces.activeWorkspace == parent.workspace ? "#cba6f7" : "#cdd6f4"
+        color: "#cba6f7"
       }
     }
 
@@ -61,12 +60,12 @@ Rectangle {
       Layout.preferredWidth: 20
 
       Text {
-        text: parent.workspace
+        text: Workspaces.activeWorkspace == parent.workspace ? "#" : parent.workspace
         anchors.centerIn: parent
-        color: Workspaces.activeWorkspace == parent.workspace ? "#cba6f7" : "#cdd6f4"
+        color: "#cba6f7"
       }
     }
-    
+
     Rectangle {
       property string workspace: "5"
       color: "#1e1e2e"
@@ -74,9 +73,9 @@ Rectangle {
       Layout.preferredWidth: 20
 
       Text {
-        text: parent.workspace
+        text: Workspaces.activeWorkspace == parent.workspace ? "#" : parent.workspace
         anchors.centerIn: parent
-        color: Workspaces.activeWorkspace == parent.workspace ? "#cba6f7" : "#cdd6f4"
+        color: "#cba6f7"
       }
     }
   }
