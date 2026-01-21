@@ -1,6 +1,7 @@
 import Quickshell
 import Quickshell.Io
 import Quickshell.Widgets
+import Quickshell.Wayland
 import QtQuick
 import QtQuick.Layouts
 
@@ -16,6 +17,7 @@ Scope {
       required property var modelData
       screen: modelData
 
+      WlrLayershell.keyboardFocus: dashboard.isVisible ? WlrKeyboardFocus.Exclusive : WlrKeyboardFocus.None
       color: "#1e1e2e"
       implicitHeight: 30
 

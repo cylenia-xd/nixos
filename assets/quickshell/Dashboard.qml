@@ -1,7 +1,6 @@
 import Quickshell
 import Quickshell.Io
 import Quickshell.Widgets
-import Quickshell.Wayland
 import QtQuick
 import QtQuick.Layouts
 
@@ -79,22 +78,15 @@ PopupWindow {
       implicitWidth: parent.implicitWidth - 40
       implicitHeight: 50
 
-      FocusScope {
-        focus: root.isVisible
+      TextInput {
         anchors.verticalCenter: parent.verticalCenter
         anchors.left: parent.left
-        anchors.leftMargin: 5
-        
-        TextInput {
-          anchors.verticalCenter: parent.verticalCenter
-          anchors.left: parent.left
-          anchors.leftMargin: 5
-          focus: true
-          color: "#cba6f7"
-          font.family: "Hack Nerd Font Mono"
-          font.pointSize: 24
-          text: "ASDASJDasdjsadjjIJASIDJAISDJ"
-        }
+        anchors.leftMargin: 10
+        focus: root.isVisible
+        color: "#cba6f7"
+        font.family: "Hack Nerd Font Mono"
+        font.pointSize: 24
+        text: "> "
       }
     }
   }
