@@ -17,7 +17,6 @@ Scope {
       required property var modelData
       screen: modelData
 
-      WlrLayershell.keyboardFocus: dashboard.isVisible ? WlrKeyboardFocus.Exclusive : WlrKeyboardFocus.None
       color: "#1e1e2e"
       implicitHeight: 30
 
@@ -35,7 +34,6 @@ Scope {
         color: "#cba6f7"
         font.family: "Hack Nerd Font Mono"
         font.pointSize: 12
-        visible: !dashboard.isVisible
       }
 
       Text {
@@ -53,11 +51,6 @@ Scope {
         width: parent.width
         height: 2
         color: "#cba6f7"
-      }
-
-      Dashboard {
-        id: dashboard
-        parentPanel: panelBar
       }
     }
   }
