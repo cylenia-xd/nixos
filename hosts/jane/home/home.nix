@@ -31,13 +31,6 @@
     bluetui
     bemoji
     libnotify
-    sed
-    grep
-    cut
-    sort
-    uniq
-    tr
-    curl
     sops
     jq
   ];
