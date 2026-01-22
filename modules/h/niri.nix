@@ -23,10 +23,6 @@
         }
       }
 
-      animations {
-        off
-      }
-
       layout {
         gaps 10
         center-focused-column "never"
