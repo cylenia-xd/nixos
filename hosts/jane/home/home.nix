@@ -29,6 +29,7 @@
     prismlauncher
     pulsemixer
     bluetui
+    bemoji
     libnotify
     sed
     grep
