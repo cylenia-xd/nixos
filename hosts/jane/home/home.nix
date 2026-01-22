@@ -20,6 +20,7 @@
     android-tools
     swaybg
     wl-clipboard
+    wtype
     xdg-user-dirs
     cliphist
     p7zip
@@ -29,6 +30,13 @@
     pulsemixer
     bluetui
     libnotify
+    sed
+    grep
+    cut
+    sort
+    uniq
+    tr
+    curl
     sops
     jq
   ];
