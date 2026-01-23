@@ -24,6 +24,7 @@
   sops.age.keyFile = "/home/cylenia/.config/sops/age/keys.txt";
   sops.secrets = {};
 
+  networking.wireguard.enable = true;
   networking.hostName = "jane";
   networking.networkmanager.enable = true;
   networking.firewall.enable = false;
