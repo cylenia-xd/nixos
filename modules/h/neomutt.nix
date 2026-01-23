@@ -40,7 +40,7 @@
       enable = true;
       address = "me@cylenia.dev";
       realName = "Cylenia";
-      passwordCommand = "cat ~/.secrets/emailpw";
+      passwordCommand = "cat /run/secrets/email_password";
       primary = true;
       userName = "me@cylenia.dev";
       smtp = {
