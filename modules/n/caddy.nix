@@ -3,6 +3,7 @@
     enable = true;
     package = pkgs.caddy.withPlugins {
       plugins = [ "github.com/greenpau/caddy-git@v1.0.9" ];
+      hash = "sha256-nh+Oq0M3xjRVlBH/QtYtbQ126CUSzQY5QvCuSrTKvlg=";
     };
     extraConfig = ''
       :8067 {
