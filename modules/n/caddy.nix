@@ -7,15 +7,13 @@
     };
     extraConfig = ''
       :8067 {
-        route {
-          git /github/cylenia-xd/bio {
-            path /srv/bio
-            then sh -c "cd /srv/bio && npm run compile"
-            hook /webhooks
-            hook_type github
-            clone_args --recursive
-            pull_args --recurse-submodules
-          }
+        git /github/cylenia-xd/bio {
+          path /srv/bio
+          then sh -c "cd /srv/bio && npm run compile"
+          hook /webhooks
+          hook_type github
+          clone_args --recursive
+          pull_args --recurse-submodules
         }
       }      
 
