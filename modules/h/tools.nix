@@ -7,6 +7,7 @@
     pulsemixer
     bluetui
     sops
+    tealdeer
     jq
   ];
 }
