@@ -7,11 +7,13 @@
     };
     extraConfig = ''
       :8067 {
-        webhook {
-          repo https://github.com/cylenia/bio.git
-          path /srv/bio
-          branch master
-          command nix-shell --command npm run compile
+        route {
+          webhook {
+            repo https://github.com/cylenia/bio.git
+            path /srv/bio
+            branch master
+            command nix-shell --command npm run compile
+          }
         }
       }
       
