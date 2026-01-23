@@ -15,11 +15,6 @@
     extraGroups = [ "networkmanager" "wheel" ];
   };
 
-  environment.systemPackages = with pkgs; [
-    sops
-    git
-  ];
-
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.kernelPackages = pkgs.linuxPackages_latest;
