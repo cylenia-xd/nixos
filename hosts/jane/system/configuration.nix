@@ -3,6 +3,7 @@
     ./hardware.nix
     "${inputs.self}/modules/n/greetd.nix"
     "${inputs.self}/modules/n/gpg.nix"
+    "${inputs.self}/modules/n/sops.nix"
   ];
 
   users = {
@@ -18,11 +19,6 @@
       hashedPassword = "$y$j9T$gej56YvgGE.K/x4UOF/mZ1$W7EQoyuqICLE8uV1oIxM.cI180PXT9xERVXMzDdtAV0";
     };
   };
-
-  sops.defaultSopsFile = ../secrets/secrets.yaml;
-  sops.defaultSopsFormat = "yaml";
-  sops.age.keyFile = "/home/cylenia/.config/sops/age/keys.txt";
-  sops.secrets = {};
 
   networking.wireguard.enable = true;
   networking.hostName = "jane";

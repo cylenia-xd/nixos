@@ -7,6 +7,7 @@
     "${inputs.self}/modules/n/searxng.nix"
     "${inputs.self}/modules/n/caddy.nix"
     "${inputs.self}/modules/n/vaultwarden.nix"
+    "${inputs.self}/modules/n/sops.nix"
   ];
 
   users.users.cylenia = {
@@ -37,16 +38,6 @@
     LC_PAPER = "en_AU.UTF-8";
     LC_TELEPHONE = "en_AU.UTF-8";
     LC_TIME = "en_AU.UTF-8";
-  };
-
-  sops.defaultSopsFile = ../secrets/secrets.yaml;
-  sops.defaultSopsFormat = "yaml";
-  sops.age.keyFile = "/home/cylenia/.config/sops/age/keys.txt";
-  sops.secrets = {
-    pangolin_env = {};
-    vaultwarden_env = {};
-    searxng_secret = {};
-    email_password_hash = {};
   };
 
   nixpkgs.config.allowUnfree = true;
