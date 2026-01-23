@@ -1,7 +1,9 @@
 { pkgs, ... }: {
   services.caddy = {
     enable = true;
-    package = pkgs.xcaddy;
+    package = pkgs.caddy.withPlugins {
+      plugins = [ "github.com/WingLim/caddy-webhook@v1.0.8" ];
+    };
     extraConfig = ''
       :8067 {
         webhook {
