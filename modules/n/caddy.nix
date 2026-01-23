@@ -7,13 +7,12 @@
     };
     extraConfig = ''
       :8067 {
-        route {
-          webhook {
-            repo https://github.com/cylenia-xd/bio.git
-            path /srv/bio
-            branch master
-            command npm run compile
-          }
+        @post {
+          method POST
+        }
+        handle @post {
+          exec git pull
+          exec npm run compile
         }
       }
       
