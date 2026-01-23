@@ -36,7 +36,7 @@
       };
       search = {
         force = true;
-        default = "duckduckgp";
+        default = "duckduckgo";
         engines = {
           bing.metaData.hidden = true;
           perplexity.metaData.hidden = true;
