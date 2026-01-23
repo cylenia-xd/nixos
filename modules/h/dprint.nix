@@ -8,11 +8,10 @@
     force = true;
     target = ".config/dprint/dprint.json";
     text = builtins.toJSON {
-      json = {};
-      markdown = {};
-      toml = {};
-      markup = {};
-      yaml = {};
+      markdown = {
+        emphasisKind = "asterisks";
+        strongKind = "asterisks";
+      };
 
       excludes = [
         "**/*-lock.json"
