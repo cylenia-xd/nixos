@@ -2,18 +2,18 @@
   services.caddy = {
     enable = true;
     package = pkgs.caddy.withPlugins {
-      plugins = [ "github.com/WingLim/caddy-webhook@v1.0.8" ];
-      hash = "sha256-oMmmKK4HkkNCUQVfMb7FImtkKmf9/oQ51h577W5WTEg=";
+      plugins = [ "github.com/greenpau/caddy-git@v1.0.9" ];
     };
     extraConfig = ''
       :8067 {
         route {
-          webhook {
-            repo https://github.com/cylenia-xd/bio.git
+          git /github/cylenia-xd/bio {
             path /srv/bio
-            branch master
-            type github
-            command npm run compile
+            then sh -c "cd /srv/bio && npm run compile"
+            hook /webhooks
+            hook_type github
+            clone_args --recursive
+            pull_args --recurse-submodules
           }
         }
       }      
