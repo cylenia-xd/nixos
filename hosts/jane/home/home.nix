@@ -8,7 +8,7 @@
     "${inputs.self}/modules/h/niri.nix"
     "${inputs.self}/modules/h/neomutt.nix"
     "${inputs.self}/modules/h/helix.nix"
-    "${inputs.self}/modules/h/firefox.nix"
+    "${inputs.self}/modules/h/librewolf.nix"
     "${inputs.self}/modules/h/dprint.nix"
     "${inputs.self}/modules/h/ssh.nix"
     "${inputs.self}/modules/h/quickshell.nix"

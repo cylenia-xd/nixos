@@ -1,5 +1,5 @@
 { pkgs, inputs, ... }: {
-  programs.firefox = {
+  programs.librewolf = {
     enable = true;
     languagePacks = [ "en-GB" ];
     profiles.default = {
