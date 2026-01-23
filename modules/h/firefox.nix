@@ -19,6 +19,7 @@
         "browser.tabs.inTitlebar" = 0; # hide window decorations
         "browser.uiCustomization.state" = ''{"placements":{"widget-overflow-fixed-list":[],"unified-extensions-area":["addon_darkreader_org-browser-action"],"nav-bar":["back-button","forward-button","stop-reload-button","vertical-spacer","urlbar-container","downloads-button","fxa-toolbar-menu-button","ublock0_raymondhill_net-browser-action","_446900e4-71c2-419f-a6a7-df9c091e268b_-browser-action","unified-extensions-button"],"toolbar-menubar":["menubar-items"],"TabsToolbar":["tabbrowser-tabs","new-tab-button"],"vertical-tabs":[],"PersonalToolbar":[]},"seen":["ublock0_raymondhill_net-browser-action","_446900e4-71c2-419f-a6a7-df9c091e268b_-browser-action","developer-button","screenshot-button","addon_darkreader_org-browser-action"],"dirtyAreaCache":["unified-extensions-area","nav-bar","vertical-tabs","toolbar-menubar","TabsToolbar","PersonalToolbar"],"currentVersion":23,"newElementCount":4}'';
         # maybe don't edit this manually ^
+        "browser.urlbar.suggest.recentsearches" = false;
         "extensions.activeThemeID" = "{76aabc99-c1a8-4c1e-832b-d4f2941d5a7a}"; # catpuccin-mocha-mauve
         "extensions.autoDisableScopes" = 0; # make sure all extensions are enabled
         "layout.css.prefers-color-scheme.content-override" = 0;
@@ -279,7 +280,7 @@
         user_pref("extensions.formautofill.creditCards.enabled", false);
 
         // PREF: set DoH provider
-        user_pref("network.trr.uri", "https://dns.dnswarden.com/uncensored");
+        user_pref("network.trr.uri", "https://dns.quad9.net/dns-query");
 
         // PREF: enforce DNS-over-HTTPS (DoH)
         user_pref("network.trr.mode", 3);        
