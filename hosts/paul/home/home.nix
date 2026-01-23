@@ -5,7 +5,6 @@
   
   home.packages = with pkgs; [
     git
-    fastfetch
   ];
 
   # don't change this!

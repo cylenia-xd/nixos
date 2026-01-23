@@ -1,4 +1,9 @@
-{ config, pkgs, lib, ... }: {
+{ pkgs, lib, ... }: {
+  home.packages = with pkgs; [
+    bemoji
+    wtype # bemoji requires
+  ];
+  
   programs.fuzzel = {
     enable = true;
     settings = {

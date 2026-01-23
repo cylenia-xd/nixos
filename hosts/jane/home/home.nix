@@ -14,25 +14,12 @@
     "${inputs.self}/modules/h/starship.nix"
     "${inputs.self}/modules/h/quickshell.nix"
     "${inputs.self}/modules/h/fuzzel.nix"
+    "${inputs.self}/modules/h/clipboard.nix"
+    "${inputs.self}/modules/h/tools.nix"
   ];
 
   home.packages = with pkgs; [
-    android-tools
-    swaybg
-    wl-clipboard
-    wtype
-    xdg-user-dirs
-    cliphist
-    p7zip
-    dprint
     nerd-fonts.hack
-    prismlauncher
-    pulsemixer
-    bluetui
-    bemoji
-    libnotify
-    sops
-    jq
   ];
 
   xdg.userDirs = {

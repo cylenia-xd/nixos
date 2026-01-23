@@ -1,4 +1,7 @@
-{ ... }: {
+{ pkgs, ... }: {
+  home.pkgs = with pkgs; [
+    swaybg
+  ];
   home.file.niri = {
     enable = true;
     target = ".config/niri/config.kdl";

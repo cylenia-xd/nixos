@@ -1,4 +1,8 @@
-{ config, pkgs, ... }: {
+{ pkgs, ... }: {
+  home.packages = with pkgs; [
+    dprint
+  ];
+  
   home.file.dprint_config = {
     executable = true;
     force = true;
