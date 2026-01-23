@@ -12,7 +12,7 @@
             repo https://github.com/cylenia-xd/bio.git
             path /srv/bio
             branch master
-            command nix-shell --command npm run compile
+            command npm run compile
           }
         }
       }
