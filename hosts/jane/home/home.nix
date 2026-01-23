@@ -16,6 +16,7 @@
     "${inputs.self}/modules/h/fuzzel.nix"
     "${inputs.self}/modules/h/clipboard.nix"
     "${inputs.self}/modules/h/tools.nix"
+    "${inputs.self}/modules/h/fj.nix"
   ];
 
   home.packages = with pkgs; [
