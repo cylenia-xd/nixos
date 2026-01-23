@@ -2,6 +2,14 @@
   programs.firefox = {
     enable = true;
     languagePacks = [ "en-GB" ];
+    policies = {
+      Cookies = {
+        Allow = [
+          "https://github.com"
+          "https://discord.com"
+        ];
+      };
+    }
     profiles.default = {
       id = 0;
       isDefault = true;
