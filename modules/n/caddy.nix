@@ -2,7 +2,6 @@
   services.caddy = {
     enable = true;
     package = pkgs.caddy;
-    };
     extraConfig = ''
       :8068 {
         root * /srv/bio/_site
