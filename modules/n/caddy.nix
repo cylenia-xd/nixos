@@ -6,16 +6,24 @@
       hash = "sha256-oMmmKK4HkkNCUQVfMb7FImtkKmf9/oQ51h577W5WTEg=";
     };
     extraConfig = ''
-      :8067 {
-        @post {
-          method POST
-        }
-        handle @post {
-          exec --working-dir /srv/bio git pull
-          exec --working-dir /srv/bio npm run compile
-        }
+      log {
+        output stderr
+        level DEBUG
+        format console
       }
       
+      :8067 {
+        route {
+          webhook {
+            repo https://github.com/cylenia-xd/bio.git
+            path /srv/bio
+            branch master
+            type github
+            command npm run compile
+          }
+        }
+      }      
+
       :8068 {
         root * /srv/bio/_site
         file_server
