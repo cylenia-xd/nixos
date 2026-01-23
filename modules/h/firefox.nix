@@ -1,5 +1,5 @@
 { pkgs, inputs, ... }: {
-  programs.librewolf = {
+  programs.firefox = {
     enable = true;
     languagePacks = [ "en-GB" ];
     profiles.default = {
@@ -36,19 +36,11 @@
       };
       search = {
         force = true;
-        default = "searxng";
+        default = "duckduckgp";
         engines = {
           bing.metaData.hidden = true;
-          google.metaData.hidden = true;
           perplexity.metaData.hidden = true;
           ebay.metaData.hidden = true;
-
-          searxng = {
-            name = "SearXNG";
-            urls = [{ template = "https://search.cylenia.dev/search?q={searchTerms}"; }];
-            iconMapObj."16" = "https://search.cylenia.dev/favicon.ico";
-            definedAliases = [ "@searxng" ];
-          };
 
           my-nixos = {
             name = "MyNixOS";
