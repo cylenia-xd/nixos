@@ -4,7 +4,6 @@
     "${inputs.self}/modules/n/newt.nix"
     "${inputs.self}/modules/n/sshd.nix"
     "${inputs.self}/modules/n/gpg.nix"
-    "${inputs.self}/modules/n/searxng.nix"
     "${inputs.self}/modules/n/caddy.nix"
     "${inputs.self}/modules/n/vaultwarden.nix"
     "${inputs.self}/modules/n/sops.nix"
