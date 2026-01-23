@@ -28,5 +28,7 @@
       }
     '';
   };
+
+  systemd.services.caddy.path = [ pkgs.nodejs ];
 }
 
