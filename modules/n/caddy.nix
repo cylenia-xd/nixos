@@ -11,8 +11,8 @@
           method POST
         }
         handle @post {
-          exec git pull
-          exec npm run compile
+          exec --working-dir /srv/bio git pull
+          exec --working-dir /srv/bio npm run compile
         }
       }
       
