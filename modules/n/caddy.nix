@@ -6,13 +6,13 @@
       hash = "sha256-oMmmKK4HkkNCUQVfMb7FImtkKmf9/oQ51h577W5WTEg=";
     };
     extraConfig = ''
-      log {
-        output stderr
-        level DEBUG
-        format console
-      }
-      
       :8067 {
+        log {
+          output stderr
+          level DEBUG
+          format console
+        }
+      
         route {
           webhook {
             repo https://github.com/cylenia-xd/bio.git
