@@ -6,7 +6,7 @@
       main = {
         term = "xterm-256color";
 
-        font = "Hack Nerd Font Mono:size=12";
+        font = "Hack Nerd Font Mono:size=6";
         dpi-aware = "yes";
       };
 
