@@ -1,6 +1,6 @@
 { ... }: {
   imports = [
-    ./helix
-    ./dprint
+    ./helix.nix
+    ./dprint.nix
   ];
 }
