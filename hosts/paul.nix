@@ -1,17 +1,9 @@
 { lib, config, pkgs, modulesPath, inputs, ... }: {
   imports = [
-     (lib.mkAliasOptionModule [ "hm" ] [ "home-manager" "users" "cylenia" ])
-     (modulesPath + "/installer/scan/not-detected.nix")
-    "${inputs.self}/modules/newt.nix"
-    "${inputs.self}/modules/sshd.nix"
-    "${inputs.self}/modules/gpg.nix"
-    "${inputs.self}/modules/caddy.nix"
-    "${inputs.self}/modules/vaultwarden.nix"
-    "${inputs.self}/modules/sops.nix"
-    "${inputs.self}/modules/immich.nix"
-    "${inputs.self}/modules/shell.nix"
-    "${inputs.self}/modules/editor"
-    "${inputs.self}/modules/tools"
+    (lib.mkAliasOptionModule [ "hm" ] [ "home-manager" "users" "cylenia" ])
+    (modulesPath + "/installer/scan/not-detected.nix")
+    "${inputs.self}/modules/server"
+    "${inputs.self}/modules/common"
   ];
 
   users = {

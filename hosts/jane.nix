@@ -2,14 +2,8 @@
   imports = [
     (lib.mkAliasOptionModule [ "hm" ] [ "home-manager" "users" "cylenia" ])
     (modulesPath + "/installer/scan/not-detected.nix")
-    "${inputs.self}/modules/greetd.nix"
-    "${inputs.self}/modules/gpg.nix"
-    "${inputs.self}/modules/sops.nix"
-    "${inputs.self}/modules/shell.nix"
-    "${inputs.self}/modules/neomutt.nix"
-    "${inputs.self}/modules/tools"
     "${inputs.self}/modules/desktop"
-    "${inputs.self}/modules/editor"   
+    "${inputs.self}/modules/common"
   ];
 
   users = {

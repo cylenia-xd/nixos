@@ -3,10 +3,13 @@
     ./clipboard.nix
     ./firefox.nix
     ./fuzzel.nix
+    ./greetd.nix
     ./kitty.nix
     ./mako.nix
+    ./neomutt.nix
     ./niri.nix
     ./quickshell.nix
+    ./editor
   ];
 
   hm.home.packages = [
