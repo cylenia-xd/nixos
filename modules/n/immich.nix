@@ -213,7 +213,7 @@
         enabled = true;
       };
       server = {
-        externalDomain = "";
+        externalDomain = "https://media.cylenia.dev";
         loginPageMessage = "";
         publicUsers = true;
       };
