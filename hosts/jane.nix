@@ -7,7 +7,6 @@
   ];
 
   networking.hostName = "jane";
-  hardware.bluetooth.enable = true;
 
   boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "usb_storage" "sd_mod" ];
   boot.kernelModules = [ "kvm-amd" ];
