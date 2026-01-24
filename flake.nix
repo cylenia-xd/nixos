@@ -3,7 +3,6 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    impermanence.url = "github:nix-community/impermanence";
     home-manager = {
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -18,14 +17,13 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, sops-nix, impermanence, ... }@inputs: {
+  outputs = { nixpkgs, home-manager, sops-nix, ... }@inputs: {
     nixosConfigurations.jane = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
       system = "x86_64-linux";
       modules = [
         ./hosts/jane.nix
         sops-nix.nixosModules.sops
-        impermanence.nixosModules.impermanence
         home-manager.nixosModules.default {
           home-manager = {
             useGlobalPkgs = true;
