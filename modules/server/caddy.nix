@@ -2,9 +2,10 @@
 let
   bioSite = pkgs.stdenv.mkDerivation {
     name = "bio-site";
-    src = fetchGit {
-      url = "https://github.com/cylenia-xd/bio.git";
-      ref = "master";
+    src = pkgs.fetchFromGitHub {
+      owner = "cylenia-xd";
+      repo = "bio";
+      rev = "2f975f0941b7664fa9f7a5c50a49b5c14e473a2e";
     };
     buildInputs = [ pkgs.nodejs ];
     buildPhase = ''
