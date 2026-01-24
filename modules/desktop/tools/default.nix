@@ -14,7 +14,6 @@
     bluetui
     sops
     tealdeer
-    tree
     jq
   ];
 }
