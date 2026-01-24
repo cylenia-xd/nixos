@@ -9,6 +9,7 @@
     ./neomutt.nix
     ./niri.nix
     ./quickshell.nix
+    ./xdg.nix
     ./editor
     ./tools
   ];
@@ -16,17 +17,23 @@
   hm.home.packages = [
     pkgs.nerd-fonts.hack
   ];
+  
+  environment.systemPackages = with pkgs; [
+    adwaita-icon-theme
+    xwayland-satellite
+  ];
 
-  hm.xdg.userDirs = {
+  programs.niri.enable = true;
+  services.gnome.gnome-keyring.enable = true;
+
+  qt = {
     enable = true;
-    createDirectories = true;
-    desktop = "/home/cylenia/.hiddenxdg/desktop";
-    documents = "/home/cylenia/documents";
-    download = "/home/cylenia/downloads";
-    music = "/home/cylenia/.hiddenxdg/music";
-    pictures = "/home/cylenia/media/pictures";
-    publicShare = "/home/cylenia/.hiddenxdg/public";
-    templates = "/home/cylenia/.hiddenxdg/templates";
-    videos = "/home/cylenia/media/videos";
+    style = "adwaita-dark";
+    platformTheme = "gnome";
+  };
+
+  boot.plymouth = {
+    enable = true;
+    theme = "bgrt";
   };
 }

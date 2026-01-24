@@ -1,4 +1,4 @@
-{ ... }: {
+{ pkgs, ... }: {
   imports = [
     ./caddy.nix
     ./immich.nix
@@ -6,4 +6,6 @@
     ./newt.nix
     ./vaultwarden.nix    
   ];
+
+  environment.systemPackages = [ pkgs.git ];
 }

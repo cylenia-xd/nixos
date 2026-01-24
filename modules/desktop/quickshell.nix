@@ -4,6 +4,8 @@
     activeConfig = null;
   };
 
+  services.upower.enable = true;
+
   hm.home.file.quickshell = {
     enable = true;
     executable = true;
