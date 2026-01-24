@@ -1,9 +1,15 @@
-{ lib, pkgs, inputs, ... }: {
+{ lib, config, pkgs, modulesPath, inputs, ... }: {
   imports = [
-    ./hardware.nix
-    "${inputs.self}/modules/system/greetd.nix"
-    "${inputs.self}/modules/system/gpg.nix"
-    "${inputs.self}/modules/system/sops.nix"
+    (lib.mkAliasOptionModule [ "hm" ] [ "home-manager" "users" "cylenia" ])
+    (modulesPath + "/installer/scan/not-detected.nix")
+    "${inputs.self}/modules/greetd.nix"
+    "${inputs.self}/modules/gpg.nix"
+    "${inputs.self}/modules/sops.nix"
+    "${inputs.self}/modules/shell.nix"
+    "${inputs.self}/modules/neomutt.nix"
+    "${inputs.self}/modules/tools"
+    "${inputs.self}/modules/desktop"
+    "${inputs.self}/modules/editor"   
   ];
 
   users = {
@@ -101,7 +107,38 @@
   nixpkgs.config.permittedInsecurePackages = [
     "olm-3.2.16"
   ];
+
+  boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "usb_storage" "sd_mod" ];
+  boot.initrd.kernelModules = [ ];
+  boot.kernelModules = [ "kvm-amd" ];
+  boot.extraModulePackages = [ ];
+
+  fileSystems."/" = {
+    device = "/dev/mapper/luks-972eaff6-d37b-45fe-87c9-7afd63e55e12";
+    fsType = "btrfs";
+    options = [ "subvol=@" ];
+  };
+
+  boot.initrd.luks.devices."luks-972eaff6-d37b-45fe-87c9-7afd63e55e12".device = "/dev/disk/by-uuid/972eaff6-d37b-45fe-87c9-7afd63e55e12";
+
+  fileSystems."/home" = {
+    device = "/dev/mapper/luks-972eaff6-d37b-45fe-87c9-7afd63e55e12";
+    fsType = "btrfs";
+    options = [ "subvol=@home" ];
+  };
+
+  fileSystems."/boot" = {
+    device = "/dev/disk/by-uuid/D9E8-4BCD";
+    fsType = "vfat";
+    options = [ "fmask=0077" "dmask=0077" ];
+  };
+
+  swapDevices = [ ];
+
+  nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
+  hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
   
   # don't change this!
   system.stateVersion = "25.11";
+  hm.home.stateVersion = "25.11";
 }

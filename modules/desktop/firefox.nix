@@ -1,5 +1,5 @@
 { pkgs, inputs, ... }: {
-  programs.firefox = {
+  hm.programs.firefox = {
     enable = true;
     languagePacks = [ "en-GB" ];
     policies = {

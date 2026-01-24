@@ -1,5 +1,5 @@
 { pkgs, ... }: {
-  programs.kitty = {
+  hm.programs.kitty = {
     enable = true;
     themeFile = "Catppuccin-Mocha";
     font = {

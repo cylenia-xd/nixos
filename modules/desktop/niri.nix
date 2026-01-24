@@ -1,8 +1,8 @@
 { pkgs, ... }: {
-  home.packages = with pkgs; [
+  hm.home.packages = with pkgs; [
     swaybg
   ];
-  home.file.niri = {
+  hm.home.file.niri = {
     enable = true;
     target = ".config/niri/config.kdl";
     text = ''

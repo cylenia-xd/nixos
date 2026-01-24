@@ -1,5 +1,5 @@
 { ... }: {
-  programs.fastfetch = {
+  hm.programs.fastfetch = {
     enable = true;
     settings = {
       logo = {

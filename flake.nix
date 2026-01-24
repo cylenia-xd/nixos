@@ -22,14 +22,12 @@
       specialArgs = { inherit inputs; };
       system = "x86_64-linux";
       modules = [
-        ./hosts/jane/system.nix
+        ./hosts/jane.nix
         sops-nix.nixosModules.sops
         home-manager.nixosModules.default {
           home-manager = {
             useGlobalPkgs = true;
             useUserPackages = true;
-            users.cylenia = ./hosts/jane/home.nix;
-            extraSpecialArgs = { inherit inputs; };
           };
         }
       ];
@@ -38,14 +36,12 @@
       specialArgs = { inherit inputs; };
       system = "x86_64-linux";
       modules = [
-        ./hosts/paul/system.nix
+        ./hosts/paul.nix
         sops-nix.nixosModules.sops
         home-manager.nixosModules.default {
           home-manager = {
             useGlobalPkgs = true;
             useUserPackages = true;
-            users.cylenia = ./hosts/paul/home.nix;
-            extraSpecialArgs = { inherit inputs; };
           };
         }
       ];

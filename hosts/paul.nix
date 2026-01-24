@@ -1,13 +1,17 @@
-{ pkgs, inputs, ... }: {
+{ lib, config, pkgs, modulesPath, inputs, ... }: {
   imports = [
-    ./hardware.nix
-    "${inputs.self}/modules/system/newt.nix"
-    "${inputs.self}/modules/system/sshd.nix"
-    "${inputs.self}/modules/system/gpg.nix"
-    "${inputs.self}/modules/system/caddy.nix"
-    "${inputs.self}/modules/system/vaultwarden.nix"
-    "${inputs.self}/modules/system/sops.nix"
-    "${inputs.self}/modules/system/immich.nix"
+     (lib.mkAliasOptionModule [ "hm" ] [ "home-manager" "users" "cylenia" ])
+     (modulesPath + "/installer/scan/not-detected.nix")
+    "${inputs.self}/modules/newt.nix"
+    "${inputs.self}/modules/sshd.nix"
+    "${inputs.self}/modules/gpg.nix"
+    "${inputs.self}/modules/caddy.nix"
+    "${inputs.self}/modules/vaultwarden.nix"
+    "${inputs.self}/modules/sops.nix"
+    "${inputs.self}/modules/immich.nix"
+    "${inputs.self}/modules/shell.nix"
+    "${inputs.self}/modules/editor"
+    "${inputs.self}/modules/tools"
   ];
 
   users = {
@@ -51,6 +55,30 @@
   nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "usbhid" "usb_storage" "sd_mod" ];
+  boot.initrd.kernelModules = [ ];
+  boot.kernelModules = [ ];
+  boot.extraModulePackages = [ ];
+
+  fileSystems."/" = {
+    device = "/dev/disk/by-uuid/1f4badfc-b9d0-4691-8130-326e01821661";
+    fsType = "ext4";
+  };
+
+  fileSystems."/boot" = {
+    device = "/dev/disk/by-uuid/3133-B330";
+    fsType = "vfat";
+    options = [ "fmask=0077" "dmask=0077" ];
+  };
+
+  swapDevices = [
+    { device = "/dev/disk/by-uuid/ffabe7e5-a2a7-45e8-9cf6-06cb3af68043"; }
+  ];
+
+  nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
+  hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+
   # don't change this!
   system.stateVersion = "25.11";
+  hm.home.stateVersion = "25.11";
 }

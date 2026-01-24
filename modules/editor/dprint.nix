@@ -1,9 +1,9 @@
 { pkgs, ... }: {
-  home.packages = with pkgs; [
-    dprint
+  hm.home.packages = [
+    pkgs.dprint
   ];
   
-  home.file.dprint_config = {
+  hm.home.file.dprint_config = {
     executable = true;
     force = true;
     target = ".config/dprint/dprint.json";

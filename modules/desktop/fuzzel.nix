@@ -1,11 +1,11 @@
 { pkgs, lib, ... }: {
-  home.packages = with pkgs; [
+  hm.home.packages = with pkgs; [
     bemoji
     rofi-rbw
     wtype # bemoji requires
   ];
   
-  programs.rbw = {
+  hm.programs.rbw = {
     enable = true;
     settings = {
       base_url = "https://pass.cylenia.dev";
@@ -17,7 +17,7 @@
     };
   };
   
-  programs.fuzzel = {
+  hm.programs.fuzzel = {
     enable = true;
     settings = {
       main = {

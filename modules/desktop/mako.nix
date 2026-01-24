@@ -1,8 +1,8 @@
 { pkgs, ... }: {
-  home.packages = with pkgs; [
+  hm.home.packages = with pkgs; [
     libnotify
   ];
-  services.mako = {
+  hm.services.mako = {
     enable = true;
     settings = {
       sort = "-time";

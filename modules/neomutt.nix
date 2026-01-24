@@ -1,5 +1,5 @@
 { ... }: {
-  programs.neomutt = {
+  hm.programs.neomutt = {
     enable = true;
     sidebar.enable = false;
     extraConfig = ''
@@ -35,7 +35,7 @@
     '';
   };
 
-  accounts.email.accounts = {
+  hm.accounts.email.accounts = {
     cylenia = {
       enable = true;
       address = "me@cylenia.dev";
@@ -63,7 +63,7 @@
     };
   };
 
-  home.file.mailcap = {
+  hm.home.file.mailcap = {
     enable = true;
     executable = true;
     force = true;

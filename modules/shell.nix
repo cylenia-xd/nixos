@@ -1,7 +1,7 @@
 { ... }: {
-  home.shell.enableBashIntegration = true;
+  hm.home.shell.enableBashIntegration = true;
 
-  programs.bash = {
+  hm.programs.bash = {
     enable = true;
     enableCompletion = true;
     shellAliases.rebuild = "sudo nixos-rebuild switch";
@@ -10,11 +10,11 @@
     shellAliases.es = "eza";
   };
 
-  programs.starship = {
+  hm.programs.starship = {
     enable = true;
   };
 
-  programs.eza = {
+  hm.programs.eza = {
     enable = true;
     enableBashIntegration = false;
     colors = "always";

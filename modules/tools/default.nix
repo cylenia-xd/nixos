@@ -1,5 +1,11 @@
 { pkgs, ... }: {
-  home.packages = with pkgs; [
+  imports = [
+    ./git.nix
+    ./ssh.nix
+    ./fastfetch.nix
+  ];
+  
+  hm.home.packages = with pkgs; [
     netcat-openbsd
     android-tools
     xdg-user-dirs
