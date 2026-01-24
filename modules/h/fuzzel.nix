@@ -9,7 +9,8 @@
     enable = true;
     settings = {
       base_url = "https://pass.cylenia.dev";
-      identity_url = "https://identity.bitwarden.com";
+      identity_url = "https://pass.cylenia.dev/identity";
+      ui_url = "https://pass.cylenia.dev";
       email = "me@cylenia.dev";
       lock_timeout = 3600;
       pinentry = pkgs.pinentry-gnome3;
