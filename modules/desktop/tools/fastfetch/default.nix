@@ -1,9 +1,14 @@
 { ... }: {
+  hm.home.file.ascii = {
+    target = ".config/fastfetch/ascii.txt";
+    source = ./ascii.txt;
+  };
+  
   hm.programs.fastfetch = {
     enable = true;
     settings = {
       logo = {
-        source = "~/nixos/assets/ascii.txt";
+        source = "~/.config/fastfetch/ascii.txt";
         padding = {
           top = 1;
           right = 5;
