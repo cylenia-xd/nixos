@@ -5,9 +5,17 @@
     settings = {
       main = {
         term = "xterm-256color";
-
+        pad = "2x2 center";
         font = "Hack Nerd Font Mono:size=8";
         dpi-aware = "yes";
+      };
+
+      cursor = {
+        style = "beam";
+        unfocused-style = "none";
+        blink = true;
+        blink-rate = 250;
+        beam-thickness = "2px";
       };
 
       mouse = {
