@@ -7,6 +7,7 @@
     "${inputs.self}/modules/n/caddy.nix"
     "${inputs.self}/modules/n/vaultwarden.nix"
     "${inputs.self}/modules/n/sops.nix"
+    "${inputs.self}/modules/n/immich.nix"
   ];
 
   users.users.cylenia = {
