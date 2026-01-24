@@ -1,4 +1,4 @@
-{ config, pkgs, ... }: {
+{ config, ... }: {
   services.newt = {
     enable = true;
     environmentFile = config.sops.secrets.pangolin_env.path;
