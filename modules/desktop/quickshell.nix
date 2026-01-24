@@ -8,6 +8,6 @@
     enable = true;
     executable = true;
     target = ".config/quickshell";
-    source = ../../../assets/quickshell;
+    source = ../../assets/quickshell;
   };
 }
