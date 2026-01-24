@@ -7,6 +7,11 @@
     shellAbbrs.rebuild = "sudo nixos-rebuild switch";
     shellAbbrs.l = "eza -l";
     shellAbbrs.la = "eza -la";
+    interactiveShellInit = ''
+      set -g fish_cursor_default line
+      set -g fish_cursor_insert underline
+      set -g fish_cursor_visual block
+    '';
   };
 
   programs.starship = {
