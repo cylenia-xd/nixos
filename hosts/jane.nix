@@ -15,10 +15,6 @@
       "/etc/NetworkManager"
       "/etc/nixos"
       "/var/lib/nixos"
-      "/home/cylenia/code"
-      "/home/cylenia/documents"
-      "/home/cylenia/downloads"
-      "/home/cylenia/nixos"
     ];
     users.cylenia = {
       directories = [

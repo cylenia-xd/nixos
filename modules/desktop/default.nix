@@ -25,9 +25,4 @@
     style = "adwaita-dark";
     platformTheme = "gnome";
   };
-
-  boot.plymouth = {
-    enable = true;
-    theme = "bgrt";
-  };
 }
