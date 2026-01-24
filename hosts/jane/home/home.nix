@@ -2,7 +2,7 @@
   imports = [
     "${inputs.self}/modules/h/git.nix"
     "${inputs.self}/modules/h/fastfetch.nix"
-    "${inputs.self}/modules/h/foot.nix"
+    "${inputs.self}/modules/h/kitty.nix"
     "${inputs.self}/modules/h/mako.nix"
     "${inputs.self}/modules/h/shell.nix"
     "${inputs.self}/modules/h/niri.nix"

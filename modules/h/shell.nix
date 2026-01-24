@@ -1,16 +1,16 @@
 { ... }: {
-  home.shell.enableFishIntegration = true;
+  home.shell.enableBashIntegration = true;
 
-  programs.fish = {
+  programs.bash = {
     enable = true;
-    preferAbbrs = true;
-    shellAbbrs.rebuild = "sudo nixos-rebuild switch";
-    shellAbbrs.l = "eza -l";
-    shellAbbrs.la = "eza -la";
-    functions.fish_postexec = "__fish_cursor_xterm line";
-    interactiveShellInit = ''
-      __fish_cursor_xterm line
-    '';
+    enableCompletion = true;
+    shellAliases.rebuild = "sudo nixos-rebuild switch";
+    shellAliases.l = "eza -l";
+    shellAliases.la = "eza -la";
+    undistractMe = {
+      enable = true;
+      timeout = 15;
+    };
   };
 
   programs.starship = {

@@ -71,7 +71,7 @@
       }
 
       binds {
-        Mod+T              { spawn "footclient"; }
+        Mod+T              { spawn "kitty"; }
         Mod+D              { spawn "fuzzel"; }
         Mod+E              { spawn-sh "BEMOJI_PICKER_CMD=\"fuzzel -d\" bemoji -t"; }
         Mod+V              { spawn-sh "cliphist list | fuzzel --dmenu --with-nth 2 | cliphist decode | wl-copy"; }

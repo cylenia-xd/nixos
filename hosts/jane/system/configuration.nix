@@ -11,7 +11,7 @@
     users.cylenia = {
       isNormalUser = true;
       description = "Cylenia";
-      shell = pkgs.fish;
+      shell = pkgs.bash;
       extraGroups = [ "networkmanager" "wheel" ];
       hashedPassword = "$y$j9T$gej56YvgGE.K/x4UOF/mZ1$W7EQoyuqICLE8uV1oIxM.cI180PXT9xERVXMzDdtAV0";
     };
@@ -19,8 +19,6 @@
       hashedPassword = "$y$j9T$gej56YvgGE.K/x4UOF/mZ1$W7EQoyuqICLE8uV1oIxM.cI180PXT9xERVXMzDdtAV0";
     };
   };
-
-  programs.fish.enable = true;
 
   networking.wireguard.enable = true;
   networking.hostName = "jane";
