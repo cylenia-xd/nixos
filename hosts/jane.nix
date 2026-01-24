@@ -11,7 +11,7 @@
 
   boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "usb_storage" "sd_mod" ];
   boot.kernelModules = [ "kvm-amd" ];
-  boot.initrd.luks.devices."cryptroot".device = "/dev/disk/by-label/root";
+  boot.initrd.luks.devices."cryptroot".device = "/dev/disk/by-uuid/972eaff6-d37b-45fe-87c9-7afd63e55e12";
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 
   fileSystems."/" = {
@@ -27,7 +27,7 @@
   };
 
   fileSystems."/boot" = {
-    device = "/dev/disk/by-label/boot";
+    device = "/dev/disk/by-uuid/D9E8-4BCD";
     fsType = "vfat";
     options = [ "fmask=0077" "dmask=0077" ];
   };
