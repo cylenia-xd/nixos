@@ -5,6 +5,8 @@
     enable = true;
     preferAbbrs = true;
     shellAbbrs.rebuild = "sudo nixos-rebuild switch";
+    shellAbbrs.l = "eza -l";
+    shellAbbrs.la = "eza -la";
   };
 
   programs.starship = {
