@@ -7,6 +7,6 @@
     ./kitty.nix
     ./mako.nix
     ./niri.nix
-    ./quickshell.nix
+    ./quickshell
   ];
 }
