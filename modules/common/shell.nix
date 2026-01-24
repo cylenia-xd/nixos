@@ -4,7 +4,7 @@
   hm.programs.bash = {
     enable = true;
     enableCompletion = true;
-    shellAliases.rebuild = "sudo nixos-rebuild switch";
+    shellAliases.rebuild = "sudo nixos-rebuild --flake /home/cylenia/nixos";
     shellAliases.e = "eza -l";
     shellAliases.ea = "eza -la";
     shellAliases.es = "eza";
