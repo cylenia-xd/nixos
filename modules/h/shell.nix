@@ -1,11 +1,10 @@
 { ... }: {
-  home.shell.enableBashIntegration = true;
+  home.shell.enableFishIntegration = true;
 
-  programs.bash = {
+  programs.fish = {
     enable = true;
-    enableCompletion = true;
-    enableVteIntegration = true;
-    shellAliases.rebuild = "sudo nixos-rebuild switch";
+    preferAbbrs = true;
+    shellAbbrs.rebuild = "sudo nixos-rebuild switch";
   };
 
   programs.starship = {
