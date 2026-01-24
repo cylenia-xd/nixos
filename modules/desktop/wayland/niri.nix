@@ -1,7 +1,4 @@
-{ pkgs, ... }: {
-  hm.home.packages = with pkgs; [
-    swaybg
-  ];
+{ ... }: {
   hm.home.file.niri = {
     enable = true;
     target = ".config/niri/config.kdl";
@@ -53,7 +50,6 @@
       }
 
       spawn-at-startup "quickshell"
-      spawn-sh-at-startup "swaybg -i ~/nixos/assets/wallpaper.jpg -o \"*\" -m stretch"
       spawn-sh-at-startup "wl-paste --type text --watch cliphist store"
       spawn-sh-at-startup "wl-paste --type image --watch cliphist store"
       spawn-at-startup "mako"
