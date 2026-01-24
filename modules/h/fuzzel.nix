@@ -1,8 +1,18 @@
 { pkgs, lib, ... }: {
   home.packages = with pkgs; [
     bemoji
+    rofi-rbw
     wtype # bemoji requires
   ];
+  
+  programs.rbw = {
+    enable = true;
+    settings = {
+      base_url = "https://pass.cylenia.dev";
+      email = "me@cylenia.dev";
+      lock_timeout = 3600;
+    };
+  };
   
   programs.fuzzel = {
     enable = true;
