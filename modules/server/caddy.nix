@@ -6,6 +6,7 @@ let
       owner = "cylenia-xd";
       repo = "bio";
       rev = "2f975f0941b7664fa9f7a5c50a49b5c14e473a2e";
+      hash = "sha256-yeFQwl1UpS8KqKdOPth1zjRKJgCDb1PEEmOSKjHOdIE=";
     };
     buildInputs = [ pkgs.nodejs ];
     buildPhase = ''
