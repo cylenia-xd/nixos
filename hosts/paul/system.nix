@@ -1,13 +1,13 @@
 { pkgs, inputs, ... }: {
   imports = [
     ./hardware.nix
-    "${inputs.self}/modules/n/newt.nix"
-    "${inputs.self}/modules/n/sshd.nix"
-    "${inputs.self}/modules/n/gpg.nix"
-    "${inputs.self}/modules/n/caddy.nix"
-    "${inputs.self}/modules/n/vaultwarden.nix"
-    "${inputs.self}/modules/n/sops.nix"
-    "${inputs.self}/modules/n/immich.nix"
+    "${inputs.self}/modules/system/newt.nix"
+    "${inputs.self}/modules/system/sshd.nix"
+    "${inputs.self}/modules/system/gpg.nix"
+    "${inputs.self}/modules/system/caddy.nix"
+    "${inputs.self}/modules/system/vaultwarden.nix"
+    "${inputs.self}/modules/system/sops.nix"
+    "${inputs.self}/modules/system/immich.nix"
   ];
 
   users = {

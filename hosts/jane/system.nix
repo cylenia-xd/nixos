@@ -1,9 +1,9 @@
 { lib, pkgs, inputs, ... }: {
   imports = [
     ./hardware.nix
-    "${inputs.self}/modules/n/greetd.nix"
-    "${inputs.self}/modules/n/gpg.nix"
-    "${inputs.self}/modules/n/sops.nix"
+    "${inputs.self}/modules/system/greetd.nix"
+    "${inputs.self}/modules/system/gpg.nix"
+    "${inputs.self}/modules/system/sops.nix"
   ];
 
   users = {

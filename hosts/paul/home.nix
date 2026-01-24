@@ -1,7 +1,7 @@
 { pkgs, inputs, ... }: {
   imports = [
-    "${inputs.self}/modules/h/helix.nix"
-    "${inputs.self}/modules/h/shell.nix"
+    "${inputs.self}/modules/home/editor"
+    "${inputs.self}/modules/home/shell.nix"
   ];
   
   home.packages = with pkgs; [
