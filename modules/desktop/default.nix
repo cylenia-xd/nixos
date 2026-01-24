@@ -10,6 +10,7 @@
     ./niri.nix
     ./quickshell.nix
     ./editor
+    ./tools
   ];
 
   hm.home.packages = [
