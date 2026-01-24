@@ -10,7 +10,7 @@
     ./niri.nix
     ./quickshell.nix
     ./xdg.nix
-    ./editor
+    ./editor.nix
     ./tools
   ];
 

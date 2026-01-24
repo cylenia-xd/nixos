@@ -31,4 +31,32 @@
       }
     ];
   };
+
+  hm.home.packages = [
+    pkgs.dprint
+  ];
+  
+  hm.home.file.dprint_config = {
+    executable = true;
+    force = true;
+    target = ".config/dprint/dprint.json";
+    text = builtins.toJSON {
+      markdown = {
+        emphasisKind = "asterisks";
+        strongKind = "asterisks";
+      };
+
+      excludes = [
+        "**/*-lock.json"
+      ];
+
+      plugins = [
+        "https://plugins.dprint.dev/json-0.21.1.wasm"
+        "https://plugins.dprint.dev/markdown-0.20.0.wasm"
+        "https://plugins.dprint.dev/toml-0.7.0.wasm"
+        "https://plugins.dprint.dev/g-plane/markup_fmt-v0.25.3.wasm"
+        "https://plugins.dprint.dev/g-plane/pretty_yaml-v0.5.1.wasm"
+      ];
+    };
+  };
 }
