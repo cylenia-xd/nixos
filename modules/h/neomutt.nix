@@ -62,4 +62,12 @@
       };
     };
   };
+
+  home.file.mailcap = {
+    enable = true;
+    executable = true;
+    force = true;
+    target = ".mailcap";
+    text = "text/html; firefox %s; nametemplate=%s.html";
+  };
 }

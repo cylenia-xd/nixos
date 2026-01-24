@@ -35,14 +35,6 @@
     videos = "/home/cylenia/media/videos";
   };
 
-  home.file.mailcap = {
-    enable = true;
-    executable = true;
-    force = true;
-    target = ".mailcap";
-    text = "text/html; librewolf %s; nametemplate=%s.html";
-  };
-
   # don't change this!
   home.stateVersion = "25.11";
 }
