@@ -20,6 +20,8 @@
     };
   };
 
+  programs.fish.enable = true;
+
   networking.wireguard.enable = true;
   networking.hostName = "jane";
   networking.networkmanager.enable = true;
