@@ -24,6 +24,7 @@
         terminal = "${lib.getExe pkgs.kitty}";
         font = "Hack Nerd Font Mono:size=8";
         icons-enabled = false;
+        width = 100;
         horizontal-pad = 8;
         vertical-pad = 8;
       };
