@@ -1,8 +1,8 @@
 { pkgs, ... }: {
   imports = [
-    ./fastfetch.nix
     ./git.nix
     ./ssh.nix
+    ./fastfetch
   ];
   
   hm.home.packages = with pkgs; [
