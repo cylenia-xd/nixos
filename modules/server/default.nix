@@ -2,8 +2,8 @@
   imports = [
     ./caddy.nix
     ./immich.nix
-    ./sshd.nix
     ./newt.nix
+    ./openssh.nix
     ./vaultwarden.nix    
   ];
 

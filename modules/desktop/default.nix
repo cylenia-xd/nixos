@@ -1,16 +1,10 @@
 { pkgs, ... }: {
   imports = [
-    ./clipboard.nix
-    ./firefox.nix
-    ./fuzzel.nix
-    ./greetd.nix
-    ./kitty.nix
-    ./mako.nix
-    ./neomutt.nix
-    ./niri.nix
-    ./quickshell.nix
-    ./xdg.nix
+    ./audio.nix
     ./editor.nix
+    ./neomutt.nix
+    ./xdg.nix
+    ./wayland
     ./tools
   ];
 
