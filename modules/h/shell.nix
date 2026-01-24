@@ -5,9 +5,9 @@
     enable = true;
     enableCompletion = true;
     shellAliases.rebuild = "sudo nixos-rebuild switch";
-    shellAliases.l = "eza -l";
-    shellAliases.la = "eza -la";
-    shellAliases.ls = "eza";
+    shellAliases.e = "eza -l";
+    shellAliases.ea = "eza -la";
+    shellAliases.es = "eza";
   };
 
   programs.starship = {
@@ -16,6 +16,7 @@
 
   programs.eza = {
     enable = true;
+    enableBashIntegration = false;
     colors = "always";
     git = true;
     icons = "always";
