@@ -7,10 +7,9 @@
     shellAbbrs.rebuild = "sudo nixos-rebuild switch";
     shellAbbrs.l = "eza -l";
     shellAbbrs.la = "eza -la";
+    functions.fish_postexec = "__fish_cursor_xterm line";
     interactiveShellInit = ''
-      set -g fish_cursor_default line
-      set -g fish_cursor_insert underline
-      set -g fish_cursor_visual block
+      __fish_cursor_xterm line
     '';
   };
 
