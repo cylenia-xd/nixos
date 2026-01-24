@@ -17,6 +17,11 @@
     colors = "always";
     git = true;
     icons = "always";
+    extraOptions = [
+      "--group-directories-first"
+      "--header"
+      "--octal-permissions"
+    ];
     theme = {
       colourful = true;
       filekinds = {
