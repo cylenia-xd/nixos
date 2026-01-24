@@ -7,10 +7,7 @@
     shellAliases.rebuild = "sudo nixos-rebuild switch";
     shellAliases.l = "eza -l";
     shellAliases.la = "eza -la";
-    undistractMe = {
-      enable = true;
-      timeout = 15;
-    };
+    shellAliases.ls = "eza";
   };
 
   programs.starship = {
