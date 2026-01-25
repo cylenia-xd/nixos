@@ -1,4 +1,4 @@
-{ ... }: {
+{ config, ... }: {
   hm.programs.neomutt = {
     enable = true;
     sidebar.enable = false;
@@ -40,7 +40,7 @@
       enable = true;
       address = "me@cylenia.dev";
       realName = "Cylenia";
-      passwordCommand = "cat /run/secrets/email_password";
+      passwordCommand = "cat ${config.sops.secrets.email_password.path}";
       primary = true;
       userName = "me@cylenia.dev";
       smtp = {
