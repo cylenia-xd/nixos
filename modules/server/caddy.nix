@@ -1,22 +1,10 @@
 { pkgs, ... }:
 let
-  bioSite = pkgs.stdenv.mkDerivation {
-    name = "bio-site";
-    src = pkgs.fetchFromGitHub {
-      owner = "cylenia-xd";
-      repo = "bio";
-      rev = "2f975f0941b7664fa9f7a5c50a49b5c14e473a2e";
-      hash = "sha256-yeFQwl1UpS8KqKdOPth1zjRKJgCDb1PEEmOSKjHOdIE=";
-    };
-    buildInputs = [ pkgs.nodejs ];
-    buildPhase = ''
-      npx @11ty/eleventy
-    '';
-    installPhase = ''
-      mkdir -p $out
-      cp -r _site/* $out/
-    '';
-  };
+  bioSite = pkgs.callPackage (pkgs.fetchFromGitHub {
+    owner = "cylenia-xd";
+    repo = "bio";
+    rev = "7f04f2f558a3220cc6ee092efa43fced172df5ae";
+  }) {};
 in {
   services.caddy = {
     enable = true;
