@@ -1,6 +1,3 @@
 { ... }: {
-  services.jellyfin = {
-    enable = true;
-    hardwareAcceleration.enable = true;
-  };
+  services.jellyfinenable = true;
 }
