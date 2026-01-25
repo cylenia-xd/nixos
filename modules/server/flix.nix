@@ -29,6 +29,11 @@
     };
   };
 
+  services.jellyseerr = {
+    enable = true;
+    port = 7070;
+  };
+
   services.qbittorrent = {
     enable = true;
     group = "flix";
