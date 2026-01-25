@@ -1,8 +1,11 @@
 { pkgs, ... }: {
+  users.groups.flix = {};
+  
   services.jellyfin.enable = true;
 
   services.prowlarr = {
     enable = true;
+    group = "flix";
     settings = {
       server.urlbase = "";
       server.bindaddress = "*";
@@ -18,6 +21,7 @@
 
   services.radarr = {
     enable = true;
+    group = "flix";
     settings = {
       server.urlbase = "";
       server.bindaddress = "*";
@@ -28,6 +32,7 @@
 
   services.qbittorrent = {
     enable = true;
+    group = "flix";
     webuiPort = 7071;
     serverConfig = {
       LegalNotice.Accepted = true;
