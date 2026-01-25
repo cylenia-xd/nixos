@@ -15,4 +15,14 @@
     enable = true;
     port = 7068;
   };
+
+  services.radarr = {
+    enable = true;
+    settings = {
+      server.urlbase = "";
+      server.bindaddress = "*";
+      server.port = 7069;
+      server.enablessl = false;
+    };
+  };
 }
