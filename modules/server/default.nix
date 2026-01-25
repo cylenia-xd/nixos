@@ -5,6 +5,7 @@
     ./newt.nix
     ./openssh.nix
     ./vaultwarden.nix    
+    ./jellyfin.nix
   ];
 
   environment.systemPackages = [ pkgs.git ];
