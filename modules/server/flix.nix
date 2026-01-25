@@ -25,4 +25,10 @@
       server.enablessl = false;
     };
   };
+
+  services.qbittorrent = {
+    enable = true;
+    torrentingPort = 7070;
+    webuiPort = 7071;
+  };
 }
