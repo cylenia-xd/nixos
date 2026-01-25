@@ -1,3 +1,3 @@
 { ... }: {
-  services.jellyfinenable = true;
+  services.jellyfin.enable = true;
 }
