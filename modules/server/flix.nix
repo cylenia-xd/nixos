@@ -5,7 +5,6 @@
 
   services.prowlarr = {
     enable = true;
-    group = "flix";
     settings = {
       server.urlbase = "";
       server.bindaddress = "*";
