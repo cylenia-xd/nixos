@@ -1,4 +1,4 @@
-{ ... }: {
+{ pkgs, ... }: {
   services.jellyfin.enable = true;
 
   services.prowlarr = {
@@ -28,7 +28,18 @@
 
   services.qbittorrent = {
     enable = true;
-    torrentingPort = 7070;
     webuiPort = 7071;
+    serverConfig = {
+      LegalNotice.Accepted = true;
+      Preferences = {
+        WebUI = {
+          Username = "opsecgod";
+          Password_PBKDF2 = "3w0Is1aJxe38as7F7JUUQg==:hEwwOmVelvk75lzicJG0CfrHDDG2pormQvHV5b0ZT602Wy/b3iiHvcqnzwyEnn/82/QnLa/fiWQAteMj1UhYUQ==";
+          AlternativeUIEnabled = true;
+          RootFolder = "${pkgs.vuetorrent}/share/vuetorrent";
+        };
+        General.Locale = "en";
+      };
+    };
   };
 }
