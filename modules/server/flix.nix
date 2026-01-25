@@ -29,6 +29,17 @@
     };
   };
 
+  services.sonarr = {
+    enable = true;
+    group = "flix";
+    settings = {
+      server.urlbase = "";
+      server.bindaddress = "*";
+      server.port = 7072;
+      server.enablessl = false;
+    };
+  };
+
   services.jellyseerr = {
     enable = true;
     port = 7070;
