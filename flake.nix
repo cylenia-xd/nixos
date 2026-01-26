@@ -17,7 +17,7 @@
     };
     nixcraft = {
       url = "github:loystonpais/nixcraft";
-      inputs.follows.nixpkgs = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
