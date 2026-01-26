@@ -2,6 +2,7 @@
   hm.nixcraft = {
     enable = true;
 
+    server.instances = {};
     client = {
       shared = {
         binEntry.enable = true;
