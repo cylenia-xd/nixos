@@ -15,6 +15,10 @@
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixcraft = {
+      url = "github:loystonpais/nixcraft";
+      inputs.follows.nixpkgs = "nixpkgs";
+    };
   };
 
   outputs = { nixpkgs, home-manager, sops-nix, ... }@inputs: {
