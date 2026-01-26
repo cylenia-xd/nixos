@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ ... }: {
   imports = [
     ./audio.nix
     ./xdg.nix
@@ -6,9 +6,5 @@
     ./tools
   ];
 
-  hm.home.packages = [
-    pkgs.nerd-fonts.hack
-  ];
-  
   services.gnome.gnome-keyring.enable = true;
 }

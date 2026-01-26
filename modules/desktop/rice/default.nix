@@ -1,4 +1,4 @@
-{ ... }: {
+{ pkgs, ... }: {
   imports = [
     ./clipboard.nix
     ./firefox.nix
@@ -12,6 +12,7 @@
     ./quickshell
   ];
 
+  hm.home.packages = [ pkgs.nerd-fonts.hack ];
   environment.systemPackages = with pkgs; [
     adwaita-icon-theme
     xwayland-satellite
