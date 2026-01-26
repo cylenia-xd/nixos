@@ -1,5 +1,5 @@
 { pkgs, ... }: {
-  hm.config.nixcraft = {
+  hm.nixcraft = {
     enable = true;
 
     client = {
