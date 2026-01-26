@@ -23,6 +23,14 @@
               hash = "sha256-ZuulZMd1enygNkSpyInQ2MdkBLvC63/mWe8GO1bc6cY=";
             };
           };
+          files = {
+            "mods/chunky.jar".source = pkgs.fetchurl {
+              url = "https://cdn.modrinth.com/data/fALzjamp/versions/NHWYq9at/Chunky-1.3.146.jar";
+            };
+            "mods/e4mc.jar".source = pkgs.fetchurl {
+              url = "https://cdn.modrinth.com/data/qANg5Jrr/versions/jpS88LKC/e4mc_minecraft-fabric-5.5.4.jar";
+            };
+          };
         };
       };
     };
