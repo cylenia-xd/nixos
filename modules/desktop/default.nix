@@ -2,6 +2,7 @@
   imports = [
     ./audio.nix
     ./xdg.nix
+    ./minecraft.nix
     ./rice
     ./tools
   ];
