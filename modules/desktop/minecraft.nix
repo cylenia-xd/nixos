@@ -20,6 +20,7 @@
             enable = true;
             file = pkgs.fetchurl {
               url = "https://cdn.modrinth.com/data/HqonU57y/versions/rlTgMYB4/Create%2B%203.1.1.mrpack";
+              hash = "sha256-ZuulZMd1enygNkSpyInQ2MdkBLvC63/mWe8GO1bc6cY=";
             };
           };
         };
