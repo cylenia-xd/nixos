@@ -7,20 +7,19 @@
       shared = {
         binEntry.enable = true;
         account = {
-          username = "Skibidi";
-          uuid = "00000000-0000-0000-0000-000000000000";
+          username = "Cylenia";
+          uuid = "10636299-87c3-4ae0-b9a1-9ecb00282433";
           offline = true;
         };
       };
 
       instances = {
-        simop-mc = {
+        create-plus = {
           enable = true;
           mrpack = {
             enable = true;
             file = pkgs.fetchurl {
-              url = "https://cdn.modrinth.com/data/BYfVnHa7/versions/vZZwrcPm/Simply%20Optimized-1.21.1-5.0.mrpack";
-              hash = "sha256-n2BxHMmqpOEMsvDqRRYFfamcDCCT4ophUw7QAJQqXmg=";
+              url = "https://cdn.modrinth.com/data/HqonU57y/versions/rlTgMYB4/Create%2B%203.1.1.mrpack";
             };
           };
         };
