@@ -26,6 +26,7 @@
           files = {
             "mods/chunky.jar".source = pkgs.fetchurl {
               url = "https://cdn.modrinth.com/data/fALzjamp/versions/NHWYq9at/Chunky-1.3.146.jar";
+              hash = "sha256-rn+501o6nZ1PIQSurnsxqQHF5YQokeLt2d3MQsJkajg=";
             };
             "mods/e4mc.jar".source = pkgs.fetchurl {
               url = "https://cdn.modrinth.com/data/qANg5Jrr/versions/jpS88LKC/e4mc_minecraft-fabric-5.5.4.jar";
