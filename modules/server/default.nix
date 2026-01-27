@@ -6,6 +6,7 @@
     ./openssh.nix
     ./vaultwarden.nix    
     ./flix.nix
+    ./minecraft.nix
   ];
 
   environment.systemPackages = [ pkgs.git ];

@@ -16,6 +16,7 @@
       instances = {
         create-plus = {
           enable = true;
+          java.memory = 4000;
           mrpack = {
             enable = true;
             file = pkgs.fetchurl {
