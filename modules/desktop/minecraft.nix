@@ -34,7 +34,7 @@
             };
             "mods/ias.jar".source = pkgs.fetchurl {
               url = "https://cdn.modrinth.com/data/cudtvDnd/versions/BEifi05w/IAS-Fabric-1.20.1-9.0.4.jar";
-              :hash = "sha256-IdTNOcTI9EejR014XbSvqIlrqrTG5JyvCkgvzpBT03s=";
+              hash = "sha256-IdTNOcTI9EejR014XbSvqIlrqrTG5JyvCkgvzpBT03s=";
             };
           };
         };
