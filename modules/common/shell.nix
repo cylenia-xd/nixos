@@ -4,10 +4,16 @@
   hm.programs.bash = {
     enable = true;
     enableCompletion = true;
-    shellAliases.rebuild = "sudo nixos-rebuild --flake /home/cylenia/nixos";
-    shellAliases.e = "eza -l";
-    shellAliases.ea = "eza -la";
-    shellAliases.es = "eza";
+    shellAliases = {
+      nrs = "sudo nixos-rebuild switch --flake /home/cylenia/nixos";
+      nr = "sudo nixos-rebuild --flake /home/cylenia/nixos";
+      e = "eza -l";
+      ea = "eza -la";
+      es = "eza";
+      ls = "echo \"Muscle memory strikes again. Use eza you dimwit!\"";
+      ll = "echo \"Muscle memory strikes again. Use eza you dimwit!\"";
+      l = "echo \"Muscle memory strikes again. Use eza you dimwit!\"";
+    };
   };
 
   hm.programs.starship = {
