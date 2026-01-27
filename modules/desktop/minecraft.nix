@@ -34,6 +34,7 @@
             };
             "mods/dh.jar".source = pkgs.fetchurl {
               url = "https://cdn.modrinth.com/data/uCdwusMi/versions/lC6CwqPp/DistantHorizons-2.4.5-b-1.20.1-fabric-forge.jar";
+              hash = "sha256-4pxdakfOQOwXT5YQSsNjlgXeMOOBGzmQfecHD+sjDMI=";
             };
           };
         };
