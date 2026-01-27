@@ -39,6 +39,7 @@
             };
             "mods/mt.jar".source = pkgs.fetchurl {
               url = "https://cdn.modrinth.com/data/aC3cM3Vq/versions/mjuG4AYd/MouseTweaks-fabric-mc1.20-2.26.jar";
+              hash = "sha256-Hrnwx4eFmKOn37Us0OgVnr+LM7BObfIyU0/tL7tmFuQ=";
             };
           };
         };
