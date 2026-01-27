@@ -2,17 +2,12 @@
   hm.nixcraft = {
     enable = true;
 
-    server.instances = {};
-    client = {
+    client.instances = {};
+    server = {
       shared = {
+        agreeToEula = true;
         binEntry.enable = true;
-        account = {
-          username = "Cylenia";
-          uuid = "10636299-87c3-4ae0-b9a1-9ecb00282433";
-          offline = true;
-        };
       };
-
       instances = {
         create-plus = {
           enable = true;
@@ -24,17 +19,22 @@
             };
           };
           files = {
-            "mods/e4mc.jar".source = pkgs.fetchurl {
-              url = "https://cdn.modrinth.com/data/qANg5Jrr/versions/jpS88LKC/e4mc_minecraft-fabric-5.5.4.jar";
-              hash = "sha256-n55fWcbVpmC+qE/Kw3VTyskfwDQXKrvtQDk+/j1Ymho=";
-            };
             "mods/dh.jar".source = pkgs.fetchurl {
               url = "https://cdn.modrinth.com/data/uCdwusMi/versions/lC6CwqPp/DistantHorizons-2.4.5-b-1.20.1-fabric-forge.jar";
               hash = "sha256-4pxdakfOQOwXT5YQSsNjlgXeMOOBGzmQfecHD+sjDMI=";
             };
+          };
+          java.memory = 2000;
+          serverProperties = {
+            bug-report-link = null;
+          };
+          service = {
+            enable = true;
+            autoStart = true;
           };
         };
       };
     };
   };
 }
+

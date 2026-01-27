@@ -16,7 +16,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixcraft = {
-      url = "github:loystonpais/nixcraft";
+      url = "github:cylenia-xd/nixcraft";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
