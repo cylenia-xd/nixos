@@ -7,8 +7,8 @@
       shared = {
         binEntry.enable = true;
         account = {
-          username = "Cylenia";
-          uuid = "10636299-87c3-4ae0-b9a1-9ecb00282433";
+          username = "Placeholder";
+          uuid = "00000000-0000-0000-0000-000000000000";
           offline = true;
         };
       };
@@ -31,6 +31,9 @@
             "mods/dh.jar".source = pkgs.fetchurl {
               url = "https://cdn.modrinth.com/data/uCdwusMi/versions/lC6CwqPp/DistantHorizons-2.4.5-b-1.20.1-fabric-forge.jar";
               hash = "sha256-4pxdakfOQOwXT5YQSsNjlgXeMOOBGzmQfecHD+sjDMI=";
+            };
+            "mods/ias.jar".source = pkgs.fetchurl {
+              url = "https://cdn.modrinth.com/data/cudtvDnd/versions/BEifi05w/IAS-Fabric-1.20.1-9.0.4.jar";
             };
           };
         };

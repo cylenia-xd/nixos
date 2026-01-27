@@ -72,15 +72,15 @@
         ]
       },
       "locked": {
-        "lastModified": 1769549764,
-        "narHash": "sha256-Y/5L4WptvmlOiIsw1xk9mnnBYNuvtwa2qRiQH4Td5fA=",
-        "owner": "cylenia-xd",
+        "lastModified": 1769529999,
+        "narHash": "sha256-vykDMaoULl+yyYHcRII/mMcmyLV0VUiky14G/UA1e7g=",
+        "owner": "loystonpais",
         "repo": "nixcraft",
-        "rev": "35653210047d5e243c85e38bce943c498e0b4083",
+        "rev": "6fcf8cc9415227efdf5f1f832a62951a2ad6f0a2",
         "type": "github"
       },
       "original": {
-        "owner": "cylenia-xd",
+        "owner": "loystonpais",
         "repo": "nixcraft",
         "type": "github"
       }
