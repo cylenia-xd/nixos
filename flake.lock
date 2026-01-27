@@ -72,11 +72,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1769408377,
-        "narHash": "sha256-vykDMaoULl+yyYHcRII/mMcmyLV0VUiky14G/UA1e7g=",
+        "lastModified": 1769549764,
+        "narHash": "sha256-Y/5L4WptvmlOiIsw1xk9mnnBYNuvtwa2qRiQH4Td5fA=",
         "owner": "cylenia-xd",
         "repo": "nixcraft",
-        "rev": "784f7f9dda93894f76eeac768eeb897c2570caab",
+        "rev": "35653210047d5e243c85e38bce943c498e0b4083",
         "type": "github"
       },
       "original": {
