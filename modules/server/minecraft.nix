@@ -27,6 +27,7 @@
           java.memory = 2000;
           serverProperties = {
             bug-report-link = null;
+            generate-structures = false;
           };
           service = {
             enable = true;

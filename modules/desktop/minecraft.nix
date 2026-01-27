@@ -37,6 +37,9 @@
               url = "https://cdn.modrinth.com/data/cudtvDnd/versions/BEifi05w/IAS-Fabric-1.20.1-9.0.4.jar";
               hash = "sha256-IdTNOcTI9EejR014XbSvqIlrqrTG5JyvCkgvzpBT03s=";
             };
+            "mods/mt.jar".source = pkgs.fetchurl {
+              url = "https://cdn.modrinth.com/data/aC3cM3Vq/versions/mjuG4AYd/MouseTweaks-fabric-mc1.20-2.26.jar";
+            };
           };
         };
       };
