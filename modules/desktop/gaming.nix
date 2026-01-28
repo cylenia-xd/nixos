@@ -41,6 +41,10 @@
               url = "https://cdn.modrinth.com/data/aC3cM3Vq/versions/mjuG4AYd/MouseTweaks-fabric-mc1.20-2.26.jar";
               hash = "sha256-Hrnwx4eFmKOn37Us0OgVnr+LM7BObfIyU0/tL7tmFuQ=";
             };
+            "mods/axiom.jar".source = pkgs.fetchurl {
+              url = "https://cdn.modrinth.com/data/N6n5dqoA/versions/KYfgWqQU/Axiom-5.2.1-for-MC1.20.1.jar";
+              hash = "sha256-hKyqr4tPFyJJ42WIbrVvzEe5lBfkvxG8vg6XIq8fPQQ=";
+            };
           };
         };
       };
