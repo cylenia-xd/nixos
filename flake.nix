@@ -47,7 +47,6 @@
           home-manager = {
             useGlobalPkgs = true;
             useUserPackages = true;
-            sharedModules = [ inputs.nixcraft.homeModules.default ];
           };
         }
       ];
