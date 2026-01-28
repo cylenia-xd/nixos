@@ -2,7 +2,6 @@
   programs.steam = {
     enable = true;
     gamescopeSession.enable = true;
-    package = pkgs.millennium-steam;
   };
 
   hm.nixcraft = {
