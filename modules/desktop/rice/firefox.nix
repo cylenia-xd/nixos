@@ -1,7 +1,7 @@
 { pkgs, inputs, ... }: {
   hm.textfox = {
     enable = true;
-    profile = [ "default" ];
+    profile = "default";
     config = {
       background = {
         color = "#1e1e2e";
