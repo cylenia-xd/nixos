@@ -1,4 +1,49 @@
 { pkgs, inputs, ... }: {
+  hm.textfox = {
+    enable = true;
+    profile = [ "default" ];
+    config = {
+      background = {
+        color = "#1e1e2e";
+      };
+      border = {
+        color = "#cba6f7";
+        width = "2px";
+        transition = "1.0s ease";
+        radius = "0px";
+      };
+      displayWindowControls = true;
+      displayNavButtons = true;
+      displayUrlbarIcons = true;
+      displaySidebarTools = false;
+      displayTitles = false;
+      newtabLogo = "   __            __  ____          \A   / /____  _  __/ /_/ __/___  _  __\A  / __/ _ \\| |/_/ __/ /_/ __ \\| |/_/\A / /_/  __/>  </ /_/ __/ /_/ />  <  \A \\__/\\___/_/|_|\\__/_/  \\____/_/|_|  ";
+      font = {
+        family = "Hack Nerd Font Mono";
+        size = "12px";
+        accent = "#cdd6f4";
+      };
+      tabs = {
+        horizontal.enable = true;
+        vertical.enable = true;
+        vertical.margin = "1.0rem";
+      };
+      navbar = {
+        margin = "8px 8px 2px";
+        padding = "4px";
+      };
+      bookmarks = {
+        alignment = "left";
+      };
+      icons = {
+        toolbar.extensions.enable = true;
+        context.extensions.enable = true;
+        context.firefox.enable = true;
+      };
+      textTransform = "uppercase";
+    };
+  };
+  
   hm.programs.firefox = {
     enable = true;
     languagePacks = [ "en-GB" ];
