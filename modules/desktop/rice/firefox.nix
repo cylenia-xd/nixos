@@ -12,7 +12,7 @@
         transition = "1.0s ease";
         radius = "0px";
       };
-      displayWindowControls = true;
+      displayWindowControls = false;
       displayNavButtons = true;
       displayUrlbarIcons = true;
       displaySidebarTools = false;
@@ -24,7 +24,7 @@
         accent = "#cdd6f4";
       };
       tabs = {
-        horizontal.enable = true;
+        horizontal.enable = false;
         vertical.enable = true;
         vertical.margin = "1.0rem";
       };
