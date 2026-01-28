@@ -28,6 +28,11 @@
           serverProperties = {
             bug-report-link = null;
             generate-structures = false;
+            difficulty = "peaceful";
+            gamemode = "creative";
+            motd = "\\u00A7dCyltopia!";
+            spawn-protection = 0;
+            server-port = 25566;
           };
           service = {
             enable = true;
