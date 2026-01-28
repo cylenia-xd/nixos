@@ -1,6 +1,9 @@
 { pkgs, ... }: {
-  hm.home.packages = [ pkgs.space-station-14-launcher ];
-  
+  programs.steam = {
+    enable = true;
+    gamescopeSession.enable = true;
+  };
+
   hm.nixcraft = {
     enable = true;
 
