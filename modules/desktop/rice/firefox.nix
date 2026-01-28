@@ -1,7 +1,7 @@
 { pkgs, inputs, ... }: {
   hm.textfox = {
     enable = true;
-    profile = "default";
+    profiles = [ "default" ];
     config = {
       background = {
         color = "#1e1e2e";
@@ -24,7 +24,7 @@
         accent = "#cdd6f4";
       };
       tabs = {
-        horizontal.enable = false;
+        horizontal.enable = true;
         vertical.enable = true;
         vertical.margin = "1.0rem";
       };
