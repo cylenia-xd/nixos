@@ -1,5 +1,5 @@
 { pkgs, ... }: {
-  hm.home.packages = [ pkgs.space-space-station-14-launcher ];
+  hm.home.packages = [ pkgs.space-station-14-launcher ];
   
   hm.nixcraft = {
     enable = true;
