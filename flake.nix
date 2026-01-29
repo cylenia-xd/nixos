@@ -5,6 +5,7 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     firefox-addons.url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
     textfox.url = "github:adriankarlen/textfox";
+    arkenfox-nixos.url = "github:dwarfmaster/arkenfox-nixos";
     home-manager = {
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -32,6 +33,7 @@
             useUserPackages = true;
             sharedModules = [
               inputs.nixcraft.homeModules.default
+              inputs.arkenfox-nixos.hmModules.arkenfox
               inputs.textfox.homeManagerModules.default
             ];
           };
