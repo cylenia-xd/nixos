@@ -46,12 +46,6 @@
   hm.programs.firefox = {
     enable = true;
     languagePacks = [ "en-GB" ];
-    extensions = {
-      force = true;
-      packages = with inputs.firefox-addons.packages.${pkgs.stdenv.hostPlatform.system}; [
-        ublock-origin
-      ];
-    };
     arkenfox = {
       enable = true;
       version = "140.0";
@@ -75,6 +69,12 @@
         "0700"."0712"."network.trr.custom_uri".value = "https://dns.quad9.net/dns-query";
         "0800"."0830"."browser.search.separatePrivateDefault".value = false;
         "0800"."0830"."browser.search.separatePrivateDefault.ui.enabled".value = false;
+      };
+      extensions = {
+        force = true;
+        packages = with inputs.firefox-addons.packages.${pkgs.stdenv.hostPlatform.system}; [
+          ublock-origin
+        ];
       };
       search = {
         force = true;
