@@ -48,7 +48,7 @@
     languagePacks = [ "en-GB" ];
     arkenfox = {
       enable = true;
-      version = "140.0";
+      version = "master";
     };
     policies = {
       Cookies = {
@@ -82,7 +82,7 @@
         engines = {
           bing.metaData.hidden = true;
           perplexity.metaData.hidden = true;
-          eBay.metaData.hidden = true;
+          ebay.metaData.hidden = true;
           google.metaData.hidden = true;
           ddg.metaData.hidden = true;
           wikipedia.metadata.hidden = true;
