@@ -54,7 +54,7 @@
     };
     arkenfox = {
       enable = true;
-      version = "140.1";
+      version = "140.0";
     };
     policies = {
       Cookies = {
