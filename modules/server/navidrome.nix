@@ -5,7 +5,8 @@
     settings = {
       MusicFolder = "/opt/media/music";
       BaseUrl = "https://music.cylenia.dev";
-      Port = 8071;
+      Address = "0.0.0.0";
+      Port = "8071";
     };
   };
 
