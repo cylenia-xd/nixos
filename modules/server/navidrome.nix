@@ -6,7 +6,7 @@
       MusicFolder = "/opt/media/music";
       BaseUrl = "https://music.cylenia.dev";
       Port = 8071;
-    }
+    };
   };
 
   services.lidarr = {
