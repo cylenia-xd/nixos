@@ -5,9 +5,6 @@
     ./newt.nix
     ./openssh.nix
     ./vaultwarden.nix    
-    ./torrenting.nix
-    ./flix.nix
-    ./navidrome.nix
   ];
 
   environment.systemPackages = [ pkgs.git ];
