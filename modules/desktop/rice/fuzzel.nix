@@ -25,7 +25,7 @@
       "drun"
       "emoji"
     ];
-    theme = let inherit (config.lib.formats.rasi) mkLiteral; in {
+    theme = let inherit (config.home-manager.users.cylenia.config.lib.formats.rasi) mkLiteral; in {
       "*" = {
         "rosewater" = mkLiteral "#f5e0dc";
         "flamingo" = mkLiteral "#f2cdcd";
