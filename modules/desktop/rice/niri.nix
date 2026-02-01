@@ -68,10 +68,10 @@
 
       binds {
         Mod+T              { spawn "kitty"; }
-        Mod+D              { spawn "fuzzel"; }
-        Mod+E              { spawn-sh "BEMOJI_PICKER_CMD=\"fuzzel -d\" bemoji -t"; }
-        Mod+V              { spawn-sh "cliphist list | fuzzel --dmenu --with-nth 2 | cliphist decode | wl-copy"; }
-        Mod+P              { spawn-sh "rofi-rbw -a type -t password -r \"> \" --selector fuzzel --clipboarder wl-copy --typer wtype --use-notify-send"; }
+        Mod+D              { spawn "rofi -drun"; }
+        Mod+E              { spawn "bemoji" "-t"; }
+        Mod+V              { spawn-sh "cliphist list | rofi -dmenu -display-columns 2 | cliphist decode | wl-copy"; }
+        Mod+P              { spawn-sh "rofi-rbw -a type -t password -r \"> \" --use-notify-send"; }
         Mod+Q repeat=false { close-window; }
 
         Mod+Left  { focus-column-left; }

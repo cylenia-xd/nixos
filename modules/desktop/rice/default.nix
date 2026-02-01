@@ -2,13 +2,13 @@
   imports = [
     ./clipboard.nix
     ./firefox.nix
-    ./fuzzel.nix
     ./greetd.nix
     ./kitty.nix
     ./mako.nix
     ./editor.nix
     ./neomutt.nix
     ./niri.nix
+    ./rofi
     ./quickshell
   ];
 
