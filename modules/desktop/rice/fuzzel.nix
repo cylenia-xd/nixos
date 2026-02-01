@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }: {
+{ config, pkgs, lib, ... }: {
   hm.home.packages = with pkgs; [
     bemoji
     rofi-rbw
@@ -25,7 +25,7 @@
       "drun"
       "emoji"
     ];
-    theme = let inherit (hm.config.lib.formats.rasi) mkLiteral; in {
+    theme = let inherit (config.lib.formats.rasi) mkLiteral; in {
       "*" = {
         "rosewater" = mkLiteral "#f5e0dc";
         "flamingo" = mkLiteral "#f2cdcd";
