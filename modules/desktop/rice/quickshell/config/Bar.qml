@@ -26,7 +26,15 @@ Scope {
         right: true
       }
 
-      WorkspacesWidget {}
+      Text {
+        anchors.left: parent.left
+        anchors.leftMargin: 10
+        anchors.verticalCenter: parent.verticalCenter
+        text: Workspaces.activeWorkspace
+        color: "#cba6f7"
+        font.family: "Hack Nerd Font Mono"
+        font.pointSize: 12
+      }
 
       Text {
         anchors.centerIn: parent
