@@ -68,7 +68,7 @@
 
       binds {
         Mod+T              { spawn "kitty"; }
-        Mod+D              { spawn "rofi -drun"; }
+        Mod+D              { spawn "rofi" "-show" "drun"; }
         Mod+E              { spawn "bemoji" "-t"; }
         Mod+V              { spawn-sh "cliphist list | rofi -dmenu -display-columns 2 | cliphist decode | wl-copy"; }
         Mod+P              { spawn-sh "rofi-rbw -a type -t password -r \"> \" --use-notify-send"; }
