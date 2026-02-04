@@ -6,7 +6,6 @@
 
   hm.nixcraft = {
     enable = true;
-
     server.instances = {};
     client = {
       shared = {
@@ -17,38 +16,19 @@
           offline = true;
         };
       };
-
       instances = {
-        create-plus = {
+        warpium = {
           enable = true;
           java.memory = 4000;
           mrpack = {
             enable = true;
             file = pkgs.fetchurl {
-              url = "https://cdn.modrinth.com/data/HqonU57y/versions/rlTgMYB4/Create%2B%203.1.1.mrpack";
-              hash = "sha256-ZuulZMd1enygNkSpyInQ2MdkBLvC63/mWe8GO1bc6cY=";
+              url = "https://cdn.modrinth.com/data/1KVo5zza/versions/yqCCvD11/Fabulously.Optimized-v12.0.0.mrpack";
             };
           };
           files = {
-            "mods/e4mc.jar".source = pkgs.fetchurl {
-              url = "https://cdn.modrinth.com/data/qANg5Jrr/versions/jpS88LKC/e4mc_minecraft-fabric-5.5.4.jar";
-              hash = "sha256-n55fWcbVpmC+qE/Kw3VTyskfwDQXKrvtQDk+/j1Ymho=";
-            };
-            "mods/dh.jar".source = pkgs.fetchurl {
-              url = "https://cdn.modrinth.com/data/uCdwusMi/versions/lC6CwqPp/DistantHorizons-2.4.5-b-1.20.1-fabric-forge.jar";
-              hash = "sha256-4pxdakfOQOwXT5YQSsNjlgXeMOOBGzmQfecHD+sjDMI=";
-            };
             "mods/ias.jar".source = pkgs.fetchurl {
-              url = "https://cdn.modrinth.com/data/cudtvDnd/versions/BEifi05w/IAS-Fabric-1.20.1-9.0.4.jar";
-              hash = "sha256-IdTNOcTI9EejR014XbSvqIlrqrTG5JyvCkgvzpBT03s=";
-            };
-            "mods/mt.jar".source = pkgs.fetchurl {
-              url = "https://cdn.modrinth.com/data/aC3cM3Vq/versions/mjuG4AYd/MouseTweaks-fabric-mc1.20-2.26.jar";
-              hash = "sha256-Hrnwx4eFmKOn37Us0OgVnr+LM7BObfIyU0/tL7tmFuQ=";
-            };
-            "mods/axiom.jar".source = pkgs.fetchurl {
-              url = "https://cdn.modrinth.com/data/N6n5dqoA/versions/KYfgWqQU/Axiom-5.2.1-for-MC1.20.1.jar";
-              hash = "sha256-hKyqr4tPFyJJ42WIbrVvzEe5lBfkvxG8vg6XIq8fPQQ=";
+              url = "https://cdn.modrinth.com/data/cudtvDnd/versions/oSzaukGT/IAS-9.0.6-alpha.2%2B1.21.11-fabric.jar";
             };
           };
         };
