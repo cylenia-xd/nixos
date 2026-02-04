@@ -110,9 +110,9 @@
         Mod+F { toggle-window-floating; }
         Mod+W { toggle-column-tabbed-display; }
 
-        Print      { screenshot; }
-        Ctrl+Print { screenshot-screen; }
-        Alt+Print  { screenshot-window; }
+        Mod+Insert      { screenshot; }
+        Mod+Ctrl+Insert { screenshot-screen; }
+        Mod+Alt+Insert  { screenshot-window; }
 
         Mod+Shift+E { quit; }
         Mod+Shift+P { power-off-monitors; }
