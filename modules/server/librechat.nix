@@ -1,9 +1,9 @@
 { config, ... }: {
-  sops.secrets.mistral_api_key.owner = "librechat";
+  sops.secrets.librechat_env.owner = "librechat";
   services.librechat = {
     enable = true;
     enableLocalDB = true;
-    credentials.MISTRAL_API_KEY = config.sops.secrets.mistral_api_key.path;
+    credentialsFile = config.sops.secrets.librechat_env.path;
     env = {
       ALLOW_REGISTRATION = true;
       CONSOLE_JSON_STRING_LENGTH = 255;
