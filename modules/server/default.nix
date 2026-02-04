@@ -5,6 +5,7 @@
     ./newt.nix
     ./openssh.nix
     ./vaultwarden.nix    
+    ./librechat.nix
   ];
 
   environment.systemPackages = [ pkgs.git ];
