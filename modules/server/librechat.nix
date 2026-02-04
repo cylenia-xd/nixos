@@ -2,6 +2,7 @@
   sops.secrets.mistral_api_key.owner = "librechat";
   services.librechat = {
     enable = true;
+    enableLocalDB = true;
     credentials.MISTRAL_API_KEY = config.sops.secrets.mistral_api_key.path;
     env = {
       ALLOW_REGISTRATION = true;
