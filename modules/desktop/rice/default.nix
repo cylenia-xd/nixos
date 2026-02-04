@@ -8,7 +8,7 @@
     ./editor.nix
     ./neomutt.nix
     ./niri.nix
-    ./rofi
+    ./fuzzel.nix
     ./quickshell
   ];
 
