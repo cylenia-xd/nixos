@@ -1,4 +1,5 @@
 { config, ... }: {
+  sops.secrets.mistral_api_key.owner = "librechat";
   services.librechat = {
     enable = true;
     credentials.MISTRAL_API_KEY = config.sops.secrets.mistral_api_key.path;

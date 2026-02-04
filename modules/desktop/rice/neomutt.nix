@@ -1,4 +1,5 @@
 { config, ... }: {
+  sops.secrets.email_password.owner = "cylenia";
   hm.programs.neomutt = {
     enable = true;
     sidebar.enable = false;
