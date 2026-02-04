@@ -55,6 +55,7 @@
         Allow = [
           "https://github.com"
           "https://discord.com"
+          "https://mistral.ai"
         ];
       };
     };
