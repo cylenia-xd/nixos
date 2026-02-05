@@ -3,8 +3,8 @@
     enable = true;
     themeFile = "Catppuccin-Mocha";
     font = {
-      name = "Hack Nerd Font Mono";
-      package = pkgs.nerd-fonts.hack;
+      name = "Monocraft";
+      package = pkgs.monocraft;
       size = 12;
     };
     settings = {
