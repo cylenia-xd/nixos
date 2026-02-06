@@ -6,9 +6,14 @@
     firefox-addons.url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
     textfox.url = "github:adriankarlen/textfox";
     arkenfox-nixos.url = "github:dwarfmaster/arkenfox-nixos";
-    catppuccin.url = "github:catppuccin/nix";
-    home-manager.url = "github:nix-community/home-manager/master";
-    sops-nix.url = "github:Mic92/sops-nix";
+    sops-nix = {
+      url = "github:Mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    home-manager = {
+      url = "github:nix-community/home-manager/master";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     nixcraft = {
       url = "github:loystonpais/nixcraft";
       inputs.nixpkgs.follows = "nixpkgs";
