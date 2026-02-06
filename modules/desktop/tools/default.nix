@@ -2,6 +2,8 @@
   imports = [
     ./git.nix
     ./ssh.nix
+    ./helix.nix
+    ./neomutt.nix
     ./fastfetch
   ];
   

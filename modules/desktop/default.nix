@@ -3,7 +3,7 @@
     ./audio.nix
     ./xdg.nix
     ./gaming.nix
-    ./rice
+    ./environment
     ./tools
   ];
 
