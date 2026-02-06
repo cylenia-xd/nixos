@@ -11,15 +11,35 @@
   ];
 
   environment.systemPackages = [
-    pkgs.adwaita-icon-theme
     pkgs.nerd-fonts.hack
   ];
 
   programs.hyprland.enable = true;
 
-  qt = {
+  hm.home.pointerCursor = {
+    gtk.enable = true;
+    package = pkgs.bibata-cursors;
+    name = "Bibata-Modern-Classic";
+    size = 16;
+  };
+
+  hm.gtk = {
     enable = true;
-    style = "adwaita-dark";
-    platformTheme = "gnome";
+
+    theme = {
+      package = pkgs.flat-remix-gtk;
+      name = "Flat-Remix-GTK-Grey-Darkest";
+    };
+
+    iconTheme = {
+      package = pkgs.adwaita-icon-theme;
+      name = "Adwaita";
+    };
+
+    font = {
+      package = pkgs.nerd-fonts.hack;
+      name = "Hack Nerd Font Mono";
+      size = 12;
+    };
   };
 }
