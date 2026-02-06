@@ -5,7 +5,7 @@
     font = {
       name = "Hack Nerd Font Mono";
       package = pkgs.nerd-fonts.hack;
-      size = 12;
+      size = 8;
     };
     settings = {
       single_window_margin_width = 2;
