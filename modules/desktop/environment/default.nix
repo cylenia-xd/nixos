@@ -16,11 +16,10 @@
 
   programs.hyprland.enable = true;
 
-  hm.home.pointerCursor = {
-    gtk.enable = true;
-    package = pkgs.bibata-cursors;
-    name = "Bibata-Modern-Classic";
-    size = 16;
+  hm.catppuccin.cursors = {
+    enable = true;
+    accent = "mauve";
+    flavor = "mocha";
   };
 
   hm.gtk = {
