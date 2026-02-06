@@ -6,10 +6,8 @@
         border_size = 2;
         gaps_in = 10;
         gaps_out = 10;
-        col = {
-          inactive_border = "rgb(45475a)";
-          active_border = "rgb(cba6f7)";
-        };
+        "col.inactive_border" = "rgb(45475a)";
+        "col.active_border" = "rgb(cba6f7)";
       };
       decoration.shadow.enabled = false;
       animations.enabled = false;
