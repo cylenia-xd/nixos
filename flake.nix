@@ -20,14 +20,13 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, sops-nix, catppuccin, ... }@inputs: {
+  outputs = { nixpkgs, home-manager, sops-nix, ... }@inputs: {
     nixosConfigurations.jane = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
       system = "x86_64-linux";
       modules = [
         ./hosts/jane.nix
         sops-nix.nixosModules.sops
-        catppuccin.nixosModules.catppuccin
         home-manager.nixosModules.default {
           home-manager = {
             useGlobalPkgs = true;
@@ -35,7 +34,6 @@
             sharedModules = [
               inputs.nixcraft.homeModules.default
               inputs.arkenfox-nixos.hmModules.arkenfox
-              inputs.catppuccin.homeModules.catppuccin
               inputs.textfox.homeManagerModules.default
             ];
           };
