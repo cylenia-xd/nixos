@@ -22,14 +22,12 @@
     settings = {
       add_newline = false;
       format = lib.concatStrings [
-        "$line_break"
+        " "
         "$directory"
         "[>](bold #cba6f7)"
         " "
       ];
       directory = {
-        truncation_length = 8;
-        truncation_symbol = ".../";
         style = "bold #cba6f7";
         read_only = " *RO*";
       };
