@@ -4,7 +4,7 @@
   hm.programs.bash = {
     enable = true;
     enableCompletion = true;
-    interactiveShellInit = "PS1='\\h \\w \\$ '";
+    sessionVariables.PS1 = "\\h \\w \\$ ";
     shellAliases = {
       nrs = "sudo nixos-rebuild switch --flake /home/cylenia/nixos";
       nr = "sudo nixos-rebuild --flake /home/cylenia/nixos";
