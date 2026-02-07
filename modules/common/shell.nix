@@ -16,10 +16,6 @@
     };
   };
 
-  hm.programs.starship = {
-    enable = true;
-  };
-
   hm.programs.eza = {
     enable = true;
     enableBashIntegration = false;
