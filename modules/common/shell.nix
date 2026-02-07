@@ -1,4 +1,4 @@
-{ ... }: {
+{ lib, ... }: {
   hm.home.shell.enableBashIntegration = true;
 
   hm.programs.bash = {
@@ -18,7 +18,21 @@
 
   hm.programs.starship = {
     enable = true;
-    presets = [ "plain-text-symbols" "no-empty-icons" ];
+    enableBashIntegration = true;
+    settings = {
+      add_newline = false;
+      format = lib.concatStrings [
+        "$line_break"
+        "$directory"
+        " [>](bold #cba6f7)"
+      ];
+      directory = {
+        truncation_length = 8;
+        truncation_symbol = ".../";
+        style = "bold #cba6f7";
+        read_only = " *RO*";
+      };
+    };
   };
 
   hm.programs.eza = {
