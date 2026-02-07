@@ -4,7 +4,6 @@
   hm.programs.bash = {
     enable = true;
     enableCompletion = true;
-    sessionVariables.PS1 = "\\h \\w \\$ ";
     shellAliases = {
       nrs = "sudo nixos-rebuild switch --flake /home/cylenia/nixos";
       nr = "sudo nixos-rebuild --flake /home/cylenia/nixos";
@@ -15,6 +14,11 @@
       ll = "echo \"Muscle memory strikes again. Use eza you dimwit!\"";
       l = "echo \"Muscle memory strikes again. Use eza you dimwit!\"";
     };
+  };
+
+  hm.programs.starship = {
+    enable = true;
+    presets = [ "plain-text-symbols" "no-empty-icons" ];
   };
 
   hm.programs.eza = {
