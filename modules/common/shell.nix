@@ -29,6 +29,8 @@
       ];
       directory = {
         style = "bold #cba6f7";
+        truncate_to_repo = false;
+        truncation_length = 1337;
         read_only = " *RO*";
       };
     };
