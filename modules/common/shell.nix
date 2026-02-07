@@ -24,7 +24,8 @@
       format = lib.concatStrings [
         "$line_break"
         "$directory"
-        " [>](bold #cba6f7)"
+        "[>](bold #cba6f7)"
+        " "
       ];
       directory = {
         truncation_length = 8;
